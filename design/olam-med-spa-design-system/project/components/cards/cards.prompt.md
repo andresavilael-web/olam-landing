@@ -1,16 +1,17 @@
-**ServiceCard / TestimonialCard / ResultCard** — OLAM's content cards. All share the signature cushion hover (lift −8px, scale 1.01, shadow deepens, border tints blue).
+**ServiceCard / TestimonialCard / ResultCard** — Olam's content cards. Editorial, warm, white-dominant. All share the gentle hover (lift −6px, soft neutral shadow, a champagne hairline appears on top). Card titles and testimonial quotes are set in the serif (Cormorant Garamond); body in Poppins light.
 
 ```jsx
-<ServiceCard index="01" title="Loss of jawline definition">
-  The first place skin laxity becomes visible. Caused by collagen depletion at the deeper SMAS layer.
+<ServiceCard index="01" title="Definición del óvalo facial">
+  El primer lugar donde se nota la pérdida de firmeza. Lo abordamos con un plan personalizado.
 </ServiceCard>
 
-<TestimonialCard rating={5} name="Maria G." detail="Pembroke Pines · Ultherapy"
-  quote="They told me honestly what to expect. By month three my jawline looked like me, 5 years ago." />
+<TestimonialCard rating={5} name="María G." detail="Pembroke Pines · Ultherapy"
+  quote="Me explicaron con honestidad qué esperar. A los tres meses me veía como yo, cinco años atrás." />
 
-<ResultCard image="/path.jpg" tag="MID-FACE LIFT" title="Cheek volume elevation" caption="Clinical Outcome" />
+<ResultCard image="/path.jpg" tag="ÓVALO FACIAL" title="Elevación natural del pómulo"
+  caption="Resultado clínico" disclaimer={true} />
 ```
 
-- **ServiceCard**: numbered problem/service tile on warm fill; `accent` switches index/hover color (blue default, green optional).
-- **TestimonialCard**: quote set in Sora; white fill, resting `shadow-card`.
-- **ResultCard**: photo-forward, image zooms on hover; falls back to a neutral placeholder when `image` is omitted.
+- **ServiceCard**: numbered tile on linen; `accent` is `blue` (default) or `slate`.
+- **TestimonialCard**: quote in serif italic; champagne stars (no gold/amber).
+- **ResultCard**: photo-forward, image zooms on hover; falls back to a neutral placeholder. **Always pass `disclaimer`** on before/after imagery — `true` renders "Los resultados varían según la persona." (brand-legal requirement), or pass a custom string.

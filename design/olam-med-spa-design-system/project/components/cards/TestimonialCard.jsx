@@ -19,7 +19,7 @@ export function TestimonialCard({
     flexDirection: 'column',
     gap: 18,
     background: 'var(--surface-card)',
-    border: `1px solid ${hover ? 'rgba(31,100,137,0.15)' : 'var(--border-hairline)'}`,
+    border: `1px solid ${hover ? 'var(--border-soft)' : 'var(--border-hairline)'}`,
     borderRadius: 'var(--radius-brand)',
     padding: 'var(--space-7)',
     boxShadow: hover ? 'var(--shadow-cushion)' : 'var(--shadow-card)',
@@ -35,18 +35,18 @@ export function TestimonialCard({
       style={cardStyle}
       {...rest}
     >
-      <div style={{ color: 'var(--amber-500)', letterSpacing: 2, fontSize: '0.95rem' }} aria-label={`${rating} out of 5`}>
-        {'★'.repeat(rating)}{'☆'.repeat(5 - rating)}
+      <div style={{ color: 'var(--rating)', letterSpacing: 3, fontSize: '0.9rem' }} aria-label={`${rating} out of 5`}>
+        {'\u2605'.repeat(rating)}{'\u2606'.repeat(5 - rating)}
       </div>
       <p style={{
-        margin: 0, fontFamily: 'var(--font-display)', fontWeight: 400, fontSize: '1.0625rem',
-        lineHeight: 1.5, color: 'var(--text-body)', letterSpacing: '-0.01em',
+        margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontStyle: 'italic', fontSize: '1.5rem',
+        lineHeight: 1.35, color: 'var(--text-strong)', letterSpacing: 'var(--ls-tight)',
       }}>
         “{quote}”
       </p>
       <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <span style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.875rem', color: 'var(--text-strong)' }}>{name}</span>
-        {detail && <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', color: 'var(--text-subtle)' }}>{detail}</span>}
+        <span style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: '0.875rem', color: 'var(--text-strong)' }}>{name}</span>
+        {detail && <span style={{ fontFamily: 'var(--font-body)', fontWeight: 300, fontSize: '0.75rem', color: 'var(--text-subtle)' }}>{detail}</span>}
       </div>
     </div>
   );

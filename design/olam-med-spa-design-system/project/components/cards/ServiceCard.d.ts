@@ -11,7 +11,7 @@ export interface ServiceCardProps {
   title: React.ReactNode;
   children?: React.ReactNode;
   /** Accent color for index + hover title. */
-  accent?: 'blue' | 'green';
+  accent?: 'blue' | 'slate';
   style?: React.CSSProperties;
 }
 

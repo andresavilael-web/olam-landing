@@ -18,28 +18,28 @@ export function Button({
   ...rest
 }) {
   const sizes = {
-    sm: { padding: '10px 20px', fontSize: '0.8125rem' },
-    md: { padding: '16px 32px', fontSize: '0.9375rem' },
-    lg: { padding: '20px 40px', fontSize: '1rem' },
+    sm: { padding: '11px 22px', fontSize: '0.8125rem' },
+    md: { padding: '15px 32px', fontSize: '0.9375rem' },
+    lg: { padding: '19px 42px', fontSize: '1rem' },
   };
 
   const variants = {
     primary: {
-      background: 'var(--action-primary)',
+      background: 'var(--action)',
       color: '#fff',
       border: '1px solid transparent',
-      boxShadow: 'var(--shadow-brand)',
+      boxShadow: 'var(--shadow-button)',
     },
     accent: {
-      background: 'var(--action-accent)',
+      background: 'var(--action)',
       color: '#fff',
       border: '1px solid transparent',
-      boxShadow: 'var(--shadow-accent)',
+      boxShadow: 'var(--shadow-button)',
     },
     secondary: {
       background: 'transparent',
       color: 'var(--text-strong)',
-      border: '1px solid var(--border-soft)',
+      border: '1px solid var(--border-strong)',
       boxShadow: 'none',
     },
     ghost: {
@@ -58,9 +58,10 @@ export function Button({
     fontFamily: 'var(--font-body)',
     fontWeight: 600,
     lineHeight: 1,
+    letterSpacing: '0.005em',
     borderRadius: 'var(--radius-pill)',
     cursor: disabled ? 'not-allowed' : 'pointer',
-    opacity: disabled ? 0.45 : 1,
+    opacity: disabled ? 0.4 : 1,
     textDecoration: 'none',
     whiteSpace: 'nowrap',
     transition: 'all var(--dur-base) var(--ease-cushion)',
@@ -74,17 +75,16 @@ export function Button({
   const hoverIn = (e) => {
     if (disabled) return;
     const el = e.currentTarget;
-    if (variant === 'primary') el.style.background = 'var(--action-primary-hover)';
-    else if (variant === 'accent') el.style.background = 'var(--action-accent-hover)';
+    if (variant === 'primary' || variant === 'accent') el.style.background = 'var(--action-hover)';
     else if (variant === 'secondary') { el.style.background = 'var(--action-ink)'; el.style.color = '#fff'; el.style.borderColor = 'var(--action-ink)'; }
-    else if (variant === 'ghost') el.style.color = 'var(--blue-700)';
+    else if (variant === 'ghost') el.style.color = 'var(--action-hover)';
   };
   const hoverOut = (e) => {
     if (disabled) return;
     const el = e.currentTarget;
     el.style.background = variants[variant].background;
     el.style.color = variants[variant].color;
-    if (variant === 'secondary') el.style.borderColor = 'var(--border-soft)';
+    if (variant === 'secondary') el.style.borderColor = 'var(--border-strong)';
   };
 
   const content = (

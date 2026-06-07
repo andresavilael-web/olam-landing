@@ -22,7 +22,7 @@ export function SiteHeader({
       style={{
         padding: '5px 12px', borderRadius: 'var(--radius-pill)', border: 'none', cursor: 'pointer',
         fontFamily: 'var(--font-body)', fontSize: '0.625rem', fontWeight: 700, letterSpacing: '0.12em',
-        background: active === l ? 'var(--ink-900)' : 'transparent',
+        background: active === l ? 'var(--charcoal)' : 'transparent',
         color: active === l ? '#fff' : 'var(--text-subtle)',
         transition: 'all var(--dur-base) var(--ease-cushion)',
       }}
@@ -45,7 +45,7 @@ export function SiteHeader({
           <img src={logoSrc} alt="OLAM Med Spa" style={{ height: 38, width: 'auto', objectFit: 'contain' }} />
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div style={{ display: 'flex', gap: 2, background: 'var(--surface-2)', padding: 4, borderRadius: 'var(--radius-pill)' }}>
+          <div style={{ display: 'flex', gap: 2, background: 'var(--surface-mist)', padding: 4, borderRadius: 'var(--radius-pill)' }}>
             {pill('en', 'EN')}
             {pill('es', 'ES')}
           </div>
@@ -56,7 +56,7 @@ export function SiteHeader({
             color: 'var(--text-strong)', textDecoration: 'none',
             transition: 'all var(--dur-base) var(--ease-cushion)',
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--ink-900)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'var(--ink-900)'; }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--charcoal)'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'var(--charcoal)'; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--text-strong)'; e.currentTarget.style.borderColor = 'var(--border-strong)'; }}
           >
             {active === 'es' ? 'Llama' : 'Call'} {phone}

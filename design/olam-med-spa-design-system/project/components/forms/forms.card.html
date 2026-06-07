@@ -22,19 +22,19 @@
     const [v, setV] = React.useState('');
     return (
       <>
-        <Input label="First name" id="f" placeholder="Enter your first name" required />
-        <Input label="Phone" id="p" type="tel" placeholder="+1 (555) 000-0000" required />
+        <Input label="Nombre" id="f" placeholder="Tu nombre" required />
+        <Input label="Teléfono" id="p" type="tel" placeholder="+1 (555) 000-0000" required />
         <div className="full">
-          <Select label="Primary concern" id="c" placeholder="Select an area"
+          <Select label="¿Qué te gustaría mejorar?" id="c" placeholder="Elige una zona"
             value={v} onChange={(e)=>setV(e.target.value)}
-            options={["Jawline & neck","Cheeks & mid-face","Crepey skin","Brow & eyes"]} />
+            options={["Óvalo facial y cuello","Pómulos y tercio medio","Piel y textura","Cejas y mirada"]} />
         </div>
         <div className="full">
-          <Textarea label="Anything else we should know?" id="n" rows={3}
-            placeholder="Optional — tell us about your goals." />
+          <Textarea label="¿Algo más que debamos saber?" id="n" rows={3}
+            placeholder="Opcional — cuéntanos tu objetivo." />
         </div>
         <div className="full">
-          <Button variant="accent" type="submit" arrow>Reserve my $100 consultation</Button>
+          <Button variant="primary" type="submit" arrow>Agenda tu diagnóstico 3D</Button>
         </div>
       </>
     );

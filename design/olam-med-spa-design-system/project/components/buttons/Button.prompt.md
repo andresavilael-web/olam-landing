@@ -1,12 +1,12 @@
-**Button** — OLAM's pill-shaped CTA; use for any primary or secondary action. Green is primary (brand), accent blue matches the live site, secondary is an ink outline, ghost is an inline text link.
+**Button** — Olam's pill CTA. There is **one** action color: deep Olam blue (`#1F5E78`). `primary` and `accent` are the same blue (accent kept for back-compat). `secondary` is a charcoal outline that fills on hover; `ghost` is an inline blue text link.
 
 ```jsx
-<Button variant="primary" size="lg" href="#reserve" arrow>
-  Reserve my $100 diagnostic consultation
+<Button variant="primary" size="lg" href="#consulta" arrow>
+  Agenda tu diagnóstico 3D
 </Button>
 ```
 
-- **variant**: `primary` (green, glow shadow) · `accent` (steel blue) · `secondary` (1px ink outline → fills ink on hover) · `ghost` (accent text, used with `arrow`)
+- **variant**: `primary` / `accent` (deep blue, soft shadow) · `secondary` (1px charcoal outline → fills charcoal on hover) · `ghost` (blue text, used with `arrow`)
 - **size**: `sm` · `md` (default) · `lg`
 - **arrow**: appends the brand `→` glyph — almost always on for CTAs.
-- Pass `href` to render an `<a>`. Copy should be first-person & specific ("Book my session →"), never "Submit".
+- Pass `href` to render an `<a>`. Copy is warm & confident; never promise ("garantizado", "para siempre"). Buttons use Poppins, never the serif.

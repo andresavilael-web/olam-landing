@@ -13,21 +13,21 @@ export function Badge({
 }) {
   const tones = {
     accent: 'var(--text-accent)',
-    green: 'var(--text-brand)',
-    danger: 'var(--danger-500)',
+    slate: 'var(--slate)',
+    champagne: 'var(--champagne)',
     muted: 'var(--text-subtle)',
   };
   const dotColors = {
-    accent: 'var(--blue-500)',
-    green: 'var(--green-500)',
-    danger: 'var(--danger-500)',
-    muted: 'var(--ink-300)',
+    accent: 'var(--olam-blue)',
+    slate: 'var(--slate)',
+    champagne: 'var(--champagne)',
+    muted: 'var(--warm-grey-2)',
   };
 
   return (
     <span style={{
       display: 'inline-flex', alignItems: 'center', gap: 8,
-      fontFamily: 'var(--font-body)', fontSize: 'var(--text-label)', fontWeight: 700,
+      fontFamily: 'var(--font-body)', fontSize: 'var(--text-label)', fontWeight: 600,
       textTransform: 'uppercase', letterSpacing: 'var(--ls-label)', color: tones[tone],
       ...style,
     }} {...rest}>

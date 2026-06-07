@@ -29,12 +29,12 @@ export function Accordion({ items = [], single = true, style = {}, ...rest }) {
           >
             <span style={{
               fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'var(--text-h3)',
-              color: 'var(--text-body)', lineHeight: 1.3,
+              color: 'var(--text-strong)', lineHeight: 1.25,
             }}>
               {it.q}
             </span>
             <span style={{
-              fontFamily: 'var(--font-display)', fontWeight: 300, fontSize: '1.75rem',
+              fontFamily: 'var(--font-body)', fontWeight: 300, fontSize: '1.6rem',
               color: 'var(--text-accent)', lineHeight: 1, flexShrink: 0,
               transform: isOpen(i) ? 'rotate(45deg)' : 'rotate(0deg)',
               transition: 'transform var(--dur-base) var(--ease-cushion)',
@@ -50,8 +50,8 @@ export function Accordion({ items = [], single = true, style = {}, ...rest }) {
             <div style={{ overflow: 'hidden' }}>
               <p style={{
                 margin: 0, paddingBottom: 28, maxWidth: 640,
-                fontFamily: 'var(--font-body)', fontSize: 'var(--text-body)',
-                lineHeight: 1.65, color: 'var(--text-muted)',
+                fontFamily: 'var(--font-body)', fontWeight: 300, fontSize: 'var(--text-body)',
+                lineHeight: 1.7, color: 'var(--text-muted)',
               }}>
                 {it.a}
               </p>

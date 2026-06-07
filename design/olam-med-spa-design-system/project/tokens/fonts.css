@@ -1,9 +1,10 @@
 /* ============================================================
-   OLAM Med Spa — Webfonts
-   Sora (display) + Inter (body), loaded from Google Fonts.
-   NOTE: loaded via CDN, not self-hosted. If you have licensed
-   font binaries, drop them in /assets/fonts and replace these
-   @import lines with local @font-face rules.
+   Olam Med Spa — Webfonts  ·  Brand Book v3
+   Cormorant Garamond (headlines/quotes) + Poppins (body/UI).
+   NOTE: loaded via Google Fonts CDN. Brand-book alternatives:
+   Canela / EB Garamond (serif), Museo Sans Rounded / Nunito Sans (sans).
+   If you license Canela or Museo Sans Rounded, drop the binaries in
+   /assets/fonts and replace these imports with local @font-face rules.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap');

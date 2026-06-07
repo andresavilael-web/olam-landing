@@ -1,4 +1,4 @@
-<!-- @dsCard group="Colors" viewport="700x160" name="Surfaces & Feedback" subtitle="Warm off-white surface system + semantic feedback." -->
+<!-- @dsCard group="Colors" viewport="700x170" name="Surfaces & Logo Green" subtitle="Semantic surface scale — and the green that lives ONLY in the logo." -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +6,23 @@
 <link rel="stylesheet" href="../styles.css">
 <style>
   body { margin: 0; font-family: var(--font-body); background: var(--surface-card); color: var(--text-body); }
-  .wrap { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
-  .row { display: flex; gap: 12px; }
+  .row { display: flex; gap: 12px; padding: 20px; }
   .sw { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-  .chip { height: 52px; border-radius: var(--radius-md); border: 1px solid var(--border-hairline); }
-  .name { font-size: 11px; font-weight: 600; color: var(--text-body); }
+  .chip { height: 58px; border-radius: var(--radius-md); border: 1px solid var(--border-hairline); }
+  .name { font-size: 11px; font-weight: 500; color: var(--text-body); }
   .hex { font-size: 10px; color: var(--text-subtle); font-variant-numeric: tabular-nums; }
+  .lock { position: relative; }
+  .lock::after { content: "logo only"; position: absolute; top: 6px; left: 6px; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: rgba(0,0,0,.45); padding: 2px 6px; border-radius: 99px; }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="row">
-      <div class="sw"><div class="chip" style="background:var(--surface-0)"></div><span class="name">surface-0 · card</span><span class="hex">#FFFFFF</span></div>
-      <div class="sw"><div class="chip" style="background:var(--surface-1)"></div><span class="name">surface-1 · page</span><span class="hex">#F9F7F4</span></div>
-      <div class="sw"><div class="chip" style="background:var(--surface-warm)"></div><span class="name">surface-warm</span><span class="hex">#FCF9F8</span></div>
-      <div class="sw"><div class="chip" style="background:var(--surface-3)"></div><span class="name">surface-3 · panel</span><span class="hex">#F2F4F5</span></div>
-      <div class="sw"><div class="chip" style="background:var(--danger-500);border-color:transparent"></div><span class="name">danger-500</span><span class="hex">#C0392B</span></div>
-      <div class="sw"><div class="chip" style="background:var(--amber-500);border-color:transparent"></div><span class="name">amber-500 · stars</span><span class="hex">#E0A100</span></div>
-    </div>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--surface-page)"></div><span class="name">page</span><span class="hex">#FFFFFF</span></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-linen)"></div><span class="name">linen panel</span><span class="hex">#F8F3EA</span></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-mist)"></div><span class="name">mist band</span><span class="hex">#F4F7F8</span></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-slate);border-color:transparent"></div><span class="name">slate band</span><span class="hex">#6E8CA3</span></div>
+    <div class="sw"><div class="chip" style="background:var(--surface-ink);border-color:transparent"></div><span class="name">ink section</span><span class="hex">#1F2020</span></div>
+    <div class="sw"><div class="chip lock" style="background:var(--logo-green);border-color:transparent"></div><span class="name">logo green</span><span class="hex">#7AB520</span></div>
   </div>
 </body>
 </html>

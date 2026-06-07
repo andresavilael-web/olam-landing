@@ -14,14 +14,13 @@ export function ServiceCard({
   ...rest
 }) {
   const [hover, setHover] = React.useState(false);
-  const accentColor = accent === 'green' ? 'var(--text-brand)' : 'var(--text-accent)';
-  const glow = accent === 'green' ? 'rgba(122,181,32,0.06)' : 'rgba(75,168,200,0.06)';
+  const accentColor = accent === 'slate' ? 'var(--slate)' : 'var(--text-accent)';
 
   const cardStyle = {
     position: 'relative',
     overflow: 'hidden',
-    background: 'var(--surface-card-muted)',
-    border: `1px solid ${hover ? 'rgba(31,100,137,0.15)' : 'var(--border-hairline)'}`,
+    background: 'var(--surface-linen)',
+    border: `1px solid ${hover ? 'var(--border-soft)' : 'var(--border-hairline)'}`,
     borderRadius: 'var(--radius-brand)',
     padding: 'var(--card-pad)',
     boxShadow: hover ? 'var(--shadow-cushion)' : 'none',
@@ -37,22 +36,22 @@ export function ServiceCard({
       style={cardStyle}
       {...rest}
     >
-      <div style={{ position: 'absolute', top: 0, right: 0, width: 96, height: 96, background: glow, filter: 'blur(28px)', borderRadius: '50%', pointerEvents: 'none' }} />
+      <span style={{ position: 'absolute', top: 0, left: 'var(--card-pad)', right: 'var(--card-pad)', height: 1, background: 'var(--border-champagne)', opacity: hover ? 0.9 : 0, transition: 'opacity var(--dur-base) var(--ease-cushion)' }} />
       <div style={{ position: 'relative' }}>
         {index != null && (
-          <span style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: '0.625rem', fontWeight: 700, letterSpacing: '0.15em', color: accentColor, marginBottom: 16 }}>
+          <span style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.18em', color: accentColor, marginBottom: 16 }}>
             {index}
           </span>
         )}
         <h3 style={{
-          fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'var(--text-h3)',
+          fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'var(--text-h3)', lineHeight: 1.1,
           margin: '0 0 12px', color: hover ? accentColor : 'var(--text-strong)',
           transition: 'color var(--dur-base) var(--ease-cushion)',
         }}>
           {title}
         </h3>
         {children && (
-          <p style={{ margin: 0, fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-muted)' }}>
+          <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontWeight: 300, fontSize: 'var(--text-sm)', lineHeight: 1.65, color: 'var(--text-muted)' }}>
             {children}
           </p>
         )}

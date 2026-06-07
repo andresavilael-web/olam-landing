@@ -545,3 +545,269 @@ The OLAM Med Spa design system is complete. Here's what I built — and where I 
 
 Also worth a look when you have a moment: the **Design System tab** (19 specimen cards — colors, type, spacing, brand, components) and the live **EN/ES toggle + technology tabs** in the website kit. Tell me what feels off and I'll iterate.
 
+## User
+
+la cliente me dio el nuevo brandbook, podemos ajustar todo en base a ese brandbook que dio?
+
+## Assistant
+
+_[tool: invoke_skill]_
+
+¡Perfecto! Vamos a leer el nuevo brand book y ajustar todo el sistema en base a él. Déjame revisarlo primero.
+
+_[tool: run_script]_
+
+_[tool: update_todos]_
+
+_[tool: copy_files]_
+
+He leído el Brand Book v3 completo. Es un **cambio de dirección importante** — no un ajuste menor. Déjame resumir lo que cambia para que confirmes que vamos por buen camino, y luego lo aplico todo:
+
+**Cambios clave del Brand Book v3:**
+- **Paleta nueva, neutra y cálida.** Blanco dominante, lino claro `#F8F3EA`, niebla `#F4F7F8`, azul niebla `#8FA7B6`, **azul Olam profundo `#1F5E78` como ÚNICO color de acción/CTA** (ya no el verde), slate `#6E8CA3` para bandas, carbón `#1F2020` para texto, champagne `#C8B78F` solo en hilos finos. **El verde vive SOLO en el logo** — sale de la paleta por completo.
+- **Tipografía nueva:** titulares en **Cormorant Garamond** (serif editorial) + cuerpo en **Poppins** (sans amable). Reemplaza Sora + Inter.
+- **Voz:** "la nueva belleza natural — revelar, no transformar." Sin garantías ("borra/para siempre"); usar "reduce, mejora, revela". "Los resultados varían" en before/after. Nombre siempre **"Olam Med Spa"**, nunca todo en mayúsculas.
+- **Stats actualizados:** 30+ años, 35,000+ procedimientos, 4.9★ 400+ reseñas.
+- **Sin rojo en la paleta** → quito el rojo de los disqualifiers; sin glows de color (paleta neutra).
+
+Construyo a **Fase 1** del plan de transición (la que dice "empezar ya"). Voy a actualizar todo: tokens, tipografía, componentes, tarjetas de specimen, el UI kit y la documentación. Empiezo ahora.Now the new color tokens — neutral Phase-1 palette.
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: read_file]_
+
+Now the spacing/shadow tokens — replace colored glows with soft neutral shadows.
+
+_[tool: str_replace_edit]_
+
+_[tool: check_design_system]_
+
+_[tool: str_replace_edit]_
+
+Tokens compile clean (104 tokens). Now let me update the components. Starting with Button — single deep-blue action color, neutral shadow.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+Now the cards — remove green, neutralize glows, serif titles.
+
+_[tool: str_replace_edit]_
+
+Now TestimonialCard — champagne stars instead of amber.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+Now ResultCard — soften, add "results vary" disclaimer support.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+Now Badge — remove green/danger (no red in palette), add slate/champagne.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+Now Tag — update variants to new palette.
+
+_[tool: str_replace_edit]_
+
+Now Accordion and SiteHeader color updates.
+
+_[tool: grep]_
+
+_[tool: str_replace_edit]_
+
+_[tool: grep]_
+
+Let me sweep for any remaining dead token references across components and guidelines.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: grep]_
+
+The focus halos still use the old blue rgba. Let me fix those.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+Now update the component demo cards to the new variants/voice. Let me update feedback and cards demos.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+Now update the demo copy in buttons/forms/navigation cards and the prompt docs.
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: check_design_system]_
+
+_[tool: show_html]_
+
+The cards bundle compiled clean. Let me screenshot to verify the new look.
+
+_[tool: show_html]_
+
+_[tool: grep]_
+
+Strong improvement — serif titles, italic quote. The black stars and "Patient photo" text are stale-bundle artifacts (the champagne stars and Spanish placeholder compile at the turn boundary). Now the big task: re-skin the UI kit. Let me find all dead token references there.
+
+_[tool: write_file]_
+
+The UI kit is extensive. Let me regenerate its self-contained `components.jsx` with the new palette/type, then fix the section files.
+
+_[tool: write_file]_
+
+Now rewrite the section files with the new palette, voice, and updated stats. Starting with Chrome (header/footer).Now Top.jsx — hero, qualification (no red), leadership with updated stats.
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+Now Middle.jsx — treatments grid + technology tabs.
+
+_[tool: write_file]_
+
+Now Bottom.jsx — results, diagnostic consult (charcoal), pricing.
+
+_[tool: write_file]_
+
+Now Closing.jsx — FAQ + reservation (slate band).
+
+_[tool: grep]_
+
+Let me verify the UI kit renders and fix the `.ph` placeholder token in index.html.
+
+_[tool: str_replace_edit]_
+
+_[tool: read_file]_
+
+Let me review and update the head typography rules in index.html for the serif system.
+
+_[tool: str_replace_edit]_
+
+_[tool: show_html]_
+
+_[tool: get_webview_logs]_
+
+_[tool: save_screenshot]_
+
+This is exactly the Brand Book v3 direction — Cormorant serif headline with italic deep-blue "naturally", Poppins body, white-dominant, deep-blue CTA, champagne stars. Let me check console and verify deeper sections.
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+Excellent — the whole page now follows Brand Book v3. Two fixes: the footer key warning, and the Leadership chevron showing raw "che" text (Material Symbols ligature timing). Let me use index keys and swap that chevron to inline SVG for robustness.
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+The whole UI kit is now on-brand. Now let me update the guideline specimen cards (Design System tab) to the new palette and type. Starting with the color cards.
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: str_replace_edit]_
+
+_[tool: write_file]_
+
+_[tool: write_file]_
+
+_[tool: str_replace_edit]_
+
+Now the spacing and iconography cards.
+
+_[tool: grep]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: str_replace_edit]_
+
+_[tool: write_file]_
+
+_[tool: check_design_system]_
+
+_[tool: show_html]_
+
+Let me add a Brand Voice specimen card (the brand book's say/don't-say guidance is central).
+
+_[tool: write_file]_
+
+The new color system looks great. Now let me rewrite the documentation — readme.md, SKILL.md, and the UI kit README — to Brand Book v3.
+
+_[tool: write_file]_
+
+_[tool: str_replace_edit]_
+
+_[tool: write_file]_
+
+_[tool: delete_file]_
+
+_[tool: grep]_
+
+Now let me clean up and do a final sweep for any remaining dead token references across the whole project.
+
+_[tool: update_todos]_
+
+_[tool: done]_
+
+All remaining matches are in the auto-generated `_ds_bundle.js` (stale this turn — it regenerates from my now-clean source at the turn boundary). My hand-written source is fully migrated. Let me mark todos done and run final verification.Clean load, no console errors. Let me fork the verifier for a thorough background check.
+
+_[tool: fork_verifier_agent]_
+
+¡Listo! Reconstruí **todo el sistema en base al Brand Book v3.**
+
+**Lo que cambió (Fase 1 del plan de transición):**
+- **Paleta neutra nueva** — blanco dominante, lino, niebla, **azul Olam `#1F5E78` como único color de acción**, slate, carbón, champagne en hilos. El verde quedó **solo en el logo**. Sin rojo, sin glows de color.
+- **Tipografía** — Cormorant Garamond (titulares + citas, con énfasis en *itálica* azul) + Poppins (cuerpo light). Serif nunca en botones ni texto largo.
+- **Voz** — "revelar, no transformar"; stats actualizados (**35,000+** procedimientos, **30+** años, **4.9★ 400+** reseñas); disclaimers "los resultados varían"; nombre **"Olam Med Spa"**.
+- **Migré los 11 componentes, las 20 tarjetas del Design System tab, y re-vestí el UI kit completo** (bilingüe EN/ES, tabs, FAQ, formulario) a v3.
+
+**Caveats / cosas a revisar contigo:**
+1. **Fotografía sigue como placeholder.** Es el mayor faltante — necesito fotos reales (rostros, equipo, antes/después con consentimiento) que sigan la dirección del book (luz natural suave, piel real, modelos 25–55, espacio sereno). En cuanto me las pases, las coloco.
+2. **Fonts vía Google CDN.** Cormorant Garamond y Poppins son gratuitos de Google. El book menciona alternativas premium (**Canela**, **Museo Sans Rounded**) — si tienen licencia de esas, mándame los archivos y hago el swap.
+3. Mantuve el **toggle EN/ES** del UI kit como demo de "bilingüe", pero el book dice *un idioma por pieza* — en producción cada página sería mono-idioma. El toggle es solo para mostrar ambas versiones.
+
+**Mi pregunta para ti / la clienta:** ¿la estructura de la landing (tensado de piel, calificación honesta, tecnologías, consulta $100) sigue siendo la página correcta para mostrar, o prefieres que el UI kit muestre una **home de marca más amplia** ("la nueva belleza natural" con todos los servicios)? Eso y las **fotos reales** llevarían esto de excelente a perfecto.
+

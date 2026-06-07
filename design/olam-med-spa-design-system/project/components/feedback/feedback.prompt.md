@@ -1,19 +1,19 @@
-**Badge / Tag / Accordion** — OLAM's small feedback & disclosure pieces.
+**Badge / Tag / Accordion** — Olam's small feedback & disclosure pieces. All use Poppins; there is **no red** in the palette, so disqualifiers/cautions use `slate` or `muted`, never danger-red.
 
 ```jsx
-<Badge tone="accent">Honest Qualification</Badge>
-<Badge tone="green" dot>This is for you if</Badge>
-<Badge tone="danger" dot>This is NOT for you if</Badge>
+<Badge tone="accent">Belleza Natural</Badge>
+<Badge tone="slate" dot>Diagnóstico 3D</Badge>
+<Badge tone="champagne" dot>Premium · Cálido</Badge>
 
 <Tag variant="soft">Ultherapy</Tag>
-<Tag variant="glass">OUR SANCTUARY</Tag>
+<Tag variant="glass">Nuestro espacio</Tag>
 
 <Accordion items={[
-  { q: "Does it hurt?", a: "We apply topical numbing before your session…" },
-  { q: "When will I see results?", a: "Initial firmness is often visible at weeks 4–6…" },
+  { q: "¿Duele el tratamiento?", a: "Aplicamos anestesia tópica antes de tu sesión…" },
+  { q: "¿Cuándo veré resultados?", a: "La firmeza inicial suele notarse entre las semanas 4 y 6…" },
 ]} />
 ```
 
-- **Badge**: section eyebrow / qualifier marker. `dot` adds a leading status dot. Always tracked-uppercase.
-- **Tag**: pill chip; `glass` is for overlay chips on photos.
-- **Accordion**: FAQ disclosure; `single` (default) keeps one panel open. Questions render in Sora.
+- **Badge**: section eyebrow / marker. Tones: `accent` (blue) · `slate` · `champagne` · `muted`. `dot` adds a leading status dot. Tracked-uppercase.
+- **Tag**: pill chip. Variants: `soft` (blue tint) · `linen` · `solid` (blue) · `slate` · `outline` · `glass` (overlay on photos).
+- **Accordion**: FAQ disclosure; questions render in the serif, the "+" rotates open. `single` (default) keeps one panel open.

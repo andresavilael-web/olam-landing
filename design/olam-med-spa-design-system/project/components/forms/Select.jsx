@@ -34,9 +34,9 @@ export function Select({
     appearance: 'none',
     WebkitAppearance: 'none',
     cursor: 'pointer',
-    boxShadow: focused ? '0 0 0 3px rgba(75,168,200,0.15)' : 'none',
+    boxShadow: focused ? '0 0 0 3px rgba(31,94,120,0.14)' : 'none',
     transition: 'border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease',
-    backgroundImage: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%236B6B6B\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><polyline points=\'6 9 12 15 18 9\'/></svg>")',
+    backgroundImage: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%236E7273\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><polyline points=\'6 9 12 15 18 9\'/></svg>")',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right 14px center',
     ...style,
@@ -46,7 +46,7 @@ export function Select({
     <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
       {label && (
         <label htmlFor={id} style={labelStyle}>
-          {label}{required && <span style={{ color: 'var(--action-accent)' }}> *</span>}
+          {label}{required && <span style={{ color: 'var(--action)' }}> *</span>}
         </label>
       )}
       <select

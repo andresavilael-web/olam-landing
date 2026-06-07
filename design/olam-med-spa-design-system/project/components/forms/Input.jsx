@@ -29,7 +29,7 @@ export function Input({
     borderRadius: 'var(--radius-sm)',
     padding: '13px 16px',
     outline: 'none',
-    boxShadow: focused ? '0 0 0 3px rgba(75,168,200,0.15)' : 'none',
+    boxShadow: focused ? '0 0 0 3px rgba(31,94,120,0.14)' : 'none',
     transition: 'border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease',
     ...style,
   };
@@ -38,7 +38,7 @@ export function Input({
     <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
       {label && (
         <label htmlFor={id} style={labelStyle}>
-          {label}{required && <span style={{ color: 'var(--action-accent)' }}> *</span>}
+          {label}{required && <span style={{ color: 'var(--action)' }}> *</span>}
         </label>
       )}
       <input

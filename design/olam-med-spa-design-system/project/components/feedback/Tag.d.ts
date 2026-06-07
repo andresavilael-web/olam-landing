@@ -3,7 +3,7 @@ import * as React from 'react';
 /** Pill tag / chip for metadata, technology labels, and image overlays. */
 export interface TagProps {
   children: React.ReactNode;
-  variant?: 'soft' | 'green' | 'solid' | 'outline' | 'glass';
+  variant?: 'soft' | 'linen' | 'solid' | 'slate' | 'outline' | 'glass';
   style?: React.CSSProperties;
 }
 

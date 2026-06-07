@@ -1,13 +1,16 @@
-# OLAM Med Spa — Design System
+# Olam Med Spa — Design System
 
-A brand & UI design system for **OLAM Med Spa**, a medical aesthetics spa in
-Pembroke Pines, FL. OLAM offers non-surgical skin tightening, injectables, laser
-treatments, and body contouring. The audience is **women 40+** seeking *natural*
-results without surgery. The voice is warm but clinically authoritative — an
-"honest medical institution," not a sales-driven chain.
+A brand & UI design system for **Olam Med Spa**, a medical aesthetics spa in
+Pembroke Pines, FL, founded by Latina women and featured in Forbes & Univisión.
+Olam offers non-invasive treatments — skin tightening, injectables, laser, body
+contouring — with personalized plans and 3D skin diagnosis.
 
-This system is consumed by design agents to produce on-brand interfaces, landing
-pages, slides, and marketing assets.
+> **Positioning — "La nueva belleza natural."** Olam doesn't *transform*; it
+> *reveals your best version*. The brand is **premium but warm, clinically
+> rigorous but human** — "we care more about our patients than our sales."
+
+**This system implements Brand Book v3 (Phase 1 of the color transition).** It
+supersedes the earlier green-led direction. See "Sources" and the change note below.
 
 ---
 
@@ -15,143 +18,138 @@ pages, slides, and marketing assets.
 
 | Source | What it is | Notes |
 |---|---|---|
-| `uploads/code.html` | **Primary source of truth** — full production landing-page HTML for the "Skin Tightening" Google-Ads page | Tailwind config (exact brand hexes), Sora+Inter type, Material Symbols, GSAP/Lenis motion, full copy in EN + ES |
-| `uploads/screencapture-…png` | Full-page screenshot of the same live landing page | Layout/visual reference; archived to `assets/reference-landing-page.png` |
-| `uploads/logo-large-a.png` | OLAM med-spa horizontal logo (green wordmark + tri-stroke swoosh) | Copied to `assets/logo-olam.png` (+ white knockout) |
-| `uploads/cropped-favicon-a-1.png` | Favicon — the swoosh mark alone | Copied to `assets/favicon-olam.png` |
-| `uploads/_.jpeg` | Unrelated "Upmind" template screenshot | Mood reference only (green editorial); NOT an OLAM asset |
+| `assets/OLAM-Brand-Book-v3.pdf` | **Primary source of truth** — the 18-page Manual de Marca V3 (2026) | Palette, type, voice, bilingual rules, photography direction, legal guardrails, transition plan |
+| `uploads/code.html` | Production HTML of the earlier skin-tightening landing page | Used for the UI-kit *structure & interactions*; its old palette/type are NOT current |
+| `uploads/screencapture-…png` → `assets/reference-landing-page.png` | Screenshot of that earlier page | Historical reference only — predates Brand Book v3 |
+| `uploads/logo-large-a.png` → `assets/logo-olam.png` | Olam logo (tri-stroke swoosh + wordmark) | "El logo se mantiene tal cual." Unchanged. White knockout added. |
+| `uploads/cropped-favicon-a-1.png` → `assets/favicon-olam.png` | Favicon — the swoosh mark | |
 
-Live site: olammedspa.com · Phone: 954.237.0930
+Address: 17901 NW 5th St Ste 201, Pembroke Pines, FL · 954.237.0930
 
-> **Color reconciliation (read me):** The written brief specifies **green
-> `#7AB520` as the *primary*** action color with **steel blue `#4BA8C8` as the
-> accent**. The *live site* actually ships **blue** CTAs (`#5B98BF` → `#1F6489`).
-> This system follows the **brief**: green is primary (matches the logo), blue is
-> the emphasis/accent color. Both blue tones are preserved as tokens
-> (`--blue-400/700`) so the live-site look is still reproducible. If you want CTAs
-> to match the deployed site exactly, use the `accent` button variant.
+> **Change note (v2 → Brand Book v3):** The first build of this system used green
+> `#7AB520` as the primary action color with Sora + Inter type. **Brand Book v3
+> overrides that:** green now lives **only in the logo**; the single action color is
+> **deep Olam blue `#1F5E78`**; the palette is neutral & warm (white-dominant); and
+> type is **Cormorant Garamond + Poppins**. Everything here reflects v3, Phase 1.
 
 ---
 
 ## CONTENT FUNDAMENTALS
 
-The voice is the brand's strongest asset: **honest, medical, and unhurried** — it
-disqualifies the wrong patient as readily as it courts the right one.
+Voice is **clinically rigorous, humanly warm**. The balance rule (from the book):
+*precision lives in treatments, consents and results; warmth and humour live in
+social and reception — never the reverse.*
 
-- **Person & address.** Speaks directly to *you* ("Is this for you?", "Then you
-  decide."). The clinic refers to itself as *we* / *OLAM*. Never "I."
-- **Tone.** Warm but authoritative. Confident without hype. It sells *trust and
-  process*, not outcomes-as-magic. Recurring promise: *"A medical session. Not a
-  sales pitch."*
-- **The signature move: honest qualification.** Copy openly states who the
-  treatment is **NOT** for ("You want a dramatic, Instagram-filter look" →
-  disqualified). *"We'd rather lose a booking than take a patient we can't help."*
-- **Headline construction.** A plain, declarative statement set in display type,
-  with the **emotional clause in light italic**: "tighten and lift your skin
-  *without surgery.*" · "Collective expertise. *Not a personality.*" · "What real
-  results *look like.*" Build every hero/section title this way.
-- **Specific, falsifiable claims.** Numbers do the persuading: *"15,000+ aesthetic
-  procedures,"* *"6,000+ injectables,"* *"results in 60–90 days,"* *"$500–$3,500,"*
-  *"financing from $45/mo."* Never vague superlatives.
-- **Anti-hype on results.** Explicitly manages expectations: "like yourself, 5
-  years ago," "a real biological process, not a filter — which is why it lasts."
-- **Casing.** Sentence case for headlines and body. **Eyebrows / labels are
-  ALL-CAPS, tracked wide** ("HONEST QUALIFICATION", "PRICE TRANSPARENCY"). Numerals
-  for stats and step indicators ("01"–"06").
-- **CTAs are direct & specific.** "Reserve my $100 diagnostic consultation →",
-  "Book my session →", "See real results". First-person possessive ("my") +
-  trailing arrow `→`. Avoid generic "Submit" / "Learn more."
-- **Bilingual.** English primary, Spanish secondary — every user-facing string has
-  an `.only-en` / `.only-es` pair, toggled by `html[data-lang]`. Spanish keeps the
-  same warm-clinical register (e.g. "No un pitch de ventas.").
-- **No emoji.** Ever. The only glyphs are a trailing `→` on CTAs, `+` on accordions,
-  and `•` list bullets. Tone is medical, not playful.
+- **Person & address.** Speaks directly to *you* / *tú*. The clinic is *we* / *Olam*
+  (never "I" in marketing). Reception/DMs are first-person and friendly ("¡Hola! Con
+  gusto te ayudo…").
+- **The promise.** *Reveal, don't transform.* "No cambiar quién sos, sino redescubrir
+  tu mejor versión." Confidence without arrogance, warmth without being casual,
+  premium without being cold. Aspirational but attainable.
+- **Brand personality.** Olam is a woman ~30: confident, innovative, a business owner,
+  young at heart. Motto: *"Aspire to inspire before you expire."* She speaks like an
+  expert friend.
+- **Say / don't say (verbatim from the book).**
+  - ✅ "Revela / realza tu belleza natural" · "Reduce, mejora, atenúa, previene" ·
+    "No invasivo / sin downtime" · "Plan personalizado / diagnóstico 3D" ·
+    "Resultados visibles; varían por persona."
+  - 🚫 "Borra / elimina para siempre" · "Revierte el envejecimiento" (as a promise) ·
+    "Garantizado / resultados asegurados" · "Te transforma."
+- **Honest qualification.** The brand openly says who a treatment may *not* be for —
+  but warmly ("Quizá aún no si…"), never with harsh/red "disqualifier" framing.
+- **Specific, current numbers (single source of truth — these replace the 2021
+  figures).** *30+ years* combined team experience · *35,000+* procedures · *4.9★,
+  400+* Google reviews · *3D* skin diagnosis · Forbes · TV (Univisión, Telemundo,
+  Hola TV, RCN). Always pair claims with "results vary."
+- **Casing & the name.** Headlines and body in sentence case. The brand name is
+  **"Olam Med Spa"** (or "med-spa") — initial cap, never "OLAM MEDSPA" all-caps or in
+  small caps within running text. Eyebrows/labels may be tracked uppercase (they are
+  not the brand name).
+- **CTAs.** Warm and specific, with a trailing `→`: "Agenda tu diagnóstico 3D →",
+  "Book my consultation →". Never "Submit."
+- **Bilingual — one language per piece.** Don't mix EN/ES in the same phrase. Spanish
+  for community & warmth; English for premium positioning & press. Same warm-clinical
+  register in both. (The UI kit demonstrates a per-page EN/ES toggle.)
+- **Legal guardrails.** No result guarantees. Every before/after & testimonial carries
+  "Individual results may vary / Los resultados varían según la persona" + patient
+  consent. Injectable brand names only in clinical context. No emoji.
 
 ---
 
 ## VISUAL FOUNDATIONS
 
-The aesthetic is **editorial medical luxury**: generous whitespace, a warm
-off-white canvas, tight display type, and soft diffuse shadows. It deliberately
-avoids the cold blue/white sterility of typical med-spa sites.
+**Editorial, neutral, warm, minimalist — white commands the page.** The look is
+premium and serene, never hard-advertising or hospital-cold.
 
-- **Color vibe.** Warm neutral base (`#F9F7F4` / `#FCF9F8`), near-black ink, with
-  green (logo) and steel-blue (emphasis) as the only saturated hues. Color is used
-  *sparingly* — eyebrows, italic emphasis words, bullet dots, buttons. Large fields
-  are neutral. Red appears **only** for honest-disqualifier lists.
-- **Type.** `Sora` for everything expressive — display, headings, eyebrows, large
-  numerals — at weight 500, tracked tight (`-0.05em` hero). Emphasis words drop to
-  **weight 300 italic** in blue. `Inter` (400/500/600) for body and UI. Hero uses
-  `clamp(3rem, 7vw, 5.25rem)` with `line-height: 0.92`.
-- **Layout.** Single-column editorial sections, `max-width: 1152px` centered,
-  side gutters 16px mobile / 32px desktop. Section rhythm **80px desktop / 48px
-  mobile** (`py-20 md:py-32` on hero sections). Asymmetric 1:2 and 2:3 grids for
-  text-vs-cards. Lots of breathing room — never dense.
-- **Backgrounds.** Mostly flat warm off-white. Occasional **full-bleed photography**
-  (hero media, leadership panel) and one **dark near-black callout band** (the $100
-  consultation / reservation) for contrast. Subtle **blurred color "glow blobs"**
-  (`blur(120px)`, brand green/blue at 5–10% opacity, `mix-blend: multiply`) float
-  behind hero/section content. No gradients-as-decoration beyond a soft
-  white→off-white hero wash and white→transparent photo scrims. No repeating
-  patterns or textures.
-- **Imagery.** Photography-forward and real: patient before/afters, the team,
-  procedure shots, the travertine lobby. Warm, natural, softly lit — never cold or
-  stocky. Photos sit in rounded frames (20–28px) with soft shadows; before/after
-  uses an interactive drag slider. On dark sections photos are knocked back
-  (`opacity-10 grayscale`) as texture.
-- **Cards.** White or warm-off-white fill, `1px` hairline border
-  (`rgba(0,0,0,0.06)`), `20px` radius (`28px` for feature/media), soft diffuse
-  shadow (`0 30px 50px rgba(0,0,0,0.03)`). Many carry a tiny brand-tint glow blob in
-  one corner.
-- **Signature hover — "cushion lift."** Cards rise and barely scale on hover:
-  `translateY(-8px) scale(1.01)`, shadow deepens to `0 40px 60px rgba(0,0,0,0.05)`,
-  border tints toward brand. Eased with `cubic-bezier(0.16, 1, 0.3, 1)` over
-  `0.4s`. Titles shift to brand color on group-hover.
-- **Buttons.** Fully **pill** (`9999px`). Primary = solid green with a soft colored
-  glow shadow; hover darkens + the same cushion ease. Secondary = `1px` ink outline,
-  fills ink-dark on hover. Ghost/inline = colored text with `→`. No press-shrink on
-  buttons (the cushion ease handles feel); cards do the lifting.
-- **Borders & dividers.** Hairlines everywhere — `rgba(0,0,0,0.06–0.10)` on light,
-  `rgba(255,255,255,0.10)` on dark. Sections separated by `border-y` hairlines, not
-  heavy rules. List/step rows divided by bottom hairlines.
-- **Radii.** `8px` inputs · `20px` brand cards · `28px` large/media · `40px` hero
-  & leadership panel · pill buttons/tags/toggles.
-- **Shadows.** Always soft, large-radius, very low opacity (3–5%). Hero media gets a
-  deeper `shadow-2xl`. Buttons get a *colored* glow matching their fill. No hard or
-  dark drop shadows; no inner shadows.
-- **Transparency & blur.** Sticky header is `white/95` + `backdrop-blur-md`. Photo
-  scrims fade white→transparent. Before/after labels and overlay chips use
-  `bg/85` + `backdrop-blur`. Used for chrome and legibility, not decoration.
-- **Animation.** Quiet and premium. Lenis smooth-scroll; GSAP scroll-reveals
-  (`opacity 0→1`, `y 35→0`, `power3.out`, staggered `d-1/d-2/d-3`); a slow image
-  parallax on the team photo; tab fades; accordions slide open. Easing favors
-  `power3.out` / the cushion bezier. No bounces, no infinite loops on content (one
-  exception: a slow linear logo marquee). Respect `prefers-reduced-motion`.
+- **Color (Phase 1).** White `#FFFFFF` dominates; light linen `#F8F3EA` is a gentle
+  warm touch; mist 5% `#F4F7F8` grounds soft sections; **deep Olam blue `#1F5E78` is
+  the single action/CTA color**; mist blue `#8FA7B6` for cool details; slate `#6E8CA3`
+  for bands with white text; charcoal `#1F2020` for text and dark sections; champagne
+  `#C8B78F` for thin metallic threads only. **No green except the logo. No browns, no
+  saturated-blue backgrounds, no red.**
+- **Type.** Headlines & quotes in **Cormorant Garamond** (serif, weight 500; emphasis
+  words in *italic*, tinted deep-blue). Body & UI in **Poppins** (rounded sans, light
+  300 / regular / 500). Serif **only** for headlines and quotes — never long text or
+  buttons. Max two weights per piece. Hero: `clamp(3rem, 6.5vw, 5.5rem)`, line-height
+  ~1.02. Lots of air.
+- **Layout.** Single-column editorial sections, `max-width: 1152px` centered, side
+  gutters 16/32px. Section rhythm **80px desktop / 48px mobile**. Asymmetric 1:2 and
+  2:3 grids. Generous negative space (the photography direction explicitly reserves
+  space for text).
+- **Backgrounds.** Mostly flat white, with linen and mist-5% bands for rhythm. One
+  charcoal "dark callout" band (the 3D consultation) and one slate band (reservation)
+  for contrast and white text. A single soft mist blur sits behind the hero. **No
+  gradient decoration, no patterns/textures, no glow blobs.**
+- **Imagery.** Photography-forward and real: natural soft diffuse light, healthy real
+  skin (visible pores/texture), close-ups of face/neck/hands, diverse models 25–55
+  with serene expressions, a clean warm clinical space. Warm light neutrals (linen,
+  sand, light wood) + natural skin; cool only as a nuance. **Avoid** generic stock,
+  over-retouched "plastic" skin, aggressive/dramatic before-afters, neon, heavy gold,
+  clutter, hospital cold. Photos sit in rounded frames (16–32px) with soft shadows.
+- **Cards.** White or linen fill, `1px` warm hairline (`rgba(31,32,32,0.08)`), `16px`
+  radius (`24px` for media), soft neutral shadow. A subtle **champagne hairline**
+  appears on hover.
+- **Hover — gentle lift.** Cards rise `translateY(-6px)` with a soft neutral shadow;
+  the title shifts to action-blue. Eased `cubic-bezier(0.16,1,0.3,1)` over `0.4s`. No
+  scale-pop, no colored glows.
+- **Buttons.** Pill (`9999px`), Poppins semibold, never the serif. Primary = solid
+  Olam blue with a soft blue depth shadow; hover darkens. Secondary = charcoal outline
+  that fills on hover. Ghost = blue text + `→`. On dark/slate bands, a white button.
+- **Borders & dividers.** Warm hairlines (`rgba(31,32,32,0.08–0.22)`); on dark,
+  `rgba(255,255,255,0.14)`. **Champagne** for special accent rules (clinical-overview
+  underline, hover hairline). Sections separated by hairlines, not heavy rules.
+- **Radii.** `6px` inputs · `16px` cards · `24px` media · `32px` hero · pill buttons.
+- **Shadows.** Soft, large-radius, neutral, low opacity. Hero media gets a deeper
+  `shadow-2xl`. Buttons get a subtle blue depth shadow. No hard/dark or inner shadows.
+- **Transparency & blur.** Sticky header `white/95` + `backdrop-blur`. Photo scrims
+  fade white→transparent. Overlay chips on photos use `white/90` + blur. For chrome &
+  legibility, not decoration.
+- **Animation.** Quiet and premium: scroll reveals (fade + small rise), tab fades,
+  accordion height reveals. No bounces, no infinite content loops. Respect
+  `prefers-reduced-motion`.
 
 ---
 
 ## ICONOGRAPHY
 
-- **Primary icon set: Google "Material Symbols Outlined"** (weight 100–700, fill
-  0–1), loaded from Google Fonts and rendered via
-  `<span class="material-symbols-outlined">chevron_right</span>`. Thin, rounded,
-  outlined — matches the soft editorial tone. Used sparingly (e.g. `chevron_right`
-  in the leadership panel's filled-blue circles).
-- **Inline SVG** for a few bespoke marks: the checkmark in reservation benefit lists
-  (`M5 13l4 4L19 7`, 2px round stroke) and the before/after slider's chevron handle.
-  Stroke style: `stroke-width: 2`, `round` caps/joins, `currentColor`.
-- **Typographic "icons."** Many UI accents are just glyphs, not icons: `→` on CTAs,
-  `+` (rotates to `×`) on FAQ accordions, `•` bullet dots, `★★★★★` for ratings,
-  small `01–06` numerals as section indices, and tiny colored dots
-  (`w-1.5 h-1.5 rounded-full`) as status/eyebrow markers.
-- **No emoji. No icon "cards."** Iconography is restrained and functional.
-- **Logo/mark.** The tri-stroke swoosh (green/black/blue, an "O") is the brand mark;
-  it appears alone as the favicon. Full logo = swoosh + "OLAM" (green) + "med-spa"
-  (dark). Assets: `assets/logo-olam.png`, `assets/logo-olam-white.png` (dark bg),
-  `assets/favicon-olam.png`.
+The brand book does not prescribe an icon library, so iconography stays **minimal and
+functional** — consistent with the editorial, airy aesthetic.
 
-When building OLAM screens, link Material Symbols from Google Fonts and prefer it
-for any UI glyph; reach for inline SVG only for the checkmark/handle marks above.
+- **Line icons: Google "Material Symbols Outlined"** (thin, rounded, outlined), loaded
+  from Google Fonts and rendered via `<span class="material-symbols-outlined">…</span>`.
+  Used sparingly for UI glyphs. Carried over from the product implementation.
+- **Inline SVG** for the bespoke marks the brand relies on: the reservation checkmark
+  (`M5 13l4 4L19 7`) and chevrons (`M9 6l6 6-6 6`), `stroke-width: 2–2.5`, round caps,
+  `currentColor`. Prefer inline SVG over an icon font in prominent spots (it never
+  shows a FOUT placeholder).
+- **Typographic "icons."** `→` on CTAs · `+` (rotates open) on FAQ accordions · `✓` /
+  `—` in qualification lists · `★★★★★` ratings rendered in **champagne** (never gold) ·
+  small colored dots (blue/slate/champagne) as eyebrow & status markers.
+- **No emoji. No icon "cards."**
+- **Logo/mark.** Tri-stroke swoosh (green/black/blue "O") = the brand mark; it appears
+  alone as the favicon. Original colour on white/linen (preferred), white on dark.
+  Never recolour, rotate, flip, stretch; keep a margin equal to the height of the "O".
+  Assets: `assets/logo-olam.png`, `assets/logo-olam-white.png`, `assets/favicon-olam.png`.
 
 ---
 
@@ -159,17 +157,16 @@ for any UI glyph; reach for inline SVG only for the checkmark/handle marks above
 
 **Root**
 - `styles.css` — entry point; `@import`s all tokens + fonts. Consumers link this.
-- `readme.md` — this guide.
-- `SKILL.md` — Agent-Skills wrapper for use in Claude Code.
+- `readme.md` — this guide. · `SKILL.md` — Agent-Skills wrapper.
 
-**`tokens/`** — `fonts.css`, `colors.css`, `typography.css`, `spacing.css`
-(CSS custom properties; base primitives + semantic aliases).
+**`tokens/`** — `fonts.css` (Cormorant + Poppins), `colors.css` (Phase-1 palette),
+`typography.css`, `spacing.css` (radii, neutral shadows, motion).
 
 **`assets/`** — `logo-olam.png`, `logo-olam-white.png`, `favicon-olam.png`,
-`reference-landing-page.png`.
+`OLAM-Brand-Book-v3.pdf`, `reference-landing-page.png` (historical).
 
-**`guidelines/`** — foundation specimen cards (Design System tab): colors, type,
-spacing, radii, shadows, brand.
+**`guidelines/`** — 20 specimen cards for the Design System tab (Colors, Type,
+Spacing, Brand — including a Voice "Sí/No" card).
 
 **`components/`** — reusable React primitives (see each `*.prompt.md`):
 - `buttons/` — `Button`, `IconButton`
@@ -178,7 +175,7 @@ spacing, radii, shadows, brand.
 - `feedback/` — `Badge`, `Tag`, `Accordion`
 - `navigation/` — `SiteHeader`, `PriceBlock`
 
-**`ui_kits/website/`** — high-fidelity, click-through recreation of the OLAM
-landing page (`index.html` + section JSX).
+**`ui_kits/website/`** — high-fidelity, bilingual, click-through recreation of the
+Olam landing page, re-skinned to Brand Book v3.
 
 Namespace for `@dsCard` HTML: `window.OLAMMedSpaDesignSystem_e5ad93`.

@@ -6,7 +6,7 @@ import * as React from 'react';
 export interface IconButtonProps {
   /** Material Symbols Outlined ligature name, e.g. "chevron_right". */
   icon: string;
-  variant?: 'accent' | 'primary' | 'ink' | 'outline';
+  variant?: 'accent' | 'primary' | 'ink' | 'slate' | 'outline';
   /** Diameter in px (default 40). */
   size?: number;
   /** Accessible label. */

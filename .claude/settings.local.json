@@ -4,7 +4,14 @@
       "WebFetch(domain:api.anthropic.com)",
       "Bash(curl -sL \"https://api.anthropic.com/v1/design/h/tXYId5m-pceqetiWqp3BsQ\" -o design_payload.raw -w \"HTTP %{http_code}\\\\nType: %{content_type}\\\\nSize: %{size_download} bytes\\\\n\")",
       "Bash(mkdir -p design)",
-      "Bash(tar -xzf design_payload.raw -C design)"
+      "Bash(tar -xzf design_payload.raw -C design)",
+      "Bash(curl -sL \"https://api.anthropic.com/v1/design/h/tXYId5m-pceqetiWqp3BsQ\" -o design_payload_new.raw -w \"HTTP %{http_code} size=%{size_download}\\\\n\")",
+      "Bash(rm -f design_payload_new.raw)",
+      "Bash(curl -sL \"https://api.anthropic.com/v1/design/h/C7r8xf73m2CNTqK4R1Cq0w\" -o design_v2.raw -w \"HTTP %{http_code}  type=%{content_type}  size=%{size_download}\\\\n\")",
+      "Bash(rm -rf design_v2)",
+      "Bash(mkdir -p design_v2)",
+      "Bash(tar -xzf design_v2.raw -C design_v2)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

@@ -8,6 +8,8 @@ export interface ResultCardProps {
   tag?: string;
   title: string;
   caption?: string;
+  /** "Results vary" disclaimer. Pass `true` for the default Spanish line, or a custom string. */
+  disclaimer?: boolean | string;
   /** CSS aspect-ratio (default "3 / 4"). */
   ratio?: string;
   style?: React.CSSProperties;

@@ -15,10 +15,11 @@ export function IconButton({
   ...rest
 }) {
   const variants = {
-    accent: { background: 'var(--action-accent)', color: '#fff' },
-    primary: { background: 'var(--action-primary)', color: '#fff' },
-    ink: { background: 'var(--ink-900)', color: '#fff' },
-    outline: { background: 'transparent', color: 'var(--text-strong)', border: '1px solid var(--border-soft)' },
+    accent: { background: 'var(--action)', color: '#fff' },
+    primary: { background: 'var(--action)', color: '#fff' },
+    ink: { background: 'var(--charcoal)', color: '#fff' },
+    slate: { background: 'var(--slate)', color: '#fff' },
+    outline: { background: 'transparent', color: 'var(--text-strong)', border: '1px solid var(--border-strong)' },
   };
 
   const base = {
