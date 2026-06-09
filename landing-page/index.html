@@ -104,6 +104,8 @@
   .nav-links a:hover { color: var(--text-accent); }
   @media (min-width: 1040px){ .nav-links { display: flex; } }
   .site .actions { display: flex; align-items: center; gap: 12px; }
+  .site .actions .btn { display: none; }
+  @media (min-width: 600px){ .site .actions .btn { display: inline-flex; } }
   .phone { display: none; align-items: center; gap: 6px; font-weight: var(--fw-medium); font-size: var(--text-sm); color: var(--text-strong); }
   @media (min-width: 680px){ .phone { display: inline-flex; } }
   .phone .material-symbols-outlined { font-size: 18px; color: var(--action); }
