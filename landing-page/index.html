@@ -601,6 +601,433 @@
   </div>
 </section>
 
+<!-- ===================== SKIN ANALYSIS WIDGET ===================== -->
+<section class="band border-y" id="skin-quiz" style="background:var(--surface-linen);">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto 48px;">
+      <span class="eyebrow"><span class="dot"></span><span class="only-en">Free · 60 seconds</span><span class="only-es">Gratis · 60 segundos</span></span>
+      <h2 class="h"><span class="only-en">Find out what your skin <span class="em">actually needs.</span></span><span class="only-es">Descubre lo que tu piel <span class="em">realmente necesita.</span></span></h2>
+      <p class="muted" style="margin-top:14px;font-size:var(--text-sm);"><span class="only-en">Upload a selfie. Our AI builds your personalized skin profile — hydration, texture, firmness — and recommends the right treatments for you. No cost, instant results.</span><span class="only-es">Sube una selfie. Nuestra IA crea tu perfil de piel personalizado — hidratación, textura, firmeza — y te recomienda los tratamientos ideales. Sin costo, resultados al instante.</span></p>
+    </div>
+
+    <div id="olam-skin-quiz">
+      <div class="osq-brand">
+        <div class="osq-logo">OLAM</div>
+        <div class="osq-tag" data-i18n="brandTag"></div>
+      </div>
+      <div class="osq-progress"><div class="osq-progress-bar" id="osqProgress"></div></div>
+      <div class="osq-card">
+
+        <div class="osq-step active" data-step="0">
+          <div class="osq-eyebrow" data-i18n="introEyebrow"></div>
+          <h1 data-i18n="introTitle"></h1>
+          <p class="osq-sub" data-i18n="introSub"></p>
+          <button class="osq-btn osq-btn-gold" onclick="osq.go(1)" data-i18n="introCta"></button>
+          <p class="osq-trust" data-i18n="introTrust"></p>
+        </div>
+
+        <div class="osq-step" data-step="1">
+          <div class="osq-eyebrow" data-i18n="q1Eyebrow"></div>
+          <h2 data-i18n="q1Title"></h2>
+          <p class="osq-sub" data-i18n="q1Sub"></p>
+          <div class="osq-options" id="osqConcern"></div>
+        </div>
+
+        <div class="osq-step" data-step="2">
+          <div class="osq-eyebrow" data-i18n="q2Eyebrow"></div>
+          <h2 data-i18n="q2Title"></h2>
+          <p class="osq-sub" data-i18n="q2Sub"></p>
+          <div class="osq-options" id="osqAge"></div>
+        </div>
+
+        <div class="osq-step" data-step="3">
+          <div class="osq-eyebrow" data-i18n="q3Eyebrow"></div>
+          <h2 data-i18n="q3Title"></h2>
+          <p class="osq-sub" data-i18n="q3Sub"></p>
+          <div class="osq-options" id="osqPrev"></div>
+        </div>
+
+        <div class="osq-step" data-step="4">
+          <div class="osq-eyebrow" data-i18n="photoEyebrow"></div>
+          <h2 data-i18n="photoTitle"></h2>
+          <p class="osq-sub" data-i18n="photoSub"></p>
+          <div id="osqPhotoZone" class="osq-photo-zone">
+            <div class="osq-photo-icon">&#10047;</div>
+            <p data-i18n="photoZoneText"></p>
+            <div class="osq-photo-actions">
+              <button type="button" onclick="event.stopPropagation();document.getElementById('osqCam').click()" data-i18n="photoBtnCam"></button>
+              <button type="button" onclick="event.stopPropagation();document.getElementById('osqFile').click()" data-i18n="photoBtnFile"></button>
+            </div>
+          </div>
+          <div id="osqPreview" class="osq-preview">
+            <img id="osqPreviewImg" alt="">
+            <button class="osq-btn-ghost" onclick="osq.resetPhoto()" data-i18n="photoRetake"></button>
+          </div>
+          <div class="osq-tips" data-i18n-html="photoTips"></div>
+          <input type="file" id="osqCam" accept="image/*" capture="user" class="osq-hidden">
+          <input type="file" id="osqFile" accept="image/*" class="osq-hidden">
+          <button class="osq-btn" id="osqPhotoNext" disabled onclick="osq.go(5)" data-i18n="photoNext"></button>
+        </div>
+
+        <div class="osq-step" data-step="5">
+          <div class="osq-eyebrow" data-i18n="formEyebrow"></div>
+          <h2 data-i18n="formTitle"></h2>
+          <p class="osq-sub" data-i18n="formSub"></p>
+          <div class="osq-field"><label for="osqName" data-i18n="formName"></label><input type="text" id="osqName" autocomplete="name"></div>
+          <div class="osq-field"><label for="osqEmail" data-i18n="formEmail"></label><input type="email" id="osqEmail" autocomplete="email" inputmode="email"></div>
+          <div class="osq-field"><label for="osqPhone" data-i18n="formPhone"></label><input type="tel" id="osqPhone" autocomplete="tel" inputmode="tel"></div>
+          <input type="text" id="osqWebsite" class="osq-hidden" tabindex="-1" autocomplete="off">
+          <div class="osq-consent">
+            <input type="checkbox" id="osqConsent">
+            <label for="osqConsent" data-i18n="formConsent"></label>
+          </div>
+          <button class="osq-btn osq-btn-gold" id="osqSubmit" onclick="osq.submit()" data-i18n="formCta"></button>
+          <p class="osq-error-msg" id="osqFormError"></p>
+        </div>
+
+        <div class="osq-step" data-step="6">
+          <div class="osq-loading">
+            <div class="osq-ring"></div>
+            <p class="osq-loading-msg" id="osqLoadingMsg"></p>
+          </div>
+        </div>
+
+        <div class="osq-step" data-step="7">
+          <div id="osqResult"></div>
+        </div>
+
+        <div class="osq-step" data-step="8">
+          <div class="osq-eyebrow" data-i18n="fbEyebrow"></div>
+          <h2 data-i18n="fbTitle"></h2>
+          <p class="osq-sub" data-i18n="fbSub"></p>
+          <a id="osqFbBook" href="#book" style="text-decoration:none"><button class="osq-btn osq-btn-gold" data-i18n="resultCta"></button></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ---- Skin Widget — tokens mapeados al sistema Olam v3 ---- */
+  #olam-skin-quiz {
+    --cream: var(--surface-linen);
+    --cream-deep: var(--surface-mist);
+    --midnight: var(--charcoal);
+    --midnight-soft: #24385A;
+    --gold: var(--champagne);
+    --gold-soft: rgba(200,183,143,0.45);
+    --white: #FFFFFF;
+    --ink-muted: var(--text-muted);
+    --error: #B3402F;
+    --radius: 18px;
+  }
+  #olam-skin-quiz,#olam-skin-quiz *{box-sizing:border-box;margin:0;padding:0;}
+  #olam-skin-quiz{font-family:var(--font-body);color:var(--charcoal);-webkit-font-smoothing:antialiased;background:var(--surface-linen);border-radius:24px;}
+  #olam-skin-quiz{max-width:520px;margin:0 auto;padding:28px 18px 56px;}
+  #olam-skin-quiz .osq-brand{text-align:center;margin-bottom:22px;}
+  #olam-skin-quiz .osq-brand .osq-logo{font-family:var(--font-display);font-weight:var(--fw-medium);font-size:22px;letter-spacing:.22em;text-transform:uppercase;}
+  #olam-skin-quiz .osq-brand .osq-tag{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--champagne);margin-top:4px;}
+  #olam-skin-quiz .osq-progress{height:3px;background:var(--surface-mist);border-radius:99px;overflow:hidden;margin-bottom:26px;}
+  #olam-skin-quiz .osq-progress-bar{height:100%;width:0%;background:var(--champagne);border-radius:99px;transition:width .45s cubic-bezier(.22,1,.36,1);}
+  #olam-skin-quiz .osq-card{background:#fff;border-radius:var(--radius-brand-lg);padding:34px 26px;box-shadow:var(--shadow-card);}
+  #olam-skin-quiz .osq-step{display:none;animation:osqIn .45s cubic-bezier(.22,1,.36,1);}
+  #olam-skin-quiz .osq-step.active{display:block;}
+  @keyframes osqIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion:reduce){#olam-skin-quiz .osq-step{animation:none;}#olam-skin-quiz .osq-progress-bar{transition:none;}}
+  #olam-skin-quiz .osq-eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne);margin-bottom:12px;}
+  #olam-skin-quiz h1,#olam-skin-quiz h2{font-family:var(--font-display);font-weight:var(--fw-medium);line-height:1.18;}
+  #olam-skin-quiz h1{font-size:30px;margin-bottom:14px;}
+  #olam-skin-quiz h2{font-size:24px;margin-bottom:8px;}
+  #olam-skin-quiz .osq-sub{color:var(--text-muted);font-size:15px;line-height:1.6;margin-bottom:24px;}
+  #olam-skin-quiz .osq-options{display:flex;flex-direction:column;gap:10px;}
+  #olam-skin-quiz .osq-opt{display:block;width:100%;text-align:left;background:var(--surface-linen);border:1.5px solid transparent;border-radius:12px;padding:15px 18px;font-family:var(--font-body);font-size:15px;font-weight:500;color:var(--charcoal);cursor:pointer;transition:border-color .18s,background .18s;}
+  #olam-skin-quiz .osq-opt:hover{border-color:var(--champagne);}
+  #olam-skin-quiz .osq-opt:focus-visible{outline:2px solid var(--action);outline-offset:2px;}
+  #olam-skin-quiz .osq-opt.selected{border-color:var(--champagne);background:#FBF7EF;}
+  #olam-skin-quiz .osq-btn{display:block;width:100%;background:var(--action);color:#fff;border:none;border-radius:var(--radius-pill);padding:17px 24px;font-family:var(--font-body);font-size:15px;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:background .18s,transform .12s;margin-top:22px;box-shadow:var(--shadow-button);}
+  #olam-skin-quiz .osq-btn:hover{background:var(--action-hover);transform:translateY(-2px);}
+  #olam-skin-quiz .osq-btn:active{transform:scale(.985);}
+  #olam-skin-quiz .osq-btn:disabled{opacity:.45;cursor:not-allowed;}
+  #olam-skin-quiz .osq-btn.osq-btn-gold{background:var(--action);}
+  #olam-skin-quiz .osq-btn.osq-btn-gold:hover{background:var(--action-hover);}
+  #olam-skin-quiz .osq-btn-ghost{display:block;width:100%;background:none;border:none;color:var(--text-muted);font-size:13px;font-family:var(--font-body);margin-top:14px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+  #olam-skin-quiz .osq-photo-zone{border:1.5px dashed rgba(200,183,143,0.6);border-radius:14px;background:var(--surface-linen);padding:30px 18px;text-align:center;cursor:pointer;transition:border-color .18s;}
+  #olam-skin-quiz .osq-photo-zone:hover{border-color:var(--champagne);}
+  #olam-skin-quiz .osq-photo-zone .osq-photo-icon{font-size:34px;line-height:1;margin-bottom:10px;}
+  #olam-skin-quiz .osq-photo-zone p{font-size:14px;color:var(--text-muted);line-height:1.5;}
+  #olam-skin-quiz .osq-photo-actions{display:flex;gap:10px;margin-top:16px;}
+  #olam-skin-quiz .osq-photo-actions button{flex:1;background:#fff;border:1.5px solid var(--border-hairline);border-radius:99px;padding:13px 10px;font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--charcoal);cursor:pointer;transition:border-color .18s;}
+  #olam-skin-quiz .osq-photo-actions button:hover{border-color:var(--champagne);}
+  #olam-skin-quiz .osq-preview{display:none;text-align:center;}
+  #olam-skin-quiz .osq-preview img{width:170px;height:170px;object-fit:cover;border-radius:50%;border:4px solid rgba(200,183,143,0.5);margin-bottom:14px;}
+  #olam-skin-quiz .osq-tips{margin-top:18px;background:#FBF7EF;border-radius:12px;padding:14px 16px;font-size:13px;color:var(--text-muted);line-height:1.65;text-align:left;}
+  #olam-skin-quiz .osq-field{margin-bottom:14px;}
+  #olam-skin-quiz .osq-field label{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+  #olam-skin-quiz .osq-field input{width:100%;border:1.5px solid var(--border-soft);border-radius:12px;padding:14px 16px;font-family:var(--font-body);font-size:16px;color:var(--charcoal);background:#fff;transition:border-color .18s;}
+  #olam-skin-quiz .osq-field input:focus{outline:none;border-color:var(--action);}
+  #olam-skin-quiz .osq-field input.osq-invalid{border-color:#B3402F;}
+  #olam-skin-quiz .osq-consent{display:flex;gap:10px;align-items:flex-start;margin:16px 0 4px;}
+  #olam-skin-quiz .osq-consent input{margin-top:3px;accent-color:var(--action);width:16px;height:16px;flex:none;}
+  #olam-skin-quiz .osq-consent label{font-size:12px;color:var(--text-muted);line-height:1.55;}
+  #olam-skin-quiz .osq-error-msg{display:none;color:#B3402F;font-size:13px;margin-top:10px;text-align:center;}
+  #olam-skin-quiz .osq-loading{text-align:center;padding:26px 0 12px;}
+  #olam-skin-quiz .osq-ring{width:74px;height:74px;border-radius:50%;border:3px solid var(--surface-mist);border-top-color:var(--champagne);margin:0 auto 24px;animation:osqSpin 1s linear infinite;}
+  @keyframes osqSpin{to{transform:rotate(360deg);}}
+  @media (prefers-reduced-motion:reduce){#olam-skin-quiz .osq-ring{animation-duration:2.5s;}}
+  #olam-skin-quiz .osq-loading-msg{font-family:var(--font-display);font-size:19px;min-height:48px;transition:opacity .3s;}
+  #olam-skin-quiz .osq-result-head{text-align:center;margin-bottom:22px;}
+  #olam-skin-quiz .osq-pill{display:inline-block;background:#FBF7EF;border:1px solid rgba(200,183,143,0.5);color:var(--text-muted);border-radius:99px;padding:7px 18px;font-size:13px;font-weight:600;letter-spacing:.04em;margin-top:10px;}
+  #olam-skin-quiz .osq-scores{display:flex;flex-direction:column;gap:14px;margin:22px 0;}
+  #olam-skin-quiz .osq-score-row{display:flex;align-items:center;gap:12px;}
+  #olam-skin-quiz .osq-score-label{flex:0 0 110px;font-size:13px;font-weight:600;}
+  #olam-skin-quiz .osq-score-track{flex:1;height:8px;background:var(--surface-linen);border-radius:99px;overflow:hidden;}
+  #olam-skin-quiz .osq-score-fill{height:100%;width:0%;background:var(--champagne);border-radius:99px;transition:width 1.1s cubic-bezier(.22,1,.36,1);}
+  #olam-skin-quiz .osq-score-num{flex:0 0 34px;text-align:right;font-size:13px;font-weight:600;color:var(--text-muted);}
+  #olam-skin-quiz .osq-obs{margin:20px 0;}
+  #olam-skin-quiz .osq-obs li{list-style:none;position:relative;padding-left:22px;font-size:14px;line-height:1.6;color:var(--charcoal);margin-bottom:9px;}
+  #olam-skin-quiz .osq-obs li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--champagne);}
+  #olam-skin-quiz .osq-recs{display:flex;flex-direction:column;gap:12px;margin:8px 0 4px;}
+  #olam-skin-quiz .osq-rec{background:var(--surface-linen);border-radius:14px;padding:16px 18px;}
+  #olam-skin-quiz .osq-rec h3{font-family:var(--font-display);font-size:17px;font-weight:600;margin-bottom:5px;}
+  #olam-skin-quiz .osq-rec p{font-size:13.5px;color:var(--text-muted);line-height:1.55;}
+  #olam-skin-quiz .osq-disclaimer{font-size:11.5px;color:var(--text-muted);line-height:1.6;margin-top:20px;text-align:center;opacity:.85;}
+  #olam-skin-quiz .osq-trust{text-align:center;font-size:12px;color:var(--text-muted);margin-top:16px;letter-spacing:.02em;}
+  #olam-skin-quiz .osq-hidden{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+</style>
+
+<script>
+const OSQ_CONFIG = {
+  LANG: document.documentElement.getAttribute('data-lang') || 'en',
+  WEBHOOK_URL: "https://n8n.srv1359876.hstgr.cloud/webhook/olam-skin-analysis",
+  BOOKING_URL: "#book",
+  CLIENT: "OLAM Med Spa",
+  GOOGLE_ADS_CONVERSION: ""
+};
+
+const OSQ_I18N = {
+  es: {
+    brandTag:"Med Spa · Análisis de piel",introEyebrow:"Gratis · 60 segundos",
+    introTitle:"Descubre lo que tu piel realmente necesita",
+    introSub:"Sube una selfie y nuestra inteligencia artificial creará tu perfil de piel personalizado: hidratación, textura, luminosidad y los tratamientos ideales para ti.",
+    introCta:"Comenzar mi análisis",introTrust:"Sin costo · Resultados al instante · 100% confidencial",
+    q1Eyebrow:"Pregunta 1 de 3",q1Title:"¿Cuál es tu principal preocupación?",q1Sub:"Selecciona la que más te identifique hoy.",
+    q1Options:[["manchas","Manchas o tono desigual"],["arrugas","Arrugas y líneas de expresión"],["flacidez","Flacidez o pérdida de firmeza"],["acne","Acné o textura irregular"],["poros","Poros dilatados"],["deshidratacion","Piel apagada o deshidratada"]],
+    q2Eyebrow:"Pregunta 2 de 3",q2Title:"¿En qué rango de edad estás?",q2Sub:"Nos ayuda a calibrar tu análisis.",
+    q2Options:[["18-29","18 – 29"],["30-39","30 – 39"],["40-49","40 – 49"],["50-59","50 – 59"],["60+","60+"]],
+    q3Eyebrow:"Pregunta 3 de 3",q3Title:"¿Has recibido tratamientos estéticos antes?",q3Sub:"Faciales, láser, botox, rellenos…",
+    q3Options:[["si","Sí, regularmente"],["alguna-vez","Alguna vez"],["nunca","Nunca, sería mi primera vez"]],
+    photoEyebrow:"Tu selfie",photoTitle:"Toma o sube una foto de tu rostro",photoSub:"Nuestra IA la analizará en segundos. La foto se usa solo para tu análisis.",
+    photoZoneText:"Toca para tomar una selfie o subir una foto",photoBtnCam:"Tomar selfie",photoBtnFile:"Subir foto",photoRetake:"Usar otra foto",
+    photoTips:"<strong>Para un mejor análisis:</strong> luz natural de frente, sin maquillaje si es posible, rostro completo y sin filtros.",
+    photoNext:"Continuar",photoTooBig:"La imagen no pudo procesarse. Intenta con otra foto.",
+    formEyebrow:"Último paso",formTitle:"¿A dónde enviamos tu análisis completo?",formSub:"Tu perfil de piel está casi listo. Recibirás el reporte completo con recomendaciones personalizadas.",
+    formName:"Nombre",formEmail:"Email",formPhone:"Celular",
+    formConsent:"Acepto recibir mi análisis y comunicaciones de OLAM Med Spa por email y SMS. Puedo cancelar en cualquier momento respondiendo STOP. Aplican tarifas de mensajes y datos.",
+    formCta:"Ver mi análisis ahora",formErrName:"Escribe tu nombre.",formErrEmail:"Revisa tu email.",formErrPhone:"Revisa tu número de celular.",formErrConsent:"Debes aceptar para recibir tu análisis.",
+    loadingMsgs:["Analizando la textura de tu piel…","Evaluando niveles de hidratación…","Midiendo luminosidad y tono…","Revisando líneas de expresión…","Preparando tus recomendaciones…"],
+    resultEyebrow:"Tu perfil de piel",resultTitle:"Hola {name}, este es tu análisis",
+    scoreLabels:{hydration:"Hidratación",texture:"Textura",radiance:"Luminosidad",firmness:"Firmeza"},
+    obsTitle:"Lo que observamos",recsTitle:"Tratamientos recomendados para ti",
+    resultCta:"Agendar mi evaluación gratuita",resultNote:"Te enviamos el reporte completo a tu email.",
+    disclaimer:"Este es un análisis cosmético orientativo generado con inteligencia artificial. No constituye un diagnóstico médico ni sustituye la evaluación de un profesional. En tu visita a OLAM Med Spa recibirás una valoración profesional personalizada.",
+    fbEyebrow:"¡Listo!",fbTitle:"Tu análisis está en camino",fbSub:"Estamos terminando de procesar tu foto. En unos minutos recibirás tu perfil de piel completo en tu email. Mientras tanto, puedes agendar tu evaluación gratuita."
+  },
+  en: {
+    brandTag:"Med Spa · Skin analysis",introEyebrow:"Free · 60 seconds",
+    introTitle:"Discover what your skin really needs",
+    introSub:"Upload a selfie and our AI will build your personalized skin profile: hydration, texture, radiance, and the ideal treatments for you.",
+    introCta:"Start my analysis",introTrust:"Free · Instant results · 100% confidential",
+    q1Eyebrow:"Question 1 of 3",q1Title:"What's your main skin concern?",q1Sub:"Pick the one that fits you best today.",
+    q1Options:[["manchas","Dark spots or uneven tone"],["arrugas","Wrinkles and fine lines"],["flacidez","Sagging or loss of firmness"],["acne","Acne or uneven texture"],["poros","Enlarged pores"],["deshidratacion","Dull or dehydrated skin"]],
+    q2Eyebrow:"Question 2 of 3",q2Title:"What's your age range?",q2Sub:"This helps us calibrate your analysis.",
+    q2Options:[["18-29","18 – 29"],["30-39","30 – 39"],["40-49","40 – 49"],["50-59","50 – 59"],["60+","60+"]],
+    q3Eyebrow:"Question 3 of 3",q3Title:"Have you had aesthetic treatments before?",q3Sub:"Facials, laser, botox, fillers…",
+    q3Options:[["si","Yes, regularly"],["alguna-vez","Once or twice"],["nunca","Never, this would be my first time"]],
+    photoEyebrow:"Your selfie",photoTitle:"Take or upload a photo of your face",photoSub:"Our AI will analyze it in seconds. Your photo is used only for your analysis.",
+    photoZoneText:"Tap to take a selfie or upload a photo",photoBtnCam:"Take selfie",photoBtnFile:"Upload photo",photoRetake:"Use a different photo",
+    photoTips:"<strong>For best results:</strong> natural light facing you, no makeup if possible, full face, no filters.",
+    photoNext:"Continue",photoTooBig:"We couldn't process that image. Please try another photo.",
+    formEyebrow:"Last step",formTitle:"Where should we send your full analysis?",formSub:"Your skin profile is almost ready. You'll receive the full report with personalized recommendations.",
+    formName:"Name",formEmail:"Email",formPhone:"Mobile phone",
+    formConsent:"I agree to receive my analysis and communications from OLAM Med Spa via email and SMS. I can opt out anytime by replying STOP. Message and data rates may apply.",
+    formCta:"See my analysis now",formErrName:"Please enter your name.",formErrEmail:"Please check your email.",formErrPhone:"Please check your phone number.",formErrConsent:"You must agree in order to receive your analysis.",
+    loadingMsgs:["Analyzing your skin texture…","Evaluating hydration levels…","Measuring radiance and tone…","Reviewing fine lines…","Preparing your recommendations…"],
+    resultEyebrow:"Your skin profile",resultTitle:"Hi {name}, here's your analysis",
+    scoreLabels:{hydration:"Hydration",texture:"Texture",radiance:"Radiance",firmness:"Firmness"},
+    obsTitle:"What we observed",recsTitle:"Treatments recommended for you",
+    resultCta:"Book my free consultation",resultNote:"We've sent the full report to your email.",
+    disclaimer:"This is an informational cosmetic analysis generated with artificial intelligence. It is not a medical diagnosis and does not replace a professional evaluation. During your visit to OLAM Med Spa you will receive a personalized professional assessment.",
+    fbEyebrow:"Done!",fbTitle:"Your analysis is on its way",fbSub:"We're finishing processing your photo. You'll receive your full skin profile by email in a few minutes. Meanwhile, you can book your free consultation."
+  }
+};
+
+const osq = (() => {
+  let T = OSQ_I18N[OSQ_CONFIG.LANG];
+  const state = {
+    step:0,concern:null,ageRange:null,previousTreatments:null,
+    photoBase64:null,photoMediaType:"image/jpeg",
+    eventId:"osq_"+Date.now()+"_"+Math.random().toString(36).slice(2,10),
+    loadingTimer:null
+  };
+  const TOTAL_STEPS = 7;
+  const $ = id => document.getElementById(id);
+
+  function applyI18n(){
+    document.querySelectorAll("#olam-skin-quiz [data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");if(T[k])el.textContent=T[k];});
+    document.querySelectorAll("#olam-skin-quiz [data-i18n-html]").forEach(el=>{const k=el.getAttribute("data-i18n-html");if(T[k])el.innerHTML=T[k];});
+    renderOptions("osqConcern",T.q1Options,v=>{state.concern=v;setTimeout(()=>go(2),250);});
+    renderOptions("osqAge",T.q2Options,v=>{state.ageRange=v;setTimeout(()=>go(3),250);});
+    renderOptions("osqPrev",T.q3Options,v=>{state.previousTreatments=v;setTimeout(()=>go(4),250);});
+    if($("osqFbBook"))$("osqFbBook").href=OSQ_CONFIG.BOOKING_URL;
+  }
+
+  function renderOptions(containerId,options,onPick){
+    const c=$(containerId);if(!c)return;c.innerHTML="";
+    options.forEach(([value,label])=>{
+      const b=document.createElement("button");
+      b.type="button";b.className="osq-opt";b.textContent=label;
+      b.onclick=()=>{c.querySelectorAll(".osq-opt").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");onPick(value);};
+      c.appendChild(b);
+    });
+  }
+
+  function go(step){
+    state.step=step;
+    document.querySelectorAll("#olam-skin-quiz .osq-step").forEach(el=>el.classList.toggle("active",+el.dataset.step===step));
+    $("osqProgress").style.width=Math.min(100,Math.round((step/TOTAL_STEPS)*100))+"%";
+    document.getElementById("skin-quiz").scrollIntoView({behavior:"smooth",block:"nearest"});
+  }
+
+  function handleFile(file){
+    if(!file||!file.type.startsWith("image/"))return;
+    const img=new Image();const url=URL.createObjectURL(file);
+    img.onload=()=>{
+      try{
+        const MAX=900;let{width:w,height:h}=img;
+        if(w>h&&w>MAX){h=Math.round(h*MAX/w);w=MAX;}else if(h>=w&&h>MAX){w=Math.round(w*MAX/h);h=MAX;}
+        const canvas=document.createElement("canvas");canvas.width=w;canvas.height=h;
+        canvas.getContext("2d").drawImage(img,0,0,w,h);
+        const dataUrl=canvas.toDataURL("image/jpeg",0.82);
+        state.photoBase64=dataUrl.split(",")[1];state.photoMediaType="image/jpeg";
+        $("osqPreviewImg").src=dataUrl;
+        $("osqPhotoZone").style.display="none";$("osqPreview").style.display="block";
+        $("osqPhotoNext").disabled=false;
+      }catch(e){alert(T.photoTooBig);}
+      URL.revokeObjectURL(url);
+    };
+    img.onerror=()=>{alert(T.photoTooBig);URL.revokeObjectURL(url);};
+    img.src=url;
+  }
+
+  function resetPhoto(){
+    state.photoBase64=null;
+    $("osqCam").value="";$("osqFile").value="";
+    $("osqPhotoZone").style.display="block";$("osqPreview").style.display="none";
+    $("osqPhotoNext").disabled=true;
+  }
+
+  const getCookie=n=>(document.cookie.match(new RegExp("(^| )"+n+"=([^;]+)"))||[])[2]||"";
+  const validEmail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  const validPhone=v=>v.replace(/\D/g,"").length>=10;
+  function markInvalid(input,bad){input.classList.toggle("osq-invalid",bad);return bad;}
+
+  async function submit(){
+    if($("osqWebsite").value)return;
+    const name=$("osqName"),email=$("osqEmail"),phone=$("osqPhone"),err=$("osqFormError");
+    err.style.display="none";
+    if(markInvalid(name,!name.value.trim())){err.textContent=T.formErrName;err.style.display="block";return;}
+    if(markInvalid(email,!validEmail(email.value.trim()))){err.textContent=T.formErrEmail;err.style.display="block";return;}
+    if(markInvalid(phone,!validPhone(phone.value))){err.textContent=T.formErrPhone;err.style.display="block";return;}
+    if(!$("osqConsent").checked){err.textContent=T.formErrConsent;err.style.display="block";return;}
+    $("osqSubmit").disabled=true;
+    try{
+      if(typeof fbq==="function")fbq("track","Lead",{content_name:"skin-analysis"},{eventID:state.eventId});
+      if(typeof gtag==="function"){
+        gtag("event","generate_lead",{event_category:"skin-analysis"});
+        if(OSQ_CONFIG.GOOGLE_ADS_CONVERSION)gtag("event","conversion",{send_to:OSQ_CONFIG.GOOGLE_ADS_CONVERSION});
+      }
+    }catch(e){}
+    go(6);startLoadingMessages();
+    const payload={
+      lang:OSQ_CONFIG.LANG,eventId:state.eventId,client:OSQ_CONFIG.CLIENT,
+      concern:state.concern,ageRange:state.ageRange,previousTreatments:state.previousTreatments,
+      firstName:name.value.trim(),email:email.value.trim().toLowerCase(),phone:phone.value.trim(),
+      consent:true,photoBase64:state.photoBase64,photoMediaType:state.photoMediaType,
+      pageUrl:location.href,fbp:getCookie("_fbp"),fbc:getCookie("_fbc"),userAgent:navigator.userAgent
+    };
+    try{
+      const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),60000);
+      const res=await fetch(OSQ_CONFIG.WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload),signal:controller.signal});
+      clearTimeout(timeout);const data=await res.json();
+      stopLoadingMessages();
+      if(data&&data.success&&data.analysis)renderResult(data.analysis,payload.firstName);else go(8);
+    }catch(e){stopLoadingMessages();go(8);}
+  }
+
+  function startLoadingMessages(){
+    const msgs=T.loadingMsgs;let i=0;const el=$("osqLoadingMsg");
+    el.textContent=msgs[0];
+    state.loadingTimer=setInterval(()=>{
+      i=Math.min(i+1,msgs.length-1);el.style.opacity=0;
+      setTimeout(()=>{el.textContent=msgs[i];el.style.opacity=1;},280);
+      if(i===msgs.length-1)clearInterval(state.loadingTimer);
+    },2200);
+  }
+  function stopLoadingMessages(){if(state.loadingTimer)clearInterval(state.loadingTimer);}
+
+  function renderResult(a,firstName){
+    const esc=s=>String(s??"").replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;"}[c]));
+    const scores=a.scores||{};
+    const scoreRows=Object.entries(T.scoreLabels).map(([key,label])=>{
+      const v=Math.max(5,Math.min(100,parseInt(scores[key],10)||50));
+      return `<div class="osq-score-row"><div class="osq-score-label">${label}</div><div class="osq-score-track"><div class="osq-score-fill" data-w="${v}"></div></div><div class="osq-score-num">${v}</div></div>`;
+    }).join("");
+    const obs=(a.observations||[]).slice(0,4).map(o=>`<li>${esc(o)}</li>`).join("");
+    const recs=(a.recommendations||[]).slice(0,3).map(r=>`<div class="osq-rec"><h3>${esc(r.treatment)}</h3><p>${esc(r.reason)}</p></div>`).join("");
+    $("osqResult").innerHTML=`
+      <div class="osq-result-head"><div class="osq-eyebrow">${T.resultEyebrow}</div><h2>${T.resultTitle.replace("{name}",esc(firstName))}</h2>${a.skinType?`<span class="osq-pill">${esc(a.skinType)}</span>`:""}</div>
+      <div class="osq-scores">${scoreRows}</div>
+      <div class="osq-eyebrow">${T.obsTitle}</div><ul class="osq-obs">${obs}</ul>
+      <div class="osq-eyebrow">${T.recsTitle}</div><div class="osq-recs">${recs}</div>
+      <a href="${OSQ_CONFIG.BOOKING_URL}" style="text-decoration:none"><button class="osq-btn osq-btn-gold">${T.resultCta}</button></a>
+      <p class="osq-trust">${T.resultNote}</p><p class="osq-disclaimer">${T.disclaimer}</p>`;
+    go(7);
+    requestAnimationFrame(()=>setTimeout(()=>{
+      document.querySelectorAll("#osqResult .osq-score-fill").forEach(f=>f.style.width=f.dataset.w+"%");
+    },120));
+  }
+
+  function setLang(lang){
+    OSQ_CONFIG.LANG=lang;T=OSQ_I18N[lang];
+    if(state.step===0)applyI18n();
+  }
+
+  function init(){
+    applyI18n();
+    $("osqCam").addEventListener("change",e=>handleFile(e.target.files[0]));
+    $("osqFile").addEventListener("change",e=>handleFile(e.target.files[0]));
+    $("osqPhotoZone").addEventListener("click",()=>$("osqFile").click());
+  }
+
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);
+  else init();
+
+  return{go,submit,resetPhoto,setLang};
+})();
+
+/* Wire al toggle de idioma existente */
+(function(){
+  function hookLang(){
+    document.querySelectorAll('[data-lang-btn]').forEach(btn=>{
+      btn.addEventListener('click',()=>{ if(typeof osq!=='undefined')osq.setLang(btn.getAttribute('data-lang-btn')); });
+    });
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",hookLang);
+  else hookLang();
+})();
+</script>
+
 <!-- ===================== CTA FORM ===================== -->
 <section class="band cta" id="book">
   <div class="wrap cta-grid">
