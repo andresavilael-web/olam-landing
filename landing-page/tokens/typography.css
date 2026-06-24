@@ -8,7 +8,7 @@
 
 :root {
   /* ---- Families ---- */
-  --font-display: 'Cormorant Garamond', 'Canela', Georgia, serif;  /* headlines, quotes */
+  --font-display: 'Fraunces', Georgia, serif;  /* headlines, quotes — Fraunces italic for hero word */
   --font-body:    'Poppins', 'Museo Sans Rounded', system-ui, sans-serif; /* body, UI, labels */
 
   /* ---- Weights ---- */
