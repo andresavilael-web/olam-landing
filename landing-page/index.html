@@ -104,17 +104,18 @@
     z-index: 50;
     width: calc(100% - 32px);
     max-width: 1100px;
-    background: rgba(31, 32, 32, 0.90);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 9999px;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 4px 28px rgba(31,32,32,0.10), 0 1px 4px rgba(31,32,32,0.06);
   }
   header.site .wrap { max-width: 100%; padding: 0; margin: 0; }
   .site .row { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 12px; padding: 0 8px 0 22px; }
-  .site .logo { height: 28px; width: auto; display: block; filter: brightness(0) invert(1); }
-  .nav-links { display: none; gap: 26px; font-size: var(--text-sm); color: rgba(255,255,255,0.72); font-weight: var(--fw-regular); }
-  .nav-links a:hover { color: #fff; }
+  .site .logo { height: 28px; width: auto; display: block; }
+  .nav-links { display: none; gap: 26px; font-size: var(--text-sm); color: var(--text-body); font-weight: var(--fw-regular); }
+  .nav-links a:hover { color: var(--text-accent); }
   @media (min-width: 1040px){ .nav-links { display: flex; } }
   .site .actions { display: flex; align-items: center; gap: 10px; }
   .site .actions .btn { display: none; }
@@ -124,11 +125,11 @@
   .btn-icon .material-symbols-outlined { font-size: 20px; }
   .btn-icon-mobile { display: inline-flex; }
   @media (min-width: 600px){ .btn-icon-mobile { display: none; } }
-  .phone { display: none; align-items: center; gap: 6px; font-weight: var(--fw-medium); font-size: var(--text-sm); color: rgba(255,255,255,0.78); }
+  .phone { display: none; align-items: center; gap: 6px; font-weight: var(--fw-medium); font-size: var(--text-sm); color: var(--text-strong); }
   @media (min-width: 800px){ .phone { display: inline-flex; } }
-  .phone .material-symbols-outlined { font-size: 18px; color: var(--mist-blue); }
-  .lang { display: inline-flex; border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-pill); overflow: hidden; }
-  .lang button { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-caption); letter-spacing: 0.06em; padding: 7px 12px; background: transparent; border: 0; cursor: pointer; color: rgba(255,255,255,0.5); }
+  .phone .material-symbols-outlined { font-size: 18px; color: var(--action); }
+  .lang { display: inline-flex; border: 1px solid var(--border-soft); border-radius: var(--radius-pill); overflow: hidden; }
+  .lang button { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-caption); letter-spacing: 0.06em; padding: 7px 12px; background: transparent; border: 0; cursor: pointer; color: var(--text-muted); }
   .lang button[aria-pressed="true"] { background: var(--action); color: #fff; }
 
   /* ---------- brand title stack v2 ---------- */
