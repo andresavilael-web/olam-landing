@@ -145,16 +145,26 @@
   .hero-badge .sm { font-size: var(--text-caption); color: var(--text-muted); }
 
   /* ---------- social proof bar ---------- */
-  .proof-bar { background: var(--surface-linen); border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); padding: 22px 0; }
-  .proof-bar-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px 36px; }
+  .proof-bar { background: var(--surface-linen); border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); padding: 28px 0; overflow: hidden; }
   .proof-logo { font-family: var(--font-display); font-size: 1.05rem; font-weight: var(--fw-medium); color: var(--text-subtle); letter-spacing: 0.04em; }
-  .proof-logo-img { height: 40px; width: auto; max-width: 120px; object-fit: contain; filter: grayscale(100%) opacity(0.55); transition: filter 0.2s; }
+  .proof-logo-img { height: 48px; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(100%) opacity(0.55); transition: filter 0.2s; flex-shrink: 0; }
   .proof-logo-img:hover { filter: grayscale(0%) opacity(1); }
-  .proof-divider { width: 1px; height: 20px; background: var(--border-soft); flex-shrink: 0; display: none; }
-  @media (min-width: 640px){ .proof-divider { display: block; } }
-  .proof-rating { display: flex; align-items: center; gap: 8px; font-size: var(--text-sm); color: var(--text-muted); }
-  .proof-rating .stars { font-size: 0.85rem; }
-  .proof-rating b { color: var(--text-strong); }
+  .proof-divider { width: 1px; height: 24px; background: var(--border-soft); flex-shrink: 0; }
+
+  /* desktop */
+  .proof-bar-desktop { display: flex; align-items: center; justify-content: space-between; gap: 0 40px; }
+  .proof-bar-mobile { display: none; }
+
+  /* mobile marquee */
+  @media (max-width: 639px) {
+    .proof-bar { padding: 20px 0; }
+    .proof-bar-desktop { display: none; }
+    .proof-bar-mobile { display: block; overflow: hidden; }
+    .proof-bar-inner { display: flex; align-items: center; width: max-content; animation: marquee 20s linear infinite; }
+    .proof-logo-img { height: 38px; max-width: 100px; margin: 0 28px; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  }
+  @media (min-width: 640px) { .proof-divider { display: block; } }
 
   /* ---------- services grid ---------- */
   .svc-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 48px; }
@@ -347,19 +357,34 @@
 
 <!-- ===================== SOCIAL PROOF BAR ===================== -->
 <div class="proof-bar">
-  <div class="wrap">
+  <div class="wrap proof-bar-desktop">
+    <img class="proof-logo-img" src="assets/Forbes.png" alt="Forbes Colombia">
+    <span class="proof-divider"></span>
+    <img class="proof-logo-img" src="assets/Univision.png" alt="Univision">
+    <span class="proof-divider"></span>
+    <img class="proof-logo-img" src="assets/Telemundo.png" alt="Telemundo">
+    <span class="proof-divider"></span>
+    <img class="proof-logo-img" src="assets/voyagemia.png" alt="VoyageMIA">
+    <span class="proof-divider"></span>
+    <img class="proof-logo-img" src="assets/shoutout-miami.png" alt="Shoutout Miami">
+    <span class="proof-divider"></span>
+    <img class="proof-logo-img" src="assets/diario las americas logo.png" alt="Diario Las Américas">
+  </div>
+  <div class="proof-bar-mobile" aria-hidden="true">
     <div class="proof-bar-inner">
       <img class="proof-logo-img" src="assets/Forbes.png" alt="Forbes Colombia">
-      <span class="proof-divider"></span>
       <img class="proof-logo-img" src="assets/Univision.png" alt="Univision">
-      <span class="proof-divider"></span>
       <img class="proof-logo-img" src="assets/Telemundo.png" alt="Telemundo">
-      <span class="proof-divider"></span>
       <img class="proof-logo-img" src="assets/voyagemia.png" alt="VoyageMIA">
-      <span class="proof-divider"></span>
       <img class="proof-logo-img" src="assets/shoutout-miami.png" alt="Shoutout Miami">
-      <span class="proof-divider"></span>
       <img class="proof-logo-img" src="assets/diario las americas logo.png" alt="Diario Las Américas">
+      <!-- duplicado para loop infinito -->
+      <img class="proof-logo-img" src="assets/Forbes.png" alt="">
+      <img class="proof-logo-img" src="assets/Univision.png" alt="">
+      <img class="proof-logo-img" src="assets/Telemundo.png" alt="">
+      <img class="proof-logo-img" src="assets/voyagemia.png" alt="">
+      <img class="proof-logo-img" src="assets/shoutout-miami.png" alt="">
+      <img class="proof-logo-img" src="assets/diario las americas logo.png" alt="">
     </div>
   </div>
 </div>
