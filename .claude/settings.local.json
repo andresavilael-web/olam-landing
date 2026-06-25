@@ -11,7 +11,17 @@
       "Bash(rm -rf design_v2)",
       "Bash(mkdir -p design_v2)",
       "Bash(tar -xzf design_v2.raw -C design_v2)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "mcp__59ba9a4d-c2b8-4d66-b5b8-fe18ba77720c__list_teams",
+      "mcp__59ba9a4d-c2b8-4d66-b5b8-fe18ba77720c__list_deployments",
+      "mcp__59ba9a4d-c2b8-4d66-b5b8-fe18ba77720c__get_project",
+      "Bash(git push *)",
+      "Bash(gh repo *)",
+      "Bash(sort -t_ -k1 -r)",
+      "Bash(sort -t/ -k1)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }

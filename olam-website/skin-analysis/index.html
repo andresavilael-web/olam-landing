@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olam Med Spa — La nueva belleza natural | Skin Tightening, Injectables, Laser & Body Contouring · Pembroke Pines, FL</title>
+<meta name="description" content="Reveal your natural beauty, without surgery. Non-invasive, personalized plans with 3D skin diagnosis in Pembroke Pines, FL. Visible results in 60–90 days; they vary by person. Book your consultation.">
+<link rel="icon" href="../assets/favicon-olam.png" type="image/png">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Olam Med Spa — Reveal your natural beauty, without surgery.">
+<meta property="og:description" content="Non-invasive, personalized plans with 3D skin diagnosis in Pembroke Pines, FL. A medical session, not a sales pitch. Results vary by person.">
+<meta property="og:image" content="assets/hero-Ba2wACGM (1).jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Design system tokens (Brand Book v3 · fonts → colors → type → spacing) -->
+<link rel="stylesheet" href="../styles.css">
+<!-- Material Symbols (brand icon set) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap">
+
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: var(--fw-light);
+    color: var(--text-body);
+    background: var(--surface-page);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- bilingual visibility ---------- */
+  html[data-lang="en"] .only-es { display: none !important; }
+  html[data-lang="es"] .only-en { display: none !important; }
+
+  /* ---------- layout ---------- */
+  .wrap { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--gutter); }
+  .wrap-narrow { max-width: var(--content-narrow); margin: 0 auto; padding: 0 var(--gutter); }
+  @media (min-width: 768px){ .wrap,.wrap-narrow{ padding: 0 var(--gutter-lg); } }
+  section.band { padding: var(--space-8) 0; position: relative; }
+  @media (min-width: 768px){ section.band { padding: var(--space-10) 0; } }
+  .border-y { border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); }
+
+  /* ---------- type ---------- */
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-label); font-weight: var(--fw-semibold);
+    text-transform: uppercase; letter-spacing: var(--ls-label);
+    color: var(--text-accent); margin: 0 0 18px; display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--action); display: inline-block; }
+  .display {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    font-size: var(--text-display); line-height: var(--lh-display);
+    letter-spacing: var(--ls-display); color: var(--text-strong); margin: 0;
+  }
+  h2.h, h3.h {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-tight); line-height: var(--lh-tight);
+    margin: 0; color: var(--text-strong);
+  }
+  h2.h { font-size: var(--text-h2); }
+  h3.h { font-size: var(--text-h3); }
+  .em, .display .em, h2.h .em {
+    font-style: italic; font-weight: var(--fw-medium); color: var(--text-accent);
+  }
+  .lead { font-family: var(--font-body); font-weight: var(--fw-light); font-size: var(--text-lead); line-height: var(--lh-body); color: var(--text-muted); margin: 0; }
+  .muted { color: var(--text-muted); }
+  .disclaimer { font-size: var(--text-caption); color: var(--text-subtle); font-style: italic; }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-body);
+    border-radius: var(--radius-pill); padding: 14px 26px; cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color var(--dur-fast) var(--ease-cushion), box-shadow var(--dur-fast) var(--ease-cushion), transform var(--dur-fast) var(--ease-cushion), border-color var(--dur-fast) var(--ease-cushion), color var(--dur-fast) var(--ease-cushion);
+    line-height: 1; white-space: nowrap;
+  }
+  .btn-primary { background: var(--action); color: #fff; box-shadow: var(--shadow-button); }
+  .btn-primary:hover { background: var(--action-hover); transform: translateY(-3px); }
+  .btn-outline { background: transparent; color: var(--text-strong); border-color: var(--border-strong); }
+  .btn-outline:hover { background: var(--action-ink); color: #fff; border-color: var(--action-ink); }
+  .btn-white { background: #fff; color: var(--charcoal); }
+  .btn-white:hover { background: var(--linen); transform: translateY(-2px); }
+  .btn-lg { padding: 17px 32px; font-size: 1.05rem; }
+  @media (max-width: 480px){ .btn-lg { padding: 13px 20px; font-size: 0.9rem; } }
+  .btn .arr { transition: transform var(--dur-fast) var(--ease-cushion); }
+  .btn:hover .arr { transform: translateX(5px); }
+
+  /* ---------- header — floating pill navbar ---------- */
+  header.site {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    width: calc(100% - 32px);
+    max-width: 1100px;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 9999px;
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 4px 28px rgba(31,32,32,0.10), 0 1px 4px rgba(31,32,32,0.06);
+  }
+  header.site .wrap { max-width: 100%; margin: 0; }
+  header.site .row { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 12px; padding: 6px 6px 6px 36px; }
+  .site .logo { height: 28px; width: auto; display: block; }
+  .nav-links { display: none; gap: 26px; font-size: var(--text-sm); color: var(--text-body); font-weight: var(--fw-regular); }
+  .nav-links a:hover { color: var(--text-accent); }
+  @media (min-width: 1040px){ .nav-links { display: flex; } }
+  .site .actions { display: flex; align-items: center; gap: 10px; }
+  .site .actions .btn { display: none; }
+  @media (min-width: 600px){ .site .actions .btn { display: inline-flex; } }
+  .btn-icon { width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background: var(--action); color: #fff; box-shadow: var(--shadow-button); border: none; cursor: pointer; transition: background-color var(--dur-fast) var(--ease-cushion), box-shadow var(--dur-fast) var(--ease-cushion), transform var(--dur-fast) var(--ease-cushion); flex-shrink: 0; }
+  .btn-icon:hover { background: var(--action-hover); transform: translateY(-2px); }
+  .btn-icon .material-symbols-outlined { font-size: 20px; }
+  .btn-icon-mobile { display: inline-flex; }
+  @media (min-width: 600px){ .btn-icon-mobile { display: none; } }
+  .phone { display: none; align-items: center; gap: 6px; font-weight: var(--fw-medium); font-size: var(--text-sm); color: var(--text-strong); }
+  @media (min-width: 800px){ .phone { display: inline-flex; } }
+  .phone .material-symbols-outlined { font-size: 18px; color: var(--action); }
+  .lang { display: inline-flex; border: 1px solid var(--border-soft); border-radius: var(--radius-pill); overflow: hidden; }
+  .lang button { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-caption); letter-spacing: 0.06em; padding: 7px 12px; background: transparent; border: 0; cursor: pointer; color: var(--text-muted); }
+  .lang button[aria-pressed="true"] { background: var(--action); color: #fff; }
+
+  /* ---------- brand title stack v2 ---------- */
+  .h-top-line { display: block; line-height: 1.1; }
+  .h-hair  { font-family: var(--font-body); font-weight: 200; font-size: clamp(2.4rem, 5vw, 3.8rem); color: var(--mist-blue); display: inline; }
+  .h-hero  { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: clamp(3.6rem, 7.5vw, 5.6rem); color: var(--charcoal); display: inline; line-height: 1.05; }
+  .h-close { font-family: var(--font-body); font-weight: 600; font-size: clamp(3rem, 6.5vw, 4.8rem); color: var(--olam-blue); display: block; line-height: 1.1; margin-top: 4px; }
+  .hero-location { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; color: var(--mist-blue); background: rgba(143,167,182,0.10); border: 1px solid rgba(143,167,182,0.25); border-radius: 99px; padding: 6px 14px; margin-bottom: 28px; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, #FFFFFF 50%, #F4F7F8 75%, #F3EAE6 100%); }
+  .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; opacity: 0; transition: opacity 0.9s var(--ease-out); }
+  .hero-video.loaded { opacity: 1; }
+  .hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(248,243,234,0.62) 0%, rgba(255,255,255,0.66) 100%); pointer-events: none; }
+  .hero-glow { position: absolute; width: 540px; height: 540px; border-radius: 9999px; background: radial-gradient(circle, rgba(143,167,182,0.20), transparent 70%); filter: blur(80px); top: -140px; right: -120px; z-index: 2; pointer-events: none; }
+  .hero .grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; padding-top: 100px; padding-bottom: 64px; position: relative; z-index: 3; }
+  @media (min-width: 920px){ .hero .grid { grid-template-columns: 1.05fr 0.95fr; gap: 60px; padding-top: 120px; padding-bottom: 100px; } }
+  .hero-sub { margin: 26px 0 0; max-width: 42ch; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+  .trust-row { display: flex; flex-wrap: wrap; gap: 22px 30px; margin-top: 38px; align-items: center; }
+  .stars { color: var(--rating); letter-spacing: 2px; font-size: 0.95rem; }
+  .trust-item { font-size: var(--text-sm); color: var(--text-muted); display: flex; flex-direction: column; gap: 2px; }
+  .trust-item b { color: var(--text-strong); font-weight: var(--fw-semibold); }
+  .hero-media {
+    position: relative; border-radius: var(--radius-xl); overflow: hidden;
+    box-shadow: var(--shadow-2xl); aspect-ratio: 4/5; min-height: 360px;
+  }
+  .hero-badge {
+    position: absolute; left: 18px; bottom: 18px; z-index: 2;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+    border-radius: var(--radius-brand); padding: 14px 18px; box-shadow: var(--shadow-card);
+    display: flex; align-items: center; gap: 12px; border: 1px solid var(--border-hairline);
+  }
+  .hero-badge .big { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: 1.7rem; color: var(--text-strong); line-height: 1; }
+  .hero-badge .sm { font-size: var(--text-caption); color: var(--text-muted); }
+
+  /* ---------- placeholder media ---------- */
+  .ph {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--linen), var(--mist-5));
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    color: var(--warm-grey-2); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; padding: 16px;
+  }
+  .ph .material-symbols-outlined { font-size: 32px; opacity: 0.7; }
+
+  /* ---------- cards ---------- */
+  .grid-cards { display: grid; gap: 22px; grid-template-columns: 1fr; }
+  @media (min-width: 640px){ .grid-cards.four { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1100px){ .grid-cards.four { grid-template-columns: repeat(4,1fr); } }
+  .card {
+    position: relative; background: var(--surface-card); border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-brand); padding: var(--card-pad);
+    box-shadow: var(--shadow-card); transition: transform var(--dur-base) var(--ease-cushion), box-shadow var(--dur-base) var(--ease-cushion), border-color var(--dur-base) var(--ease-cushion); overflow: hidden;
+  }
+  .card.hoverable:hover { transform: var(--lift-card); box-shadow: var(--shadow-cushion); border-color: var(--border-champagne); }
+  .card .icowrap {
+    width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--action-tint); color: var(--action); margin-bottom: 20px;
+  }
+  .card .icowrap.alt { background: var(--surface-mist); color: var(--slate); }
+  .card .icowrap .material-symbols-outlined { font-size: 26px; }
+  .card h3 { margin: 0 0 10px; }
+  .card.hoverable:hover h3 { color: var(--action); }
+  .card p { font-size: var(--text-sm); line-height: var(--lh-body); color: var(--text-muted); margin: 0; }
+  .card .feat { margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .card .feat li { font-size: var(--text-sm); color: var(--text-body); display: flex; gap: 8px; align-items: flex-start; }
+  .card .feat li::before { content: "—"; color: var(--champagne); font-weight: 600; }
+
+  /* ---------- stats ---------- */
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 16px; }
+  @media (min-width: 768px){ .stats { grid-template-columns: repeat(4,1fr); } }
+  .stat .num { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: clamp(2.4rem,4.4vw,3.2rem); color: var(--text-strong); line-height: 1; }
+  .stat .lab { font-size: var(--text-sm); color: var(--text-muted); margin-top: 10px; }
+  .awards { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+  .pill-award {
+    display: inline-flex; align-items: center; gap: 8px; font-size: var(--text-sm); font-weight: var(--fw-medium);
+    color: var(--text-strong); background: var(--surface-card); border: 1px solid var(--border-soft);
+    border-radius: var(--radius-pill); padding: 9px 16px;
+  }
+  .pill-award .material-symbols-outlined { font-size: 18px; color: var(--action); }
+
+  /* honest qualification (warm, no red) */
+  .qual { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 8px; }
+  @media (min-width: 768px){ .qual { grid-template-columns: 1fr 1fr; } }
+  .qual .col { background: var(--surface-card); border: 1px solid var(--border-hairline); border-radius: var(--radius-brand); padding: 30px; }
+  .qual .col.maybe { background: var(--surface-linen); }
+  .qual .col h4 { margin: 0 0 18px; font-family: var(--font-body); font-size: var(--text-label); letter-spacing: var(--ls-label); text-transform: uppercase; font-weight: var(--fw-semibold); display: flex; align-items: center; gap: 8px; }
+  .qual .yes h4 { color: var(--action); }
+  .qual .maybe h4 { color: var(--warm-grey); }
+  .qual ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .qual li { display: flex; gap: 12px; font-size: var(--text-body); line-height: 1.5; color: var(--text-body); }
+  .qual li .material-symbols-outlined { font-size: 20px; flex-shrink: 0; }
+  .qual .yes li .material-symbols-outlined { color: var(--action); }
+  .qual .maybe li .material-symbols-outlined { color: var(--warm-grey-2); }
+
+  /* testimonials */
+  .tgrid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
+  @media (min-width: 880px){ .tgrid { grid-template-columns: repeat(3,1fr); } }
+  .tcard { background: var(--surface-linen); border: 1px solid var(--border-hairline); border-radius: var(--radius-brand); padding: 28px; }
+  .tcard .stars { margin-bottom: 16px; }
+  .tcard p { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.5; color: var(--text-strong); margin: 0 0 18px; font-style: italic; font-weight: var(--fw-regular); }
+  .tcard .who { display: flex; align-items: center; gap: 12px; }
+  .tcard .av { width: 40px; height: 40px; border-radius: 9999px; background: var(--action-tint); color: var(--action); display: grid; place-items: center; font-weight: var(--fw-semibold); font-size: 0.85rem; }
+  .tcard .who b { font-size: var(--text-sm); color: var(--text-strong); display: block; font-family: var(--font-body); font-weight: var(--fw-medium); }
+  .tcard .who span { font-size: var(--text-caption); color: var(--text-muted); }
+  .placeholder-tag { font-size: var(--text-caption); color: var(--warm-grey-2); font-style: italic; font-family: var(--font-body); }
+
+  /* ---------- card image header ---------- */
+  .card-img-wrap { margin: -2rem -2rem 20px; border-radius: var(--radius-brand) var(--radius-brand) 0 0; overflow: hidden; height: 180px; }
+  .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform var(--dur-base) var(--ease-cushion); }
+  .card.hoverable:hover .card-img-wrap img { transform: scale(1.05); }
+
+  /* ---------- before / after ---------- */
+  .ba-wrap { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
+  @media (min-width: 920px){ .ba-wrap { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .ba {
+    position: relative; width: 100%; aspect-ratio: 4/5; border-radius: var(--radius-brand-lg);
+    overflow: hidden; box-shadow: var(--shadow-card); user-select: none; touch-action: none; cursor: ew-resize;
+  }
+  .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .ba-after-img { z-index: 1; }
+  .ba-before-img { z-index: 2; clip-path: inset(0 50% 0 0); }
+  .ba .lbl { position: absolute; top: 14px; z-index: 4; font-size: var(--text-caption); font-weight: var(--fw-semibold); letter-spacing: 0.08em; text-transform: uppercase; background: rgba(31,32,32,0.82); color: #fff; padding: 5px 12px; border-radius: var(--radius-pill); backdrop-filter: blur(4px); }
+  .ba .lbl.l { left: 14px; } .ba .lbl.r { right: 14px; }
+  .ba .handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #fff; z-index: 3; transform: translateX(-1px); }
+  .ba .knob {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 4;
+    width: 44px; height: 44px; border-radius: 9999px; background: #fff; box-shadow: var(--shadow-sm);
+    display: grid; place-items: center; color: var(--charcoal);
+  }
+  .ba-meta { font-size: var(--text-caption); color: var(--text-muted); margin-top: 14px; text-align: center; }
+  .results-list { margin: 26px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+  .results-list li { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--border-hairline); align-items: baseline; }
+  .results-list li:last-child { border-bottom: 0; }
+  .results-list .idx { font-family: var(--font-display); font-weight: var(--fw-medium); color: var(--action); font-size: 1.3rem; min-width: 32px; }
+  .results-list p { margin: 0; font-size: var(--text-body); line-height: 1.55; color: var(--text-body); }
+
+  /* ---------- process ---------- */
+  .steps { display: grid; grid-template-columns: 1fr; gap: 22px; }
+  @media (min-width: 880px){ .steps { grid-template-columns: repeat(3,1fr); } }
+  .step { position: relative; background: var(--surface-card); border: 1px solid var(--border-hairline); border-radius: var(--radius-brand); padding: 32px; box-shadow: var(--shadow-card); transition: transform var(--dur-base) var(--ease-cushion), box-shadow var(--dur-base) var(--ease-cushion), border-color var(--dur-base) var(--ease-cushion); }
+  .step:hover { transform: var(--lift-card); box-shadow: var(--shadow-cushion); border-color: var(--border-champagne); }
+  .step .n { font-family: var(--font-display); font-weight: var(--fw-medium); font-size: 2.8rem; color: var(--accent-detail); line-height: 1; }
+  .step h3 { margin: 14px 0 12px; }
+  .step p { margin: 0; font-size: var(--text-sm); line-height: var(--lh-body); color: var(--text-muted); }
+
+  /* ---------- FAQ ---------- */
+  .faq { max-width: 760px; margin: 0 auto; }
+  .qa { border-bottom: 1px solid var(--border-soft); }
+  .qa button { width: 100%; background: none; border: 0; cursor: pointer; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 24px 0; font-family: var(--font-display); font-weight: var(--fw-medium); font-size: var(--text-h4); color: var(--text-strong); }
+  .qa .plus { font-size: 1.6rem; color: var(--action); line-height: 1; transition: transform var(--dur-base) var(--ease-cushion); flex-shrink: 0; }
+  .qa.open .plus { transform: rotate(45deg); }
+  .qa .ans { max-height: 0; overflow: hidden; transition: max-height var(--dur-base) var(--ease-cushion); }
+  .qa .ans p { margin: 0 0 24px; font-size: var(--text-body); line-height: var(--lh-body); color: var(--text-muted); max-width: 64ch; }
+
+  /* ---------- CTA form (dark charcoal callout) ---------- */
+  .cta { background: var(--surface-linen); color: var(--text-body); position: relative; overflow: hidden; }
+  .cta-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; position: relative; z-index: 1; }
+  @media (min-width: 920px){ .cta-grid { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .cta .eyebrow { color: var(--text-accent); }
+  .cta .eyebrow .dot { background: var(--action); }
+  .cta h2.h { color: var(--text-strong); }
+  .cta h2.h .em { color: var(--text-accent); }
+  .cta .lead { color: var(--text-muted); margin-top: 20px; }
+  .cta-benefits { list-style: none; margin: 30px 0 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+  .cta-benefits li { display: flex; gap: 12px; font-size: var(--text-body); color: var(--text-body); align-items: flex-start; }
+  .cta-benefits svg { flex-shrink: 0; margin-top: 2px; }
+  .cta-benefits svg path { stroke: var(--action); }
+  .form-card { background: var(--surface-card); color: var(--text-body); border-radius: var(--radius-brand-lg); padding: 24px; box-shadow: var(--shadow-2xl); }
+  @media (min-width: 768px){ .form-card { padding: 30px; } }
+  .form-card h3 { margin: 0 0 4px; }
+  .form-card .sub { font-size: var(--text-sm); color: var(--text-muted); margin: 0 0 20px; }
+
+  /* ---------- footer ---------- */
+  footer.site { background: var(--surface-linen); border-top: 1px solid var(--border-hairline); padding: 52px 0 36px; }
+  .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+  .foot-logo { height: 32px; margin-bottom: 16px; }
+  .foot-col p, .foot-col a { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.9; display: block; }
+  .foot-col a:hover { color: var(--text-accent); }
+  .foot-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border-champagne); font-size: var(--text-caption); color: var(--text-subtle); display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+
+  /* ---------- reveal animation ---------- */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce){ .reveal { opacity: 1; transform: none; transition: none; } html{scroll-behavior:auto;} }
+
+  /* ---------- skip link ---------- */
+  .skip-link { position: absolute; left: -9999px; top: 4px; z-index: 999; padding: 8px 16px; background: var(--action); color: #fff; border-radius: var(--radius-pill); font-weight: var(--fw-semibold); font-size: var(--text-sm); text-decoration: none; }
+  .skip-link:focus { left: 8px; }
+
+  /* ---------- GHL iframe mobile height ---------- */
+  @media (max-width: 767px) { #inline-qxRPO4krPS42zbVf3IjU { min-height: 480px !important; } }
+</style>
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+<a href="#top" class="skip-link">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site">
+  <div class="wrap row">
+    <a href="#top" aria-label="Olam Med Spa home"><img class="logo" src="../assets/logo-olam.png" alt="Olam Med Spa"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services"><span class="only-en">Services</span><span class="only-es">Servicios</span></a>
+      <a href="#proof"><span class="only-en">Why Olam</span><span class="only-es">Por qué Olam</span></a>
+      <a href="#results"><span class="only-en">Results</span><span class="only-es">Resultados</span></a>
+      <a href="#process"><span class="only-en">How it works</span><span class="only-es">Cómo funciona</span></a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="actions">
+      <a class="phone" href="tel:19542370930"><span class="material-symbols-outlined">call</span>954.237.0930</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn-icon btn-icon-mobile" href="#book" aria-label="Book my consultation"><span class="material-symbols-outlined">calendar_month</span></a>
+      <a class="btn btn-primary" href="#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="../assets/Background Video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <span class="hero-glow" aria-hidden="true"></span>
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="hero-location">📍 Pembroke Pines, FL</span>
+      <h1>
+        <span class="h-top-line"><span class="h-hair"><span class="only-en">Your skin, </span><span class="only-es">Tu piel, </span></span><span class="h-hero"><span class="only-en">our</span><span class="only-es">nuestra</span></span></span>
+        <span class="h-close"><span class="only-en">obsession</span><span class="only-es">obsesión</span></span>
+      </h1>
+      <p class="lead hero-sub">
+        <span class="only-en">Non-invasive, personalized plans with 3D skin diagnosis. Visible results in 60–90 days — they vary by person. A medical session, not a sales pitch.</span>
+        <span class="only-es">Planes personalizados y no invasivos con diagnóstico 3D. Resultados visibles en 60–90 días — varían según la persona. Una sesión médica, no un pitch de ventas.</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+        <a class="btn btn-outline btn-lg" href="#skin-quiz"><span class="only-en">Analyze my skin — free</span><span class="only-es">Analiza mi piel — gratis</span></a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item"><span class="stars">★★★★★</span><span><b>4.9</b> · <span class="only-en">Google — 400+ reviews</span><span class="only-es">Google — 400+ reseñas</span></span></div>
+        <div class="trust-item"><b>35,000+</b><span><span class="only-en">procedures performed</span><span class="only-es">procedimientos realizados</span></span></div>
+        <div class="trust-item"><b>Forbes &amp; TV</b><span><span class="only-en">Univisión · Telemundo · Hola TV</span><span class="only-es">Univisión · Telemundo · Hola TV</span></span></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="hero-media">
+        <img src="../assets/hero-Ba2wACGM (1).jpg" alt="Woman examining her skin after Olam Med Spa treatment" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        <div class="hero-badge">
+          <span class="big">60–90</span>
+          <span class="sm"><span class="only-en">days to visible,<br>natural results</span><span class="only-es">días para resultados<br>visibles y naturales</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="band border-y" id="services">
+  <div class="wrap">
+    <div class="reveal" style="max-width:640px;margin-bottom:48px;">
+      <span class="eyebrow"><span class="dot"></span><span class="only-en">What we treat</span><span class="only-es">Lo que tratamos</span></span>
+      <h2 class="h">
+        <span class="only-en">Not one treatment. <span class="em">The right treatment</span> for your skin.</span>
+        <span class="only-es">No un tratamiento. <span class="em">El tratamiento correcto</span> para tu piel.</span>
+      </h2>
+      <p class="lead" style="margin-top:20px;">
+        <span class="only-en">We reduce, improve, soften and prevent — non-invasively. Every plan is matched to your skin with 3D diagnosis and supervised by our Board Certified Medical Director.</span>
+        <span class="only-es">Reducimos, mejoramos, atenuamos y prevenimos — de forma no invasiva. Cada plan se ajusta a tu piel con diagnóstico 3D y lo supervisa nuestro Director Médico Certificado.</span>
+      </p>
+    </div>
+    <div class="grid-cards four">
+      <article class="card hoverable reveal">
+        <div class="card-img-wrap"><img src="../assets/skin tating.jpg" alt="Skin Tightening treatment"></div>
+        <h3 class="h"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></h3>
+        <p><span class="only-en">Non-surgical lifting that stimulates your own collagen at the deeper SMAS and dermal layers.</span><span class="only-es">Lifting no quirúrgico que estimula tu propio colágeno en las capas profundas (SMAS y dermis).</span></p>
+        <ul class="feat">
+          <li><span class="only-en">Ultherapy® micro-focused ultrasound</span><span class="only-es">Ultherapy® ultrasonido microfocalizado</span></li>
+          <li><span class="only-en">RF Microneedling</span><span class="only-es">Microagujas con radiofrecuencia</span></li>
+          <li><span class="only-en">Agnes RF precision sculpting</span><span class="only-es">Agnes RF esculpido de precisión</span></li>
+        </ul>
+      </article>
+      <article class="card hoverable reveal">
+        <div class="card-img-wrap"><img src="../assets/injectables.jpg" alt="Injectables treatment"></div>
+        <h3 class="h"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></h3>
+        <p><span class="only-en">Botox and fillers to soften lines and restore volume — natural, never overdone.</span><span class="only-es">Botox y rellenos para suavizar líneas y restaurar volumen — natural, nunca exagerado.</span></p>
+        <ul class="feat">
+          <li><span class="only-en">Wrinkle relaxers &amp; dermal fillers</span><span class="only-es">Relajantes de arrugas y rellenos dérmicos</span></li>
+          <li><span class="only-en">Conservative, medical dosing</span><span class="only-es">Dosificación médica y conservadora</span></li>
+          <li><span class="only-en">Results that look like you</span><span class="only-es">Resultados que se ven como tú</span></li>
+        </ul>
+      </article>
+      <article class="card hoverable reveal">
+        <div class="card-img-wrap"><img src="../assets/Laser.jpg" alt="Laser treatment"></div>
+        <h3 class="h"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></h3>
+        <p><span class="only-en">Targeted energy for texture, tone, pigment and unwanted hair on the face and body.</span><span class="only-es">Energía dirigida para textura, tono, pigmento y vello no deseado en rostro y cuerpo.</span></p>
+        <ul class="feat">
+          <li><span class="only-en">Skin resurfacing &amp; tone</span><span class="only-es">Renovación de la piel y tono</span></li>
+          <li><span class="only-en">Pigment &amp; sun-damage correction</span><span class="only-es">Corrección de pigmento y daño solar</span></li>
+          <li><span class="only-en">Laser hair removal</span><span class="only-es">Depilación láser</span></li>
+        </ul>
+      </article>
+      <article class="card hoverable reveal">
+        <div class="card-img-wrap"><img src="../assets/body-contouring.jpg" alt="Body Contouring treatment"></div>
+        <h3 class="h"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></h3>
+        <p><span class="only-en">Non-invasive fat reduction and skin tightening to refine and define the body.</span><span class="only-es">Reducción de grasa y tensado de piel no invasivos para definir el cuerpo.</span></p>
+        <ul class="feat">
+          <li><span class="only-en">Targeted fat reduction</span><span class="only-es">Reducción de grasa localizada</span></li>
+          <li><span class="only-en">Skin tightening for the body</span><span class="only-es">Tensado de piel corporal</span></li>
+          <li><span class="only-en">Post-weight-loss laxity</span><span class="only-es">Flacidez tras pérdida de peso</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="muted reveal" style="font-size:var(--text-sm);margin-top:28px;max-width:62ch;">
+      <span class="only-en">Which option is right for you is determined in your consultation with 3D skin diagnosis — not by Google, not by guessing, and not by us trying to upsell you. Results vary by person.</span>
+      <span class="only-es">Cuál es la opción correcta para ti se determina en tu consulta con diagnóstico 3D — no por Google, no adivinando, y no porque queramos venderte de más. Los resultados varían según la persona.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===================== SOCIAL PROOF ===================== -->
+<section class="band" id="proof">
+  <div class="wrap">
+    <div class="reveal" style="max-width:680px;margin-bottom:44px;">
+      <span class="eyebrow"><span class="dot"></span><span class="only-en">Medical Leadership</span><span class="only-es">Liderazgo Médico</span></span>
+      <h2 class="h">
+        <span class="only-en">Collective expertise. <span class="em">Not a personality.</span></span>
+        <span class="only-es">Experiencia colectiva. <span class="em">No una personalidad.</span></span>
+      </h2>
+      <p class="lead" style="margin-top:20px;">
+        <span class="only-en">Every Olam plan is reviewed and supervised by our Board Certified Medical Director and a team with 30+ years of combined experience. We've performed 35,000+ non-invasive procedures, and we're featured in Forbes and on Univisión, Telemundo, Hola TV and RCN. This isn't a rotating-staff franchise — it's a medical institution that cares more about its patients than its sales.</span>
+        <span class="only-es">Cada plan de Olam es revisado y supervisado por nuestro Director Médico Certificado y un equipo con más de 30 años de experiencia combinada. Hemos realizado más de 35,000 procedimientos no invasivos, y nos han destacado en Forbes y en Univisión, Telemundo, Hola TV y RCN. No es una franquicia de personal rotativo — es una institución médica que se preocupa más por sus pacientes que por sus ventas.</span>
+      </p>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="num">35,000+</div><div class="lab"><span class="only-en">non-invasive procedures</span><span class="only-es">procedimientos no invasivos</span></div></div>
+      <div class="stat"><div class="num">30+</div><div class="lab"><span class="only-en">years combined experience</span><span class="only-es">años de experiencia combinada</span></div></div>
+      <div class="stat"><div class="num">4.9★</div><div class="lab"><span class="only-en">400+ Google reviews</span><span class="only-es">400+ reseñas en Google</span></div></div>
+      <div class="stat"><div class="num">3D</div><div class="lab"><span class="only-en">personalized skin diagnosis</span><span class="only-es">diagnóstico 3D personalizado</span></div></div>
+    </div>
+
+    <div class="awards reveal">
+      <span class="pill-award"><span class="material-symbols-outlined">newspaper</span><span class="only-en">Featured in Forbes &amp; national TV</span><span class="only-es">Destacados en Forbes y TV nacional</span></span>
+      <span class="pill-award"><span class="material-symbols-outlined">verified</span><span class="only-en">Board Certified Medical Director</span><span class="only-es">Director Médico Certificado</span></span>
+      <span class="pill-award"><span class="material-symbols-outlined">diversity_1</span><span class="only-en">Latina-founded med spa</span><span class="only-es">Med spa fundado por mujeres latinas</span></span>
+    </div>
+
+    <!-- Honest qualification (warm, no harsh framing) -->
+    <div style="margin-top:60px;">
+      <div class="reveal" style="max-width:640px;margin-bottom:26px;">
+        <span class="eyebrow"><span class="dot"></span><span class="only-en">Honest Qualification</span><span class="only-es">Calificación Honesta</span></span>
+        <h2 class="h"><span class="only-en">Is this <span class="em">for you?</span></span><span class="only-es">¿Es esto <span class="em">para ti?</span></span></h2>
+        <p class="lead" style="margin-top:16px;">
+          <span class="only-en">We care more about our patients than our sales — so we'll tell you honestly. Here's the gentle filter.</span>
+          <span class="only-es">Nos importan más nuestras pacientes que nuestras ventas — así que te lo diremos con honestidad. Este es el filtro, con cariño.</span>
+        </p>
+      </div>
+      <div class="qual reveal">
+        <div class="col yes">
+          <h4><span class="material-symbols-outlined">check_circle</span><span class="only-en">This is for you if</span><span class="only-es">Esto es para ti si</span></h4>
+          <ul>
+            <li><span class="material-symbols-outlined">check</span><span class="only-en">You see early loss of firmness along your jawline, neck or cheeks.</span><span class="only-es">Notas pérdida temprana de firmeza en mandíbula, cuello o mejillas.</span></li>
+            <li><span class="material-symbols-outlined">check</span><span class="only-en">You're 35–65 and want to act early, non-invasively.</span><span class="only-es">Tienes 35–65 años y quieres actuar a tiempo, sin cirugía.</span></li>
+            <li><span class="material-symbols-outlined">check</span><span class="only-en">You want natural results — to look like yourself, refreshed.</span><span class="only-es">Quieres resultados naturales — verte como tú, renovada.</span></li>
+          </ul>
+        </div>
+        <div class="col maybe">
+          <h4><span class="material-symbols-outlined">schedule</span><span class="only-en">Maybe not yet if</span><span class="only-es">Quizá aún no si</span></h4>
+          <ul>
+            <li><span class="material-symbols-outlined">remove</span><span class="only-en">You're hoping for a dramatic, filtered look.</span><span class="only-es">Esperas un look dramático, de filtro.</span></li>
+            <li><span class="material-symbols-outlined">remove</span><span class="only-en">You expect a single session to change everything overnight.</span><span class="only-es">Esperas que una sola sesión lo cambie todo de la noche a la mañana.</span></li>
+            <li><span class="material-symbols-outlined">remove</span><span class="only-en">You'd rather not start with a personalized medical plan.</span><span class="only-es">Prefieres no empezar con un plan médico personalizado.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TrustIndex reviews widget -->
+    <div class="reveal" style="margin-top:40px;">
+      <script defer async src='https://cdn.trustindex.io/loader.js?a69d04174bae977ae596485f37a'></script>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BEFORE / AFTER ===================== -->
+<section class="band border-y" id="results" style="background:var(--surface-mist);">
+  <div class="wrap">
+    <div class="reveal" style="max-width:640px;margin-bottom:48px;">
+      <span class="eyebrow"><span class="dot"></span><span class="only-en">Realistic expectations</span><span class="only-es">Expectativas realistas</span></span>
+      <h2 class="h"><span class="only-en">What real results <span class="em">look like.</span></span><span class="only-es">Cómo se ven los <span class="em">resultados reales.</span></span></h2>
+    </div>
+    <div class="ba-wrap">
+      <div class="reveal">
+        <div class="ba" id="ba" role="slider" aria-label="Before and after comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+          <img class="ba-img ba-after-img" src="../assets/after01.jpg" alt="After treatment — skin firmer and lifted">
+          <img class="ba-img ba-before-img" id="baBeforeImg" src="../assets/before01.jpeg" alt="Before treatment — natural baseline">
+          <span class="lbl l"><span class="only-en">Before</span><span class="only-es">Antes</span></span>
+          <span class="lbl r"><span class="only-en">After</span><span class="only-es">Después</span></span>
+          <div class="handle" id="baHandle"><div class="knob"><span class="material-symbols-outlined">drag_indicator</span></div></div>
+        </div>
+        <p class="ba-meta"><span class="only-en">Drag to compare — After vs. Before. Individual results may vary.</span><span class="only-es">Arrastra para comparar — Después vs. Antes. Los resultados varían según la persona.</span></p>
+      </div>
+      <div class="reveal">
+        <ul class="results-list">
+          <li><span class="idx">01</span><p><span class="only-en">Visible firmness on the jaw and neck starting around week 4–6.</span><span class="only-es">Firmeza visible en mandíbula y cuello alrededor de la semana 4–6.</span></p></li>
+          <li><span class="idx">02</span><p><span class="only-en">Clearer jawline definition progressing over 2–6 months.</span><span class="only-es">Definición más clara de la mandíbula progresando a lo largo de 2–6 meses.</span></p></li>
+          <li><span class="idx">03</span><p><span class="only-en">Gradual collagen rebuild — the kind of change your friends notice without asking why.</span><span class="only-es">Reconstrucción gradual de colágeno — el tipo de cambio que tus amigas notan sin saber por qué.</span></p></li>
+          <li><span class="idx">04</span><p><span class="only-en">Natural-looking skin — not stretched, not frozen, not filtered.</span><span class="only-es">Piel de aspecto natural — sin estirar, sin congelar, sin filtro.</span></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3-STEP PROCESS ===================== -->
+<section class="band" id="process">
+  <div class="wrap">
+    <div class="reveal" style="max-width:640px;margin-bottom:48px;">
+      <span class="eyebrow"><span class="dot"></span><span class="only-en">How it works</span><span class="only-es">Cómo funciona</span></span>
+      <h2 class="h"><span class="only-en">Three steps. <span class="em">Then you decide.</span></span><span class="only-es">Tres pasos. <span class="em">Luego tú decides.</span></span></h2>
+      <p class="lead" style="margin-top:20px;"><span class="only-en">A medical session, not a sales pitch. The fee you invest comes back to you.</span><span class="only-es">Una sesión médica, no un pitch de ventas. La cuota que inviertes se te acredita.</span></p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">01</div>
+        <h3 class="h"><span class="only-en">Book your consultation with 3D diagnosis</span><span class="only-es">Agenda tu consulta con diagnóstico 3D</span></h3>
+        <p><span class="only-en">An objective reading of your collagen, laxity and structure with 3D skin analysis. Not a visual guess.</span><span class="only-es">Una lectura objetiva de tu colágeno, flacidez y estructura con análisis 3D de la piel. No una suposición visual.</span></p>
+      </div>
+      <div class="step reveal">
+        <div class="n">02</div>
+        <h3 class="h"><span class="only-en">Get a personalized plan and exact price</span><span class="only-es">Recibe un plan personalizado y precio exacto</span></h3>
+        <p><span class="only-en">Technology, area, sessions and sequence — reviewed and signed off by our Medical Director, with a realistic projection. No upsell.</span><span class="only-es">Tecnología, área, sesiones y secuencia — revisados y firmados por nuestro Director Médico, con una proyección realista. Sin venta adicional.</span></p>
+      </div>
+      <div class="step reveal">
+        <div class="n">03</div>
+        <h3 class="h"><span class="only-en">Begin treatment, fully supervised</span><span class="only-es">Comienza el tratamiento, con supervisión total</span></h3>
+        <p><span class="only-en">Every session is performed by licensed professionals with complete follow-up through your result milestones.</span><span class="only-es">Cada sesión la realizan profesionales licenciados con seguimiento completo hasta tus metas de resultados.</span></p>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:40px;">
+      <a class="btn btn-primary btn-lg" href="#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+      <span class="muted" style="font-size:var(--text-sm);margin-left:16px;"><span class="only-en">Personalized pricing · financing available</span><span class="only-es">Precios personalizados · financiamiento disponible</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="band border-y" id="faq" style="background:var(--surface-linen);">
+  <div class="wrap-narrow">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 48px;">
+      <span class="eyebrow" style="justify-content:center;"><span class="dot"></span><span class="only-en">Common doubts</span><span class="only-es">Dudas comunes</span></span>
+      <h2 class="h"><span class="only-en">Questions <span class="em">real patients</span> ask us.</span><span class="only-es">Preguntas que <span class="em">pacientes reales</span> nos hacen.</span></h2>
+    </div>
+    <div class="faq reveal">
+      <div class="qa">
+        <button aria-expanded="false"><span><span class="only-en">Does it hurt?</span><span class="only-es">¿Duele?</span></span><span class="plus">+</span></button>
+        <div class="ans"><p><span class="only-en">For most non-invasive technologies (Ultherapy, RF Microneedling, Agnes RF) we apply topical numbing before your session. Patients typically describe the sensation as warmth or a quick tingling, not sharp pain. You can work and socialize the same day — no downtime.</span><span class="only-es">Para la mayoría de las tecnologías no invasivas (Ultherapy, microagujas RF, Agnes RF) aplicamos anestesia tópica antes de tu sesión. Las pacientes describen la sensación como calor o un cosquilleo breve, no dolor agudo. Puedes trabajar y socializar el mismo día — sin downtime.</span></p></div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false"><span><span class="only-en">When will I see results?</span><span class="only-es">¿Cuándo veré resultados?</span></span><span class="plus">+</span></button>
+        <div class="ans"><p><span class="only-en">Initial firmness is often visible between weeks 4–6. Full collagen rebuild progresses over 2–6 months. This is a real biological process, not a filter — which is why it lasts. Results vary by person.</span><span class="only-es">La firmeza inicial suele verse entre las semanas 4–6. La reconstrucción completa de colágeno progresa a lo largo de 2–6 meses. Es un proceso biológico real, no un filtro — por eso dura. Los resultados varían según la persona.</span></p></div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false"><span><span class="only-en">Why does this cost more than some chain med spas?</span><span class="only-es">¿Por qué cuesta más que en algunos med spas de cadena?</span></span><span class="plus">+</span></button>
+        <div class="ans"><p><span class="only-en">Your plan is reviewed by a Board Certified Medical Director, every procedure is performed by licensed professionals who don't rotate every six months, and you receive a complete follow-up protocol — not a handshake at the door. You're paying for medical supervision, not a room with a machine.</span><span class="only-es">Tu plan lo revisa un Director Médico Certificado, cada procedimiento lo realizan profesionales licenciados que no rotan cada seis meses, y recibes un protocolo de seguimiento completo — no un apretón de manos en la puerta. Pagas por supervisión médica, no por un cuarto con una máquina.</span></p></div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false"><span><span class="only-en">What if a treatment isn't right for me?</span><span class="only-es">¿Y si un tratamiento no es para mí?</span></span><span class="plus">+</span></button>
+        <div class="ans"><p><span class="only-en">Your consultation with 3D diagnosis is designed to find that out before we recommend anything. If a treatment isn't right for you, we'll tell you clearly — and you walk away with an honest assessment you can use elsewhere, and no pressure to book.</span><span class="only-es">Tu consulta con diagnóstico 3D está diseñada para averiguarlo antes de recomendar nada. Si un tratamiento no es para ti, te lo diremos con claridad — y te llevas una evaluación honesta que puedes usar en otro lugar, y cero presión para reservar.</span></p></div>
+      </div>
+      <div class="qa">
+        <button aria-expanded="false"><span><span class="only-en">It's my first time — is it safe?</span><span class="only-es">Es mi primera vez — ¿es seguro?</span></span><span class="plus">+</span></button>
+        <div class="ans"><p><span class="only-en">Every plan is supervised by our Board Certified Medical Director. We only use FDA-approved technology. You'll receive a complete follow-up protocol, with direct contact if anything feels off — because that's how medicine should work.</span><span class="only-es">Cada plan lo supervisa nuestro Director Médico Certificado. Solo usamos tecnología aprobada por la FDA. Recibirás un protocolo de seguimiento completo, con contacto directo si algo no se siente bien — porque así debe funcionar la medicina.</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKIN ANALYSIS WIDGET ===================== -->
+<section class="band" id="skin-quiz" style="background:var(--olam-blue);position:relative;overflow:hidden;">
+  <!-- decorative glow blobs -->
+  <span aria-hidden="true" style="position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(200,183,143,0.10),transparent 70%);top:-120px;right:-80px;pointer-events:none;"></span>
+  <span aria-hidden="true" style="position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(31,94,120,0.35),transparent 70%);bottom:-80px;left:-60px;pointer-events:none;"></span>
+  <div class="wrap">
+    <!-- header -->
+    <div class="reveal" style="text-align:center;max-width:620px;margin:0 auto 52px;">
+      <span class="eyebrow" style="color:rgba(200,183,143,0.9);justify-content:center;display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--champagne);display:inline-block;flex-shrink:0;"></span><span class="only-en">Free · 60 seconds</span><span class="only-es">Gratis · 60 segundos</span></span>
+      <h2 class="h" style="color:#fff;margin-top:12px;"><span class="only-en">Find out what your skin <span class="em" style="color:var(--champagne);">actually needs.</span></span><span class="only-es">Descubre lo que tu piel <span class="em" style="color:var(--champagne);">realmente necesita.</span></span></h2>
+      <p style="color:rgba(255,255,255,0.65);margin-top:16px;font-size:var(--text-sm);line-height:1.65;"><span class="only-en">Upload a selfie. Our AI builds your personalized skin profile and recommends the right treatments for you. No cost, instant results.</span><span class="only-es">Sube una selfie. Nuestra IA crea tu perfil de piel personalizado y te recomienda los tratamientos ideales. Sin costo, resultados al instante.</span></p>
+    </div>
+
+    <!-- 3-step how it works -->
+    <div class="osq-how reveal">
+      <div class="osq-how-step">
+        <div class="osq-how-num">01</div>
+        <div class="osq-how-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#C8B78F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="18" cy="14" r="5.5"/>
+            <path d="M6 28c0-5.523 5.373-10 12-10s12 4.477 12 10"/>
+            <path d="M27 7l2.5-2.5M9 7L6.5 4.5M18 4V2"/>
+          </svg>
+        </div>
+        <p class="osq-how-label"><span class="only-en">Take a selfie</span><span class="only-es">Toma una selfie</span></p>
+        <p class="osq-how-sub"><span class="only-en">Natural light, no filter, full face</span><span class="only-es">Luz natural, sin filtro, rostro completo</span></p>
+      </div>
+      <div class="osq-how-arrow" aria-hidden="true">
+        <svg width="28" height="16" viewBox="0 0 28 16" fill="none" stroke="rgba(200,183,143,0.5)" stroke-width="1.5" stroke-linecap="round"><path d="M2 8h24M19 2l7 6-7 6"/></svg>
+      </div>
+      <div class="osq-how-step">
+        <div class="osq-how-num">02</div>
+        <div class="osq-how-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#C8B78F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="6" width="24" height="24" rx="4"/>
+            <path d="M12 18h12M12 13h5M12 23h8"/>
+            <circle cx="25" cy="13" r="2.5" fill="#C8B78F" stroke="none"/>
+          </svg>
+        </div>
+        <p class="osq-how-label"><span class="only-en">AI analyzes your skin</span><span class="only-es">La IA analiza tu piel</span></p>
+        <p class="osq-how-sub"><span class="only-en">Hydration, texture, firmness, radiance</span><span class="only-es">Hidratación, textura, firmeza, luminosidad</span></p>
+      </div>
+      <div class="osq-how-arrow" aria-hidden="true">
+        <svg width="28" height="16" viewBox="0 0 28 16" fill="none" stroke="rgba(200,183,143,0.5)" stroke-width="1.5" stroke-linecap="round"><path d="M2 8h24M19 2l7 6-7 6"/></svg>
+      </div>
+      <div class="osq-how-step">
+        <div class="osq-how-num">03</div>
+        <div class="osq-how-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#C8B78F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 4h16a2 2 0 012 2v24a2 2 0 01-2 2H10a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+            <path d="M13 13h10M13 18h10M13 23h6"/>
+            <path d="M8 9h2M8 14h2M8 19h2" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <p class="osq-how-label"><span class="only-en">Get your plan</span><span class="only-es">Recibe tu plan</span></p>
+        <p class="osq-how-sub"><span class="only-en">Personalized treatments sent to your email</span><span class="only-es">Tratamientos personalizados a tu email</span></p>
+      </div>
+    </div>
+
+    <div id="olam-skin-quiz">
+      <div class="osq-brand">
+        <img src="../assets/logo-olam.png" alt="OLAM Med Spa" class="osq-logo-img">
+      </div>
+
+      <div class="osq-progress"><div class="osq-progress-bar" id="osqProgress"></div></div>
+
+      <div class="osq-card">
+
+        <!-- STEP 0: Intro -->
+        <div class="osq-step active" data-step="0">
+          <div class="osq-eyebrow" data-i18n="introEyebrow"></div>
+          <h1 class="osq-stack">
+            <span class="osq-h-hair" data-i18n="introHair"></span>
+            <span class="osq-h-hero" data-i18n="introHero"></span>
+            <span class="osq-h-close" data-i18n="introClose"></span>
+          </h1>
+          <p class="osq-sub" data-i18n="introSub"></p>
+          <button class="osq-btn" onclick="osq.go(1)" data-i18n="introCta"></button>
+          <p class="osq-trust" data-i18n="introTrust"></p>
+        </div>
+
+        <!-- STEP 1: Concern -->
+        <div class="osq-step" data-step="1">
+          <div class="osq-eyebrow" data-i18n="q1Eyebrow"></div>
+          <h2 class="osq-stack"><span class="osq-h-hero" data-i18n="q1Title"></span></h2>
+          <p class="osq-sub" data-i18n="q1Sub"></p>
+          <div class="osq-options" id="osqConcern"></div>
+        </div>
+
+        <!-- STEP 2: Age -->
+        <div class="osq-step" data-step="2">
+          <div class="osq-eyebrow" data-i18n="q2Eyebrow"></div>
+          <h2 class="osq-stack"><span class="osq-h-hero" data-i18n="q2Title"></span></h2>
+          <p class="osq-sub" data-i18n="q2Sub"></p>
+          <div class="osq-options" id="osqAge"></div>
+        </div>
+
+        <!-- STEP 3: Previous treatments -->
+        <div class="osq-step" data-step="3">
+          <div class="osq-eyebrow" data-i18n="q3Eyebrow"></div>
+          <h2 class="osq-stack"><span class="osq-h-hero" data-i18n="q3Title"></span></h2>
+          <p class="osq-sub" data-i18n="q3Sub"></p>
+          <div class="osq-options" id="osqPrev"></div>
+        </div>
+
+        <!-- STEP 4: Photo -->
+        <div class="osq-step" data-step="4">
+          <div class="osq-eyebrow" data-i18n="photoEyebrow"></div>
+          <h2 class="osq-stack"><span class="osq-h-hero" data-i18n="photoTitle"></span></h2>
+          <p class="osq-sub" data-i18n="photoSub"></p>
+          <div id="osqPhotoZone" class="osq-photo-zone">
+            <div class="osq-photo-icon">&#10047;</div>
+            <p data-i18n="photoZoneText"></p>
+            <div class="osq-photo-actions">
+              <button type="button" onclick="event.stopPropagation();document.getElementById('osqCam').click()" data-i18n="photoBtnCam"></button>
+              <button type="button" onclick="event.stopPropagation();document.getElementById('osqFile').click()" data-i18n="photoBtnFile"></button>
+            </div>
+          </div>
+          <div id="osqPreview" class="osq-preview">
+            <img id="osqPreviewImg" alt="">
+            <button class="osq-btn-ghost" onclick="osq.resetPhoto()" data-i18n="photoRetake"></button>
+          </div>
+          <div class="osq-tips" data-i18n-html="photoTips"></div>
+          <input type="file" id="osqCam" accept="image/*" capture="user" class="osq-hidden">
+          <input type="file" id="osqFile" accept="image/*" class="osq-hidden">
+          <button class="osq-btn" id="osqPhotoNext" disabled onclick="osq.go(5)" data-i18n="photoNext"></button>
+        </div>
+
+        <!-- STEP 5: Contact -->
+        <div class="osq-step" data-step="5">
+          <div class="osq-eyebrow" data-i18n="formEyebrow"></div>
+          <h2 class="osq-stack"><span class="osq-h-hero" data-i18n="formTitle"></span></h2>
+          <p class="osq-sub" data-i18n="formSub"></p>
+          <div class="osq-field">
+            <label for="osqName" data-i18n="formName"></label>
+            <input type="text" id="osqName" autocomplete="name">
+          </div>
+          <div class="osq-field">
+            <label for="osqEmail" data-i18n="formEmail"></label>
+            <input type="email" id="osqEmail" autocomplete="email" inputmode="email">
+          </div>
+          <div class="osq-field">
+            <label for="osqPhone" data-i18n="formPhone"></label>
+            <input type="tel" id="osqPhone" autocomplete="tel" inputmode="tel">
+          </div>
+          <input type="text" id="osqWebsite" class="osq-hidden" tabindex="-1" autocomplete="off">
+          <div class="osq-consent">
+            <input type="checkbox" id="osqConsent">
+            <label for="osqConsent" data-i18n="formConsent"></label>
+          </div>
+          <button class="osq-btn" id="osqSubmit" onclick="osq.submit()" data-i18n="formCta"></button>
+          <p class="osq-error-msg" id="osqFormError"></p>
+        </div>
+
+        <!-- STEP 6: Loading -->
+        <div class="osq-step" data-step="6">
+          <div class="osq-loading">
+            <div class="osq-ring"></div>
+            <p class="osq-loading-msg" id="osqLoadingMsg"></p>
+          </div>
+        </div>
+
+        <!-- STEP 7: Result -->
+        <div class="osq-step" data-step="7">
+          <div id="osqResult"></div>
+        </div>
+
+        <!-- STEP 8: Fallback -->
+        <div class="osq-step" data-step="8">
+          <div class="osq-eyebrow" data-i18n="fbEyebrow"></div>
+          <h2 class="osq-stack"><span class="osq-h-hero" data-i18n="fbTitle"></span></h2>
+          <p class="osq-sub" data-i18n="fbSub"></p>
+          <a id="osqFbBook" href="#book" style="text-decoration:none"><button class="osq-btn" data-i18n="resultCta"></button></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ---- Skin section: how-it-works steps ---- */
+  .osq-how { display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:center; gap:12px; max-width:700px; margin:0 auto 52px; }
+  @media (max-width:767px){
+    .osq-how { grid-template-columns:1fr; max-width:280px; gap:8px; margin-bottom:40px; }
+    .osq-how-arrow { transform:rotate(90deg); display:flex; justify-content:center; }
+  }
+  .osq-how-step { text-align:center; }
+  .osq-how-num { font-family:var(--font-display); font-weight:var(--fw-medium); font-size:0.75rem; letter-spacing:0.18em; color:var(--champagne); margin-bottom:14px; opacity:0.8; }
+  .osq-how-icon { width:80px; height:80px; border-radius:50%; background:rgba(255,255,255,0.06); border:1px solid rgba(200,183,143,0.25); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; transition:background var(--dur-base) var(--ease-cushion); }
+  .osq-how-step:hover .osq-how-icon { background:rgba(200,183,143,0.12); border-color:rgba(200,183,143,0.5); }
+  .osq-how-label { color:#fff; font-size:var(--text-sm); font-weight:var(--fw-semibold); margin:0 0 6px; }
+  .osq-how-sub { color:rgba(255,255,255,0.5); font-size:11.5px; line-height:1.5; margin:0; }
+  .osq-how-arrow { display:flex; align-items:center; justify-content:center; }
+
+  /* ---- Skin Widget V2 2026 ---- */
+  #olam-skin-quiz{
+    --blanco:#FFFFFF;
+    --lino:#F8F3EA;
+    --blush:#F3EAE6;
+    --niebla:#F4F7F8;
+    --champagne:#C8B78F;
+    --azul-niebla:#8FA7B6;
+    --azul-olam:#1F5E78;
+    --azul-olam-deep:#173F50;
+    --carbon:#1F2020;
+    --carbon-soft:#5C6066;
+    --error:#A8483A;
+    --radius:20px;
+  }
+  #olam-skin-quiz, #olam-skin-quiz *{box-sizing:border-box;margin:0;padding:0;}
+  #olam-skin-quiz{font-family:'Poppins',sans-serif;font-weight:300;color:var(--carbon);-webkit-font-smoothing:antialiased;background:var(--blanco);border-radius:28px;}
+  #olam-skin-quiz{max-width:540px;margin:0 auto;padding:32px 18px 64px;}
+  #olam-skin-quiz .osq-brand{display:flex;align-items:center;justify-content:center;margin-bottom:28px;}
+  #olam-skin-quiz .osq-brand .osq-logo-img{height:34px;width:auto;display:block;}
+  #olam-skin-quiz .osq-progress{height:3px;background:var(--niebla);border-radius:99px;overflow:hidden;margin-bottom:30px;}
+  #olam-skin-quiz .osq-progress-bar{height:100%;width:0%;background:var(--azul-olam);border-radius:99px;transition:width .45s cubic-bezier(.22,1,.36,1);}
+  #olam-skin-quiz .osq-card{background:var(--blanco);border-radius:28px;padding:40px 30px;box-shadow:0 24px 64px rgba(31,94,120,.08);position:relative;overflow:hidden;}
+  #olam-skin-quiz .osq-card::before{content:"";position:absolute;top:-120px;right:-120px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle, var(--blush) 0%, transparent 72%);pointer-events:none;}
+  #olam-skin-quiz .osq-card::after{content:"";position:absolute;bottom:-140px;left:-100px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle, var(--lino) 0%, transparent 72%);pointer-events:none;}
+  #olam-skin-quiz .osq-card > *{position:relative;z-index:1;}
+  #olam-skin-quiz .osq-step{display:none;animation:osqIn .45s cubic-bezier(.22,1,.36,1);}
+  #olam-skin-quiz .osq-step.active{display:block;}
+  @keyframes osqIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){#olam-skin-quiz .osq-step{animation:none;}#olam-skin-quiz .osq-progress-bar{transition:none;}}
+  #olam-skin-quiz .osq-eyebrow{font-family:'Poppins',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);margin-bottom:14px;}
+  #olam-skin-quiz .osq-h-hair{font-family:'Poppins',sans-serif;font-weight:200;font-size:26px;line-height:1.22;color:var(--azul-niebla);}
+  #olam-skin-quiz .osq-h-hero{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:30px;line-height:1.18;color:var(--carbon);display:block;}
+  #olam-skin-quiz .osq-h-close{font-family:'Poppins',sans-serif;font-weight:600;font-size:26px;line-height:1.2;color:var(--azul-olam);display:block;}
+  #olam-skin-quiz h1.osq-stack, #olam-skin-quiz h2.osq-stack{margin-bottom:16px;}
+  #olam-skin-quiz .osq-sub{font-family:'Poppins',sans-serif;font-weight:300;color:var(--carbon-soft);font-size:15px;line-height:1.65;margin-bottom:26px;}
+  #olam-skin-quiz .osq-options{display:flex;flex-direction:column;gap:11px;}
+  #olam-skin-quiz .osq-opt{display:block;width:100%;text-align:left;background:var(--niebla);border:1.5px solid transparent;border-radius:14px;padding:16px 20px;font-family:'Poppins',sans-serif;font-size:14.5px;font-weight:400;color:var(--carbon);cursor:pointer;transition:border-color .18s,background .18s;}
+  #olam-skin-quiz .osq-opt:hover{border-color:var(--champagne);}
+  #olam-skin-quiz .osq-opt:focus-visible{outline:2px solid var(--azul-olam);outline-offset:2px;}
+  #olam-skin-quiz .osq-opt.selected{border-color:var(--azul-olam);background:var(--blush);}
+  #olam-skin-quiz .osq-btn{display:block;width:100%;background:var(--azul-olam);color:var(--blanco);border:none;border-radius:99px;padding:18px 24px;font-family:'Poppins',sans-serif;font-size:14.5px;font-weight:500;letter-spacing:.03em;cursor:pointer;transition:background .18s,transform .12s;margin-top:24px;}
+  #olam-skin-quiz .osq-btn:hover{background:var(--azul-olam-deep);}
+  #olam-skin-quiz .osq-btn:active{transform:scale(.985);}
+  #olam-skin-quiz .osq-btn:disabled{opacity:.4;cursor:not-allowed;}
+  #olam-skin-quiz .osq-btn-ghost{display:block;width:100%;background:none;border:none;color:var(--carbon-soft);font-size:13px;font-family:'Poppins',sans-serif;margin-top:16px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+  #olam-skin-quiz .osq-photo-zone{border:1.5px dashed var(--champagne);border-radius:18px;background:var(--lino);padding:34px 18px;text-align:center;cursor:pointer;transition:border-color .18s;}
+  #olam-skin-quiz .osq-photo-zone:hover{border-color:var(--azul-olam);}
+  #olam-skin-quiz .osq-photo-zone .osq-photo-icon{font-size:30px;line-height:1;margin-bottom:12px;color:var(--azul-olam);}
+  #olam-skin-quiz .osq-photo-zone p{font-size:13.5px;color:var(--carbon-soft);line-height:1.5;}
+  #olam-skin-quiz .osq-photo-actions{display:flex;gap:10px;margin-top:18px;}
+  #olam-skin-quiz .osq-photo-actions button{flex:1;background:var(--blanco);border:1.5px solid var(--blush);border-radius:99px;padding:14px 10px;font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:500;color:var(--carbon);cursor:pointer;transition:border-color .18s;}
+  #olam-skin-quiz .osq-photo-actions button:hover{border-color:var(--azul-olam);}
+  #olam-skin-quiz .osq-preview{display:none;text-align:center;}
+  #olam-skin-quiz .osq-preview img{width:176px;height:176px;object-fit:cover;border-radius:50%;border:5px solid var(--blush);margin-bottom:16px;}
+  #olam-skin-quiz .osq-tips{margin-top:20px;background:var(--niebla);border-radius:14px;padding:16px 18px;font-size:12.5px;color:var(--carbon-soft);line-height:1.65;text-align:left;}
+  #olam-skin-quiz .osq-tips strong{color:var(--carbon);font-weight:500;}
+  #olam-skin-quiz .osq-field{margin-bottom:15px;}
+  #olam-skin-quiz .osq-field label{display:block;font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--carbon-soft);margin-bottom:7px;}
+  #olam-skin-quiz .osq-field input{width:100%;border:1.5px solid var(--blush);border-radius:14px;padding:15px 18px;font-family:'Poppins',sans-serif;font-size:16px;font-weight:300;color:var(--carbon);background:var(--blanco);transition:border-color .18s;}
+  #olam-skin-quiz .osq-field input:focus{outline:none;border-color:var(--azul-olam);}
+  #olam-skin-quiz .osq-field input.osq-invalid{border-color:var(--error);}
+  #olam-skin-quiz .osq-consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0 4px;}
+  #olam-skin-quiz .osq-consent input{margin-top:3px;accent-color:var(--azul-olam);width:16px;height:16px;flex:none;}
+  #olam-skin-quiz .osq-consent label{font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:300;color:var(--carbon-soft);line-height:1.6;}
+  #olam-skin-quiz .osq-error-msg{display:none;font-family:'Poppins',sans-serif;color:var(--error);font-size:13px;margin-top:12px;text-align:center;}
+  #olam-skin-quiz .osq-loading{text-align:center;padding:30px 0 14px;}
+  #olam-skin-quiz .osq-ring{width:76px;height:76px;border-radius:50%;border:3px solid var(--niebla);border-top-color:var(--azul-olam);margin:0 auto 26px;animation:osqSpin 1s linear infinite;}
+  @keyframes osqSpin{to{transform:rotate(360deg);}}
+  @media (prefers-reduced-motion: reduce){#olam-skin-quiz .osq-ring{animation-duration:2.5s;}}
+  #olam-skin-quiz .osq-loading-msg{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:19px;color:var(--carbon);min-height:48px;transition:opacity .3s;}
+  #olam-skin-quiz .osq-result-head{text-align:center;margin-bottom:26px;}
+  #olam-skin-quiz .osq-pill{display:inline-block;background:var(--blush);border:1px solid var(--champagne);color:var(--azul-olam-deep);border-radius:99px;padding:8px 20px;font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.03em;margin-top:12px;}
+  #olam-skin-quiz .osq-scores{display:flex;flex-direction:column;gap:16px;margin:24px 0;}
+  #olam-skin-quiz .osq-score-row{display:flex;align-items:center;gap:14px;}
+  #olam-skin-quiz .osq-score-label{flex:0 0 104px;font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:500;color:var(--carbon);}
+  #olam-skin-quiz .osq-score-track{flex:1;height:7px;background:var(--niebla);border-radius:99px;overflow:hidden;}
+  #olam-skin-quiz .osq-score-fill{height:100%;width:0%;background:linear-gradient(90deg, var(--azul-niebla), var(--azul-olam));border-radius:99px;transition:width 1.1s cubic-bezier(.22,1,.36,1);}
+  #olam-skin-quiz .osq-score-num{flex:0 0 32px;text-align:right;font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:500;color:var(--carbon-soft);}
+  #olam-skin-quiz .osq-obs{margin:22px 0;list-style:none;}
+  #olam-skin-quiz .osq-obs li{position:relative;padding-left:24px;font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:300;line-height:1.65;color:var(--carbon);margin-bottom:10px;}
+  #olam-skin-quiz .osq-obs li::before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--champagne);}
+  #olam-skin-quiz .osq-recs{display:flex;flex-direction:column;gap:13px;margin:10px 0 6px;}
+  #olam-skin-quiz .osq-rec{background:var(--lino);border-radius:16px;padding:18px 20px;}
+  #olam-skin-quiz .osq-rec h3{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:17px;color:var(--carbon);margin-bottom:6px;}
+  #olam-skin-quiz .osq-rec p{font-family:'Poppins',sans-serif;font-size:13px;font-weight:300;color:var(--carbon-soft);line-height:1.55;}
+  #olam-skin-quiz .osq-disclaimer{font-family:'Poppins',sans-serif;font-size:11px;font-weight:300;color:var(--carbon-soft);line-height:1.65;margin-top:22px;text-align:center;opacity:.85;}
+  #olam-skin-quiz .osq-trust{font-family:'Poppins',sans-serif;text-align:center;font-size:12px;font-weight:300;color:var(--carbon-soft);margin-top:18px;letter-spacing:.01em;}
+  #olam-skin-quiz .osq-hidden{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+</style>
+
+<script>
+const OSQ_CONFIG = {
+  LANG: document.documentElement.getAttribute('data-lang') || 'en',
+  WEBHOOK_URL: "https://n8n.srv1359876.hstgr.cloud/webhook/olam-skin-analysis",
+  BOOKING_URL: "#book",
+  CLIENT: "OLAM Med Spa",
+  GOOGLE_ADS_CONVERSION: ""
+};
+
+const OSQ_I18N = {
+  es: {
+    introEyebrow:"Diagnóstico 3D · Gratis · 60 segundos",
+    introHair:"Tu piel,",introHero:"nuestra",introClose:"obsesión",
+    introSub:"Sube una selfie y descubre tu perfil de piel: hidratación, textura, luminosidad y los tratamientos que la revelan en su mejor versión.",
+    introCta:"Comenzar mi diagnóstico",introTrust:"Sin costo · Resultados al instante · 100% confidencial",
+    q1Eyebrow:"Pregunta 1 de 3",q1Title:"¿Cuál es tu principal preocupación?",q1Sub:"Selecciona la que más te identifique hoy.",
+    q1Options:[["manchas","Manchas o tono desigual"],["arrugas","Líneas de expresión"],["flacidez","Flacidez o pérdida de firmeza"],["acne","Acné o textura irregular"],["poros","Poros dilatados"],["deshidratacion","Piel apagada o deshidratada"]],
+    q2Eyebrow:"Pregunta 2 de 3",q2Title:"¿En qué rango de edad estás?",q2Sub:"Nos ayuda a calibrar tu diagnóstico.",
+    q2Options:[["18-29","18 – 29"],["30-39","30 – 39"],["40-49","40 – 49"],["50-59","50 – 59"],["60+","60+"]],
+    q3Eyebrow:"Pregunta 3 de 3",q3Title:"¿Has recibido tratamientos estéticos antes?",q3Sub:"Faciales, láser, botox, rellenos…",
+    q3Options:[["si","Sí, regularmente"],["alguna-vez","Alguna vez"],["nunca","Nunca, sería mi primera vez"]],
+    photoEyebrow:"Tu selfie",photoTitle:"Toma o sube una foto de tu rostro",photoSub:"Nuestra tecnología la analizará en segundos. La foto se usa solo para tu diagnóstico.",
+    photoZoneText:"Toca para tomar una selfie o subir una foto",photoBtnCam:"Tomar selfie",photoBtnFile:"Subir foto",photoRetake:"Usar otra foto",
+    photoTips:"<strong>Para un mejor diagnóstico:</strong> luz natural de frente, sin maquillaje si es posible, rostro completo y sin filtros.",
+    photoNext:"Continuar",photoTooBig:"La imagen no pudo procesarse. Intenta con otra foto.",
+    formEyebrow:"Último paso",formTitle:"¿A dónde enviamos tu diagnóstico completo?",formSub:"Tu perfil de piel está casi listo. Recibirás el reporte completo con recomendaciones personalizadas.",
+    formName:"Nombre",formEmail:"Email",formPhone:"Celular",
+    formConsent:"Acepto recibir mi diagnóstico y comunicaciones de OLAM Med Spa por email y SMS. Puedo cancelar en cualquier momento respondiendo STOP. Aplican tarifas de mensajes y datos.",
+    formCta:"Ver mi diagnóstico ahora",formErrName:"Escribe tu nombre.",formErrEmail:"Revisa tu email.",formErrPhone:"Revisa tu número de celular.",formErrConsent:"Debes aceptar para recibir tu diagnóstico.",
+    loadingMsgs:["Analizando la textura de tu piel…","Evaluando niveles de hidratación…","Midiendo luminosidad y tono…","Revisando líneas de expresión…","Preparando tus recomendaciones…"],
+    resultEyebrow:"Tu perfil de piel",resultTitle:"Hola {name}, esto revela tu piel",
+    scoreLabels:{hydration:"Hidratación",texture:"Textura",radiance:"Luminosidad",firmness:"Firmeza"},
+    obsTitle:"Lo que observamos",recsTitle:"Tratamientos que la revelan",
+    resultCta:"Agenda tu cita →",resultNote:"Te enviamos el reporte completo a tu email.",
+    disclaimer:"Este es un diagnóstico cosmético orientativo generado con inteligencia artificial. No constituye un diagnóstico médico ni sustituye la evaluación de un profesional. Los resultados varían según cada persona. En tu visita a OLAM Med Spa recibirás una valoración profesional personalizada.",
+    fbEyebrow:"¡Listo!",fbTitle:"Tu diagnóstico está en camino",fbSub:"Estamos terminando de procesar tu foto. En unos minutos recibirás tu perfil de piel completo en tu email. Mientras tanto, puedes agendar tu evaluación gratuita."
+  },
+  en: {
+    introEyebrow:"3D Diagnosis · Free · 60 seconds",
+    introHair:"Your skin,",introHero:"our",introClose:"obsession",
+    introSub:"Upload a selfie and discover your skin profile: hydration, texture, radiance, and the treatments that reveal it at its best.",
+    introCta:"Start my diagnosis",introTrust:"Free · Instant results · 100% confidential",
+    q1Eyebrow:"Question 1 of 3",q1Title:"What's your main skin concern?",q1Sub:"Pick the one that fits you best today.",
+    q1Options:[["manchas","Dark spots or uneven tone"],["arrugas","Fine lines"],["flacidez","Sagging or loss of firmness"],["acne","Acne or uneven texture"],["poros","Enlarged pores"],["deshidratacion","Dull or dehydrated skin"]],
+    q2Eyebrow:"Question 2 of 3",q2Title:"What's your age range?",q2Sub:"This helps us calibrate your diagnosis.",
+    q2Options:[["18-29","18 – 29"],["30-39","30 – 39"],["40-49","40 – 49"],["50-59","50 – 59"],["60+","60+"]],
+    q3Eyebrow:"Question 3 of 3",q3Title:"Have you had aesthetic treatments before?",q3Sub:"Facials, laser, botox, fillers…",
+    q3Options:[["si","Yes, regularly"],["alguna-vez","Once or twice"],["nunca","Never, this would be my first time"]],
+    photoEyebrow:"Your selfie",photoTitle:"Take or upload a photo of your face",photoSub:"Our technology will analyze it in seconds. Your photo is used only for your diagnosis.",
+    photoZoneText:"Tap to take a selfie or upload a photo",photoBtnCam:"Take selfie",photoBtnFile:"Upload photo",photoRetake:"Use a different photo",
+    photoTips:"<strong>For best results:</strong> natural light facing you, no makeup if possible, full face, no filters.",
+    photoNext:"Continue",photoTooBig:"We couldn't process that image. Please try another photo.",
+    formEyebrow:"Last step",formTitle:"Where should we send your full diagnosis?",formSub:"Your skin profile is almost ready. You'll receive the full report with personalized recommendations.",
+    formName:"Name",formEmail:"Email",formPhone:"Mobile phone",
+    formConsent:"I agree to receive my diagnosis and communications from OLAM Med Spa via email and SMS. I can opt out anytime by replying STOP. Message and data rates may apply.",
+    formCta:"See my diagnosis now",formErrName:"Please enter your name.",formErrEmail:"Please check your email.",formErrPhone:"Please check your phone number.",formErrConsent:"You must agree in order to receive your diagnosis.",
+    loadingMsgs:["Analyzing your skin texture…","Evaluating hydration levels…","Measuring radiance and tone…","Reviewing fine lines…","Preparing your recommendations…"],
+    resultEyebrow:"Your skin profile",resultTitle:"Hi {name}, this is what your skin reveals",
+    scoreLabels:{hydration:"Hydration",texture:"Texture",radiance:"Radiance",firmness:"Firmness"},
+    obsTitle:"What we observed",recsTitle:"Treatments that reveal it",
+    resultCta:"Book your visit →",resultNote:"We've sent the full report to your email.",
+    disclaimer:"This is an informational cosmetic diagnosis generated with artificial intelligence. It is not a medical diagnosis and does not replace a professional evaluation. Results vary by individual. During your visit to OLAM Med Spa you will receive a personalized professional assessment.",
+    fbEyebrow:"Done!",fbTitle:"Your diagnosis is on its way",fbSub:"We're finishing processing your photo. You'll receive your full skin profile by email in a few minutes. Meanwhile, you can book your free consultation."
+  }
+};
+
+const osq = (() => {
+  let T = OSQ_I18N[OSQ_CONFIG.LANG];
+  const state = {
+    step:0,concern:null,ageRange:null,previousTreatments:null,
+    photoBase64:null,photoMediaType:"image/jpeg",
+    eventId:"osq_"+Date.now()+"_"+Math.random().toString(36).slice(2,10),
+    loadingTimer:null
+  };
+  const TOTAL_STEPS = 7;
+  const $ = id => document.getElementById(id);
+
+  function applyI18n(){
+    document.querySelectorAll("#olam-skin-quiz [data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");if(T[k])el.textContent=T[k];});
+    document.querySelectorAll("#olam-skin-quiz [data-i18n-html]").forEach(el=>{const k=el.getAttribute("data-i18n-html");if(T[k])el.innerHTML=T[k];});
+    renderOptions("osqConcern",T.q1Options,v=>{state.concern=v;setTimeout(()=>go(2),250);});
+    renderOptions("osqAge",T.q2Options,v=>{state.ageRange=v;setTimeout(()=>go(3),250);});
+    renderOptions("osqPrev",T.q3Options,v=>{state.previousTreatments=v;setTimeout(()=>go(4),250);});
+    if($("osqFbBook"))$("osqFbBook").href=OSQ_CONFIG.BOOKING_URL;
+  }
+
+  function renderOptions(containerId,options,onPick){
+    const c=$(containerId);if(!c)return;c.innerHTML="";
+    options.forEach(([value,label])=>{
+      const b=document.createElement("button");
+      b.type="button";b.className="osq-opt";b.textContent=label;
+      b.onclick=()=>{c.querySelectorAll(".osq-opt").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");onPick(value);};
+      c.appendChild(b);
+    });
+  }
+
+  function go(step){
+    state.step=step;
+    document.querySelectorAll("#olam-skin-quiz .osq-step").forEach(el=>el.classList.toggle("active",+el.dataset.step===step));
+    $("osqProgress").style.width=Math.min(100,Math.round((step/TOTAL_STEPS)*100))+"%";
+    document.getElementById("skin-quiz").scrollIntoView({behavior:"smooth",block:"nearest"});
+  }
+
+  function handleFile(file){
+    if(!file||!file.type.startsWith("image/"))return;
+    const img=new Image();const url=URL.createObjectURL(file);
+    img.onload=()=>{
+      try{
+        const MAX=900;let{width:w,height:h}=img;
+        if(w>h&&w>MAX){h=Math.round(h*MAX/w);w=MAX;}else if(h>=w&&h>MAX){w=Math.round(w*MAX/h);h=MAX;}
+        const canvas=document.createElement("canvas");canvas.width=w;canvas.height=h;
+        canvas.getContext("2d").drawImage(img,0,0,w,h);
+        const dataUrl=canvas.toDataURL("image/jpeg",0.82);
+        state.photoBase64=dataUrl.split(",")[1];state.photoMediaType="image/jpeg";
+        $("osqPreviewImg").src=dataUrl;
+        $("osqPhotoZone").style.display="none";$("osqPreview").style.display="block";
+        $("osqPhotoNext").disabled=false;
+      }catch(e){alert(T.photoTooBig);}
+      URL.revokeObjectURL(url);
+    };
+    img.onerror=()=>{alert(T.photoTooBig);URL.revokeObjectURL(url);};
+    img.src=url;
+  }
+
+  function resetPhoto(){
+    state.photoBase64=null;
+    $("osqCam").value="";$("osqFile").value="";
+    $("osqPhotoZone").style.display="block";$("osqPreview").style.display="none";
+    $("osqPhotoNext").disabled=true;
+  }
+
+  const getCookie=n=>(document.cookie.match(new RegExp("(^| )"+n+"=([^;]+)"))||[])[2]||"";
+  const validEmail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  const validPhone=v=>v.replace(/\D/g,"").length>=10;
+  function markInvalid(input,bad){input.classList.toggle("osq-invalid",bad);return bad;}
+
+  async function submit(){
+    if($("osqWebsite").value)return;
+    const name=$("osqName"),email=$("osqEmail"),phone=$("osqPhone"),err=$("osqFormError");
+    err.style.display="none";
+    if(markInvalid(name,!name.value.trim())){err.textContent=T.formErrName;err.style.display="block";return;}
+    if(markInvalid(email,!validEmail(email.value.trim()))){err.textContent=T.formErrEmail;err.style.display="block";return;}
+    if(markInvalid(phone,!validPhone(phone.value))){err.textContent=T.formErrPhone;err.style.display="block";return;}
+    if(!$("osqConsent").checked){err.textContent=T.formErrConsent;err.style.display="block";return;}
+    $("osqSubmit").disabled=true;
+    try{
+      if(typeof fbq==="function")fbq("track","Lead",{content_name:"skin-analysis"},{eventID:state.eventId});
+      if(typeof gtag==="function"){
+        gtag("event","generate_lead",{event_category:"skin-analysis"});
+        if(OSQ_CONFIG.GOOGLE_ADS_CONVERSION)gtag("event","conversion",{send_to:OSQ_CONFIG.GOOGLE_ADS_CONVERSION});
+      }
+    }catch(e){}
+    go(6);startLoadingMessages();
+    const payload={
+      lang:OSQ_CONFIG.LANG,eventId:state.eventId,client:OSQ_CONFIG.CLIENT,
+      concern:state.concern,ageRange:state.ageRange,previousTreatments:state.previousTreatments,
+      firstName:name.value.trim(),email:email.value.trim().toLowerCase(),phone:phone.value.trim(),
+      consent:true,photoBase64:state.photoBase64,photoMediaType:state.photoMediaType,
+      pageUrl:location.href,fbp:getCookie("_fbp"),fbc:getCookie("_fbc"),userAgent:navigator.userAgent
+    };
+    try{
+      const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),60000);
+      const res=await fetch(OSQ_CONFIG.WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload),signal:controller.signal});
+      clearTimeout(timeout);const data=await res.json();
+      stopLoadingMessages();
+      if(data&&data.success&&data.analysis)renderResult(data.analysis,payload.firstName);else go(8);
+    }catch(e){stopLoadingMessages();go(8);}
+  }
+
+  function startLoadingMessages(){
+    const msgs=T.loadingMsgs;let i=0;const el=$("osqLoadingMsg");
+    el.textContent=msgs[0];
+    state.loadingTimer=setInterval(()=>{
+      i=Math.min(i+1,msgs.length-1);el.style.opacity=0;
+      setTimeout(()=>{el.textContent=msgs[i];el.style.opacity=1;},280);
+      if(i===msgs.length-1)clearInterval(state.loadingTimer);
+    },2200);
+  }
+  function stopLoadingMessages(){if(state.loadingTimer)clearInterval(state.loadingTimer);}
+
+  function renderResult(a,firstName){
+    const esc=s=>String(s??"").replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;"}[c]));
+    const scores=a.scores||{};
+    const scoreRows=Object.entries(T.scoreLabels).map(([key,label])=>{
+      const v=Math.max(5,Math.min(100,parseInt(scores[key],10)||50));
+      return `<div class="osq-score-row"><div class="osq-score-label">${label}</div><div class="osq-score-track"><div class="osq-score-fill" data-w="${v}"></div></div><div class="osq-score-num">${v}</div></div>`;
+    }).join("");
+    const obs=(a.observations||[]).slice(0,4).map(o=>`<li>${esc(o)}</li>`).join("");
+    const recs=(a.recommendations||[]).slice(0,3).map(r=>`<div class="osq-rec"><h3>${esc(r.treatment)}</h3><p>${esc(r.reason)}</p></div>`).join("");
+    $("osqResult").innerHTML=`
+      <div class="osq-result-head"><div class="osq-eyebrow">${T.resultEyebrow}</div><h2>${T.resultTitle.replace("{name}",esc(firstName))}</h2>${a.skinType?`<span class="osq-pill">${esc(a.skinType)}</span>`:""}</div>
+      <div class="osq-scores">${scoreRows}</div>
+      <div class="osq-eyebrow">${T.obsTitle}</div><ul class="osq-obs">${obs}</ul>
+      <div class="osq-eyebrow">${T.recsTitle}</div><div class="osq-recs">${recs}</div>
+      <a href="${OSQ_CONFIG.BOOKING_URL}" style="text-decoration:none"><button class="osq-btn osq-btn-gold">${T.resultCta}</button></a>
+      <p class="osq-trust">${T.resultNote}</p><p class="osq-disclaimer">${T.disclaimer}</p>`;
+    go(7);
+    requestAnimationFrame(()=>setTimeout(()=>{
+      document.querySelectorAll("#osqResult .osq-score-fill").forEach(f=>f.style.width=f.dataset.w+"%");
+    },120));
+  }
+
+  function setLang(lang){
+    OSQ_CONFIG.LANG=lang;T=OSQ_I18N[lang];
+    applyI18n();
+  }
+
+  function init(){
+    applyI18n();
+    $("osqCam").addEventListener("change",e=>handleFile(e.target.files[0]));
+    $("osqFile").addEventListener("change",e=>handleFile(e.target.files[0]));
+    $("osqPhotoZone").addEventListener("click",()=>$("osqFile").click());
+  }
+
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);
+  else init();
+
+  return{go,submit,resetPhoto,setLang};
+})();
+
+/* Wire al toggle de idioma existente */
+(function(){
+  function hookLang(){
+    document.querySelectorAll('[data-lang-btn]').forEach(btn=>{
+      btn.addEventListener('click',()=>{ if(typeof osq!=='undefined')osq.setLang(btn.getAttribute('data-lang-btn')); });
+    });
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",hookLang);
+  else hookLang();
+})();
+</script>
+
+<!-- ===================== CTA FORM ===================== -->
+<section class="band cta" id="book">
+  <div class="wrap cta-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span><span class="only-en">Reserve your consultation</span><span class="only-es">Reserva tu consulta</span></span>
+      <h2 class="h"><span class="only-en">One honest conversation. <span class="em">Then you decide.</span></span><span class="only-es">Una conversación honesta. <span class="em">Luego tú decides.</span></span></h2>
+      <p class="lead"><span class="only-en">We'll contact you within 5 minutes during business hours to confirm your preferred time.</span><span class="only-es">Te contactaremos en 5 minutos durante horario laboral para confirmar tu horario preferido.</span></p>
+      <ul class="cta-benefits">
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8B78F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span class="only-en">Personalized plan with 3D skin diagnosis</span><span class="only-es">Plan personalizado con diagnóstico 3D de la piel</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8B78F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span class="only-en">Exact price in writing — no upsell on the day</span><span class="only-es">Precio exacto por escrito — sin venta adicional el mismo día</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8B78F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span class="only-en">Financing available for qualified applicants</span><span class="only-es">Financiamiento disponible para solicitantes calificadas</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8B78F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span class="only-en">Board Certified Medical Director supervision</span><span class="only-es">Supervisión del Director Médico Certificado</span></li>
+      </ul>
+      <div style="margin-top:32px;border-radius:var(--radius-xl);overflow:hidden;line-height:0;">
+        <img src="../assets/olam-spa-livingroom.png" alt="Olam Med Spa — Pembroke Pines" style="width:100%;height:320px;object-fit:cover;display:block;border-radius:var(--radius-xl);">
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="form-card">
+        <h3 class="h"><span class="only-en">Book your consultation</span><span class="only-es">Agenda tu consulta</span></h3>
+        <p class="sub"><span class="only-en">A medical session — not a sales pitch.</span><span class="only-es">Una sesión médica — no un pitch de ventas.</span></p>
+        <!-- GoHighLevel form embed (auto-resized by form_embed.js) -->
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/qxRPO4krPS42zbVf3IjU"
+          style="width:100%;min-height:640px;border:none;border-radius:var(--radius-sm);display:block;"
+          id="inline-qxRPO4krPS42zbVf3IjU"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="RETO ANDRES WEPLASH"
+          data-height="621"
+          data-layout-iframe-id="inline-qxRPO4krPS42zbVf3IjU"
+          data-form-id="qxRPO4krPS42zbVf3IjU"
+          title="Book your consultation">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col" style="max-width:320px;">
+        <img class="foot-logo" src="../assets/logo-olam.png" alt="Olam Med Spa">
+        <p><span class="only-en">La nueva belleza natural. Personalized, physician-supervised non-invasive aesthetic medicine in Pembroke Pines, FL.</span><span class="only-es">La nueva belleza natural. Medicina estética no invasiva, personalizada y supervisada por médicos en Pembroke Pines, FL.</span></p>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;"><span class="only-en">Services</span><span class="only-es">Servicios</span></p>
+        <a href="#services"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>
+        <a href="#services"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>
+        <a href="#services"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></a>
+        <a href="#services"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;"><span class="only-en">Visit</span><span class="only-es">Visítanos</span></p>
+        <a href="tel:19542370930">954.237.0930</a>
+        <p>17901 NW 5th St, Ste 201<br>Pembroke Pines, FL</p>
+        <a href="#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span></a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Olam Med Spa. <span class="only-en">All rights reserved.</span><span class="only-es">Todos los derechos reservados.</span></span>
+      <span><span class="only-en">FDA-approved technology · Individual results may vary.</span><span class="only-es">Tecnología aprobada por la FDA · Los resultados varían según la persona.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // hero video fade-in
+  (function(){ var v = document.querySelector('.hero-video'); if(v){ v.addEventListener('canplay', function(){ v.classList.add('loaded'); }, {once:true}); if(v.readyState >= 3) v.classList.add('loaded'); } })();
+
+  // ---------- language toggle ----------
+  (function(){
+    var root = document.documentElement;
+    var btns = document.querySelectorAll('[data-lang-btn]');
+    function setLang(lang){
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      btns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang-btn') === lang); });
+      try { localStorage.setItem('olam-lang', lang); } catch(e){}
+      if(typeof osq !== 'undefined') osq.setLang(lang);
+    }
+    btns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang-btn')); }); });
+    var saved; try { saved = localStorage.getItem('olam-lang'); } catch(e){}
+    if(saved) setLang(saved);
+  })();
+
+  // ---------- scroll reveal ----------
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      els.forEach(function(e){ e.classList.add('in'); }); return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  // ---------- FAQ accordion ----------
+  document.querySelectorAll('.qa button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var qa = btn.parentElement, ans = qa.querySelector('.ans'), open = qa.classList.contains('open');
+      document.querySelectorAll('.qa').forEach(function(o){
+        var a = o.querySelector('.ans');
+        a.style.transition = 'max-height 0.3s cubic-bezier(0.4,0,1,1)';
+        o.classList.remove('open'); a.style.maxHeight = null; o.querySelector('button').setAttribute('aria-expanded','false');
+      });
+      if(!open){
+        ans.style.transition = 'max-height 0.42s cubic-bezier(0.16,1,0.3,1)';
+        qa.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  // ---------- before / after slider ----------
+  (function(){
+    var ba = document.getElementById('ba'), beforeImg = document.getElementById('baBeforeImg'), handle = document.getElementById('baHandle');
+    if(!ba) return;
+    function set(pct){ pct = Math.max(0, Math.min(100, pct)); beforeImg.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)'; handle.style.left = pct + '%'; ba.setAttribute('aria-valuenow', Math.round(pct)); }
+    function fromEvent(e){ var r = ba.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left; set((x / r.width) * 100); }
+    var dragging = false;
+    ba.addEventListener('pointerdown', function(e){ dragging = true; ba.setPointerCapture(e.pointerId); fromEvent(e); });
+    ba.addEventListener('pointermove', function(e){ if(dragging) fromEvent(e); });
+    ba.addEventListener('pointerup', function(){ dragging = false; });
+    ba.addEventListener('keydown', function(e){ var cur = parseFloat(ba.getAttribute('aria-valuenow')) || 50; if(e.key === 'ArrowLeft'){ set(cur - 4); e.preventDefault(); } if(e.key === 'ArrowRight'){ set(cur + 4); e.preventDefault(); } });
+    // start at 0%, animate to 50% when visible — communicates interactivity
+    set(0);
+    var baObserver = new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){
+        beforeImg.style.transition = 'clip-path 0.9s cubic-bezier(0.16,1,0.3,1)';
+        handle.style.transition = 'left 0.9s cubic-bezier(0.16,1,0.3,1)';
+        set(50);
+        setTimeout(function(){
+          beforeImg.style.transition = '';
+          handle.style.transition = '';
+        }, 950);
+        baObserver.disconnect();
+      }
+    }, { threshold: 0.4 });
+    baObserver.observe(ba);
+  })();
+</script>
+<!-- GoHighLevel form auto-resize -->
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</body>
+</html>
