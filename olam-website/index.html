@@ -149,9 +149,9 @@
   .proof-logo { font-family: var(--font-display); font-size: 1.05rem; font-weight: var(--fw-medium); color: var(--text-subtle); letter-spacing: 0.04em; }
   .proof-divider { display: none; }
 
-  /* desktop: cada logo en slot flex igual */
-  .proof-bar-desktop { display: flex; align-items: center; justify-content: space-between; }
-  .proof-bar-desktop .proof-logo-img { flex: 1; min-width: 0; width: 100%; height: 90px; max-width: none; object-fit: contain; filter: grayscale(100%) opacity(0.6); transition: filter 0.2s; }
+  /* desktop: logos a tamaño natural escalado */
+  .proof-bar-desktop { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .proof-bar-desktop .proof-logo-img { height: 80px; width: auto; object-fit: contain; filter: grayscale(100%) opacity(0.65); transition: filter 0.2s; flex-shrink: 0; }
   .proof-bar-desktop .proof-logo-img:hover { filter: grayscale(0%) opacity(1); }
   .proof-bar-mobile { display: none; }
 
