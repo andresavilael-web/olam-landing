@@ -169,18 +169,36 @@
   }
 
   /* ---------- philosophy ---------- */
-  .philosophy-grid { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: start; }
-  @media (min-width: 900px) { .philosophy-grid { grid-template-columns: 1.1fr 0.9fr; gap: 80px; } }
-  .phil-list { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-direction: column; gap: 12px; }
-  .phil-list li { display: flex; align-items: flex-start; gap: 12px; font-size: var(--text-sm); color: var(--text-body); }
-  .phil-list li::before { content: "—"; color: var(--action); font-weight: 600; flex-shrink: 0; }
   .phil-quote { margin: 32px 0 0; font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--text-accent); line-height: 1.65; border-left: 3px solid var(--action); padding-left: 20px; }
-  .phil-stats { display: flex; flex-direction: column; gap: 16px; }
-  .phil-stat-card { background: var(--surface-linen); border: 1px solid var(--border-hairline); border-radius: var(--radius-brand); padding: 24px 28px; }
-  .phil-stat-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: var(--fw-medium); color: var(--text-strong); line-height: 1; margin-bottom: 6px; }
-  .phil-stat-label { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.5; }
-  .phil-award { display: flex; align-items: flex-start; gap: 16px; }
-  .phil-award-icon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+
+  /* stats horizontales */
+  .phil-stats-row { display: flex; flex-wrap: wrap; gap: 0; margin-top: 48px; border: 1px solid var(--border-hairline); border-radius: var(--radius-brand); overflow: hidden; background: var(--surface-linen); }
+  .phil-stat-h { flex: 1; min-width: 160px; padding: 28px 24px; text-align: center; }
+  .phil-stat-divider { width: 1px; background: var(--border-hairline); flex-shrink: 0; }
+  @media (max-width: 700px) { .phil-stat-divider { display: none; } .phil-stat-h { border-bottom: 1px solid var(--border-hairline); min-width: 45%; } }
+  .phil-stat-num { font-family: var(--font-display); font-size: 1.9rem; font-weight: var(--fw-medium); color: var(--olam-blue); line-height: 1; margin-bottom: 6px; }
+  .phil-stat-label { font-size: var(--text-caption); color: var(--text-muted); line-height: 1.4; }
+
+  /* video */
+  .video-wrap { position: relative; margin-top: 56px; border-radius: var(--radius-xl); overflow: hidden; cursor: pointer; box-shadow: var(--shadow-2xl); }
+  .video-poster { width: 100%; height: 480px; object-fit: cover; display: block; }
+  @media (max-width: 640px) { .video-poster { height: 240px; } }
+  .video-play-btn { position: absolute; inset: 0; margin: auto; width: 80px; height: 80px; background: none; border: none; cursor: pointer; padding: 0; transition: transform 0.2s; }
+  .video-play-btn:hover { transform: scale(1.1); }
+  .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+
+  /* discover banner */
+  .discover-banner { background: var(--olam-blue); padding: 36px 0; text-align: center; }
+  .discover-banner p { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: clamp(0.95rem, 2vw, 1.25rem); letter-spacing: 0.04em; text-transform: uppercase; color: #fff; margin: 0; line-height: 1.5; }
+
+  /* specialize section */
+  .specialize-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+  @media (min-width: 860px) { .specialize-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+  .specialize-img img { width: 100%; height: 480px; object-fit: cover; border-radius: var(--radius-xl); display: block; box-shadow: var(--shadow-2xl); }
+  @media (max-width: 859px) { .specialize-img img { height: 300px; } }
+  .specialize-list { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 14px; }
+  .specialize-list li { display: flex; align-items: flex-start; gap: 12px; font-size: var(--text-body); color: var(--text-body); line-height: 1.5; }
+  .specialize-list li::before { content: "✓"; color: var(--action); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
   /* ---------- services grid ---------- */
   .svc-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 48px; }
@@ -411,51 +429,88 @@
 <!-- ===================== PHILOSOPHY ===================== -->
 <section class="band" id="philosophy">
   <div class="wrap">
-    <div class="philosophy-grid">
-      <div class="reveal">
-        <p class="eyebrow"><span class="dot"></span><span class="only-en">Our philosophy</span><span class="only-es">Nuestra filosofía</span></p>
-        <h2 class="h"><span class="only-en">Introducing the <em class="em">new natural beauty.</em></span><span class="only-es">La nueva <em class="em">belleza natural.</em></span></h2>
-        <p class="lead" style="margin-top:24px;">
-          <span class="only-en">Are you concerned about the natural aging of your skin? You're not alone. Over time, factors like sun exposure, stress, and hormonal changes can affect your skin's appearance — causing spots, fine lines, wrinkles, dullness, enlarged pores, and uneven texture. But that is not your true self.</span>
-          <span class="only-es">¿Te preocupa el envejecimiento natural de tu piel? No estás sola. Con el tiempo, factores como la exposición solar, el estrés y los cambios hormonales pueden afectar tu apariencia — causando manchas, líneas finas, arrugas, opacidad, poros dilatados y textura irregular. Pero ese no es tu verdadero yo.</span>
-        </p>
-        <p class="lead" style="margin-top:20px;">
-          <span class="only-en">At Olam Med Spa, we guide you through a transformation that respects your essence and enhances your natural beauty. We offer personalized, non-invasive aesthetic treatments that smooth wrinkles, improve texture, reduce imperfections, and help you feel confident in your skin — no filters, no exaggerations.</span>
-          <span class="only-es">En Olam Med Spa te guiamos en una transformación que respeta tu esencia y realza tu belleza natural. Ofrecemos tratamientos estéticos no invasivos y personalizados que suavizan arrugas, mejoran la textura, reducen imperfecciones y te ayudan a sentirte segura — sin filtros ni exageraciones.</span>
-        </p>
-        <ul class="phil-list reveal">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Our philosophy</span><span class="only-es">Nuestra filosofía</span></p>
+      <h2 class="h"><span class="only-en">Introducing the <em class="em">new natural beauty.</em></span><span class="only-es">La nueva <em class="em">belleza natural.</em></span></h2>
+      <p class="lead" style="margin-top:24px;max-width:72ch;">
+        <span class="only-en">Are you concerned about the natural aging of your skin? You're not alone. Over time, factors like sun exposure, stress, and hormonal changes can affect your skin's appearance — causing spots, fine lines, wrinkles, dullness, enlarged pores, and uneven texture. But that is not your true self.</span>
+        <span class="only-es">¿Te preocupa el envejecimiento natural de tu piel? No estás sola. Con el tiempo, factores como la exposición solar, el estrés y los cambios hormonales pueden afectar tu apariencia — causando manchas, líneas finas, arrugas, opacidad, poros dilatados y textura irregular. Pero ese no es tu verdadero yo.</span>
+      </p>
+      <p class="lead" style="margin-top:20px;max-width:72ch;">
+        <span class="only-en">At Olam Med Spa, we guide you through a transformation that respects your essence and enhances your natural beauty. We offer personalized, non-invasive aesthetic treatments that smooth wrinkles, improve texture, reduce imperfections, and help you feel confident in your skin — no filters, no exaggerations.</span>
+        <span class="only-es">En Olam Med Spa te guiamos en una transformación que respeta tu esencia y realza tu belleza natural. Ofrecemos tratamientos estéticos no invasivos y personalizados que suavizan arrugas, mejoran la textura, reducen imperfecciones y te ayudan a sentirte segura — sin filtros ni exageraciones.</span>
+      </p>
+    </div>
+
+    <!-- Stats horizontales -->
+    <div class="phil-stats-row reveal">
+      <div class="phil-stat-h">
+        <div class="phil-stat-num">30+</div>
+        <div class="phil-stat-label"><span class="only-en">years of combined medical expertise</span><span class="only-es">años de experiencia médica</span></div>
+      </div>
+      <div class="phil-stat-divider"></div>
+      <div class="phil-stat-h">
+        <div class="phil-stat-num">6,000+</div>
+        <div class="phil-stat-label"><span class="only-en">injectable procedures in the last 5 years</span><span class="only-es">procedimientos de inyectables</span></div>
+      </div>
+      <div class="phil-stat-divider"></div>
+      <div class="phil-stat-h">
+        <div class="phil-stat-num">15,000+</div>
+        <div class="phil-stat-label"><span class="only-en">aesthetic procedures in the last 5 years</span><span class="only-es">procedimientos estéticos</span></div>
+      </div>
+      <div class="phil-stat-divider"></div>
+      <div class="phil-stat-h">
+        <div class="phil-stat-num">★ Forbes</div>
+        <div class="phil-stat-label"><span class="only-en">Featured as a high-end medical spa</span><span class="only-es">Destacados como med spa de alta gama</span></div>
+      </div>
+      <div class="phil-stat-divider"></div>
+      <div class="phil-stat-h">
+        <div class="phil-stat-num">TV</div>
+        <div class="phil-stat-label">Univision · Telemundo · Hola TV · RCN</div>
+      </div>
+    </div>
+
+    <!-- Video YouTube -->
+    <div class="video-wrap reveal" id="videoWrap">
+      <img class="video-poster" src="assets/olam-spa-livingroom.png" alt="Olam Med Spa — ver video" loading="lazy">
+      <button class="video-play-btn" id="videoPlayBtn" aria-label="Reproducir video">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.92)"/>
+          <polygon points="32,24 60,40 32,56" fill="var(--olam-blue)"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DISCOVER BANNER ===================== -->
+<div class="discover-banner">
+  <div class="wrap">
+    <p><span class="only-en">Discover how aesthetic treatments in Pembroke Pines can transform your skin and reveal a more radiant version of you</span><span class="only-es">Descubre cómo los tratamientos estéticos en Pembroke Pines pueden transformar tu piel y revelar una versión más radiante de ti</span></p>
+  </div>
+</div>
+
+<!-- ===================== SPECIALIZE ===================== -->
+<section class="band" id="specialize">
+  <div class="wrap">
+    <div class="specialize-grid">
+      <div class="specialize-img reveal">
+        <img src="assets/injectables.jpg" alt="Olam Med Spa treatments" loading="lazy">
+      </div>
+      <div class="specialize-content reveal">
+        <p class="eyebrow"><span class="dot"></span><span class="only-en">We specialize in</span><span class="only-es">Nos especializamos en</span></p>
+        <ul class="specialize-list">
           <li><span class="only-en">Anti-aging facial treatments</span><span class="only-es">Tratamientos faciales anti-envejecimiento</span></li>
           <li><span class="only-en">Injectables such as Botox and dermal fillers</span><span class="only-es">Inyectables como Botox y fillers dérmicos</span></li>
           <li><span class="only-en">Rejuvenation with laser and radiofrequency</span><span class="only-es">Rejuvenecimiento con láser y radiofrecuencia</span></li>
           <li><span class="only-en">Non-surgical body contouring</span><span class="only-es">Contorno corporal no quirúrgico</span></li>
           <li><span class="only-en">3D skin diagnostics and customized treatment plans</span><span class="only-es">Diagnóstico 3D de piel y planes de tratamiento personalizados</span></li>
         </ul>
-        <p class="phil-quote reveal">
+        <p class="phil-quote" style="margin-top:28px;">
           <span class="only-en">"We believe true beauty is not imposed — it's revealed. It's not about changing who you are, but rediscovering your best self with confidence, authenticity, and care."</span>
           <span class="only-es">"Creemos que la verdadera belleza no se impone — se revela. No se trata de cambiar quién eres, sino de redescubrir tu mejor versión con confianza, autenticidad y cuidado."</span>
         </p>
-      </div>
-      <div class="phil-stats reveal">
-        <div class="phil-stat-card">
-          <div class="phil-stat-num">30+</div>
-          <div class="phil-stat-label"><span class="only-en">years of combined medical expertise</span><span class="only-es">años de experiencia médica combinada</span></div>
-        </div>
-        <div class="phil-stat-card">
-          <div class="phil-stat-num">6,000+</div>
-          <div class="phil-stat-label"><span class="only-en">injectable procedures in the last 5 years</span><span class="only-es">procedimientos de inyectables en los últimos 5 años</span></div>
-        </div>
-        <div class="phil-stat-card">
-          <div class="phil-stat-num">15,000+</div>
-          <div class="phil-stat-label"><span class="only-en">aesthetic procedures in the last 5 years</span><span class="only-es">procedimientos estéticos en los últimos 5 años</span></div>
-        </div>
-        <div class="phil-stat-card phil-award">
-          <div class="phil-award-icon">★</div>
-          <div class="phil-stat-label"><span class="only-en">Featured in Forbes Magazine as a high-end medical spa</span><span class="only-es">Destacados en Forbes Magazine como med spa de alta gama</span></div>
-        </div>
-        <div class="phil-stat-card phil-award">
-          <div class="phil-award-icon">📺</div>
-          <div class="phil-stat-label"><span class="only-en">Featured on Univision, Telemundo, Hola TV, RCN as experts in medical aesthetics</span><span class="only-es">Presencia en Univision, Telemundo, Hola TV, RCN como expertos en estética médica</span></div>
-        </div>
+        <a class="btn btn-primary" href="#book" style="margin-top:28px;display:inline-flex;"><span class="only-en">About Us</span><span class="only-es">Sobre nosotros</span> <span class="arr">→</span></a>
       </div>
     </div>
   </div>
@@ -643,60 +698,36 @@
 
 <!-- ===================== BOOKING CTA ===================== -->
 <section class="band cta" id="book">
-  <div class="wrap">
-    <div class="cta-grid">
-      <div class="reveal">
-        <p class="eyebrow"><span class="dot"></span><span class="only-en">Reserve your consultation</span><span class="only-es">Reserva tu consulta</span></p>
-        <h2 class="h"><span class="only-en">Are you ready to take control of your skin and <em class="em">start your beauty journey?</em></span><span class="only-es">¿Estás lista para tomar el control de tu piel y <em class="em">comenzar tu viaje de belleza?</em></span></h2>
-        <p class="lead" style="margin-top:16px;">
-          <span class="only-en">Book your personalized consultation. From first consultation to results you'll love — our aesthetic treatments in Pembroke Pines deliver visible transformation with personalized care.</span>
-          <span class="only-es">Agenda tu consulta personalizada. Desde la primera consulta hasta los resultados que amarás — nuestros tratamientos estéticos en Pembroke Pines ofrecen una transformación visible con atención personalizada.</span>
-        </p>
-        <ul class="cta-benefits">
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="only-en">Personalized plan with 3D skin diagnosis</span><span class="only-es">Plan personalizado con diagnóstico 3D de piel</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="only-en">Exact price in writing — no upsell on the day</span><span class="only-es">Precio exacto por escrito — sin ventas adicionales el día</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="only-en">Financing available for qualified applicants</span><span class="only-es">Financiamiento disponible para aplicantes calificados</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="only-en">Board Certified Medical Director supervision</span><span class="only-es">Supervisión de Director Médico certificado</span>
-          </li>
-        </ul>
-        <div style="margin-top:32px;border-radius:var(--radius-xl);overflow:hidden;line-height:0;">
-          <img src="assets/olam-spa-livingroom.png" alt="Olam Med Spa — Pembroke Pines" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:var(--radius-xl);">
-        </div>
+  <div class="wrap" style="max-width:760px;text-align:center;">
+    <div class="reveal">
+      <p class="eyebrow" style="justify-content:center;"><span class="dot"></span><span class="only-en">Reserve your consultation</span><span class="only-es">Reserva tu consulta</span></p>
+      <h2 class="h"><span class="only-en">Are you ready to take control of your skin and <em class="em">start your beauty journey?</em></span><span class="only-es">¿Estás lista para tomar el control de tu piel y <em class="em">comenzar tu viaje de belleza?</em></span></h2>
+      <p class="lead" style="margin-top:20px;">
+        <span class="only-en">Book your personalized consultation. From first consultation to results you'll love — our aesthetic treatments in Pembroke Pines deliver visible transformation with personalized care.</span>
+        <span class="only-es">Agenda tu consulta personalizada. Desde la primera consulta hasta los resultados que amarás — nuestros tratamientos estéticos en Pembroke Pines ofrecen una transformación visible con atención personalizada.</span>
+      </p>
+      <div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a class="btn btn-primary btn-lg" href="tel:19542370930"><span class="only-en">Call 954.237.0930</span><span class="only-es">Llama 954.237.0930</span></a>
+        <a class="btn btn-outline btn-lg" href="mailto:info@olammedspa.com">info@olammedspa.com</a>
       </div>
-      <div class="reveal">
-        <div class="form-card">
-          <h3 class="h"><span class="only-en">Book your consultation</span><span class="only-es">Agenda tu consulta</span></h3>
-          <p class="sub"><span class="only-en">A medical session — not a sales pitch.</span><span class="only-es">Una sesión médica — no un pitch de ventas.</span></p>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/qxRPO4krPS42zbVf3IjU"
-            style="width:100%;min-height:640px;border:none;border-radius:var(--radius-sm);display:block;"
-            id="inline-home-form"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="RETO ANDRES WEPLASH"
-            data-height="621"
-            data-layout-iframe-id="inline-home-form"
-            data-form-id="qxRPO4krPS42zbVf3IjU"
-            title="Book your consultation">
-          </iframe>
-        </div>
-      </div>
+      <ul class="cta-benefits" style="display:inline-flex;flex-direction:column;align-items:flex-start;margin-top:36px;text-align:left;">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="only-en">Personalized plan with 3D skin diagnosis</span><span class="only-es">Plan personalizado con diagnóstico 3D de piel</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="only-en">Financing available for qualified applicants</span><span class="only-es">Financiamiento disponible para aplicantes calificados</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="only-en">Board Certified Medical Director supervision</span><span class="only-es">Supervisión de Director Médico certificado</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="only-en">17901 NW 5th St Ste 201, Pembroke Pines, FL 33029</span><span class="only-es">17901 NW 5th St Ste 201, Pembroke Pines, FL 33029</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
@@ -749,6 +780,23 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // YouTube video player
+  (function(){
+    var wrap = document.getElementById('videoWrap');
+    var btn  = document.getElementById('videoPlayBtn');
+    if(!wrap || !btn) return;
+    btn.addEventListener('click', function(){
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/Xq38FvXcSrw?autoplay=1&rel=0';
+      iframe.allow = 'autoplay; encrypted-media';
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+      wrap.querySelector('.video-poster').style.display = 'none';
+      btn.style.display = 'none';
+      wrap.appendChild(iframe);
+    });
+  })();
 
   // hero video fade-in
   (function(){
