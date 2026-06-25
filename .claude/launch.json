@@ -4,7 +4,7 @@
     {
       "name": "olam-landing",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "landing-page", "-l", "8753"],
+      "runtimeArgs": ["serve", "olam-website", "-l", "8753"],
       "port": 8753
     }
   ]
