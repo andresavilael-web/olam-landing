@@ -118,28 +118,29 @@
   /* hero */
   .about-hero {
     padding-top: 120px; padding-bottom: 80px;
-    background: var(--olam-blue); position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #e0cfa8 0%, #ede5d0 45%, #F8F3EA 100%);
+    position: relative; overflow: hidden;
   }
   .about-hero::before {
     content: ''; position: absolute; inset: 0;
     background: url('assets/olam-spa-livingroom.png') center/cover no-repeat;
-    opacity: 0.18;
+    opacity: 0.07; mix-blend-mode: multiply;
   }
   .about-hero .wrap { position: relative; z-index: 1; }
-  .about-hero .eyebrow { color: rgba(255,255,255,0.7); }
-  .about-hero .eyebrow .dot { background: rgba(255,255,255,0.5); }
+  .about-hero .eyebrow { color: var(--text-accent); }
+  .about-hero .eyebrow .dot { background: var(--action); }
   .about-hero h1 {
     font-family: var(--font-display); font-style: italic; font-weight: 300;
-    font-size: clamp(2.8rem, 6vw, 5rem); color: #fff;
+    font-size: clamp(2.8rem, 6vw, 5rem); color: var(--charcoal);
     line-height: 1.1; margin: 0 0 20px; letter-spacing: -0.01em;
   }
   .about-hero h1 strong {
     font-family: var(--font-body); font-weight: 600; font-style: normal;
-    color: rgba(255,255,255,0.9);
+    color: var(--olam-blue);
   }
   .about-hero .tagline {
     font-family: var(--font-body); font-weight: 300;
-    font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.8);
+    font-size: clamp(1rem, 2vw, 1.25rem); color: var(--text-muted);
     margin: 0 0 40px; max-width: 48ch; line-height: 1.65;
   }
 
@@ -325,8 +326,8 @@
         <span class="only-es">En Olam Med Spa creemos que la belleza natural y la confianza en una misma deben ser accesibles para todos. Con más de 30 años de experiencia combinada, hemos ayudado a miles de mujeres a verse y sentirse increíbles — sin cirugía, sin concesiones.</span>
       </p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a class="btn btn-white btn-lg" href="/#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span> <span class="arr">→</span></a>
-        <a class="btn btn-outline btn-lg" href="/#services" style="border-color:rgba(255,255,255,0.4);color:#fff;"><span class="only-en">Explore services</span><span class="only-es">Ver servicios</span></a>
+        <a class="btn btn-primary btn-lg" href="/#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span> <span class="arr">→</span></a>
+        <a class="btn btn-outline btn-lg" href="/#services"><span class="only-en">Explore services</span><span class="only-es">Ver servicios</span></a>
       </div>
     </div>
   </div>
