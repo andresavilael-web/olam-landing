@@ -118,13 +118,13 @@
   /* hero */
   .about-hero {
     padding-top: 120px; padding-bottom: 80px;
-    background: linear-gradient(135deg, #e0cfa8 0%, #ede5d0 45%, #F8F3EA 100%);
+    background: #ffffff;
     position: relative; overflow: hidden;
   }
   .about-hero::before {
     content: ''; position: absolute; inset: 0;
     background: url('assets/olam-spa-livingroom.png') center/cover no-repeat;
-    opacity: 0.07; mix-blend-mode: multiply;
+    opacity: 0.05; mix-blend-mode: multiply;
   }
   .about-hero .wrap { position: relative; z-index: 1; }
   .about-hero .eyebrow { color: var(--text-accent); }
@@ -293,13 +293,11 @@
     <a href="/" aria-label="Olam Med Spa home"><img class="logo" src="assets/logo-olam.png" alt="Olam Med Spa"></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="/#services"><span class="only-en">Services</span><span class="only-es">Servicios</span></a>
-      <a href="/#proof"><span class="only-en">Why Olam</span><span class="only-es">Por qué Olam</span></a>
-      <a href="/#results"><span class="only-en">Results</span><span class="only-es">Resultados</span></a>
       <a href="/about" style="color:var(--text-accent);font-weight:600;"><span class="only-en">About</span><span class="only-es">Nosotros</span></a>
+      <a href="/financing"><span class="only-en">Financing</span><span class="only-es">Financiamiento</span></a>
       <a href="/contact"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
     </nav>
     <div class="actions">
-      <a class="phone" href="tel:19542370930"><span class="material-symbols-outlined">call</span>954.237.0930</a>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
         <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>

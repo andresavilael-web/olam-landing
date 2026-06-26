@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financing Options — Olam Med Spa | Pembroke Pines, FL</title>
+<meta name="description" content="Flexible financing options for aesthetic treatments at Olam Med Spa. Apply with CareCredit or Cherry — instant approval, zero-interest options available.">
+<link rel="icon" href="assets/favicon-olam.png" type="image/png">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap">
+
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: var(--fw-light);
+    color: var(--text-body);
+    background: var(--surface-page);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* bilingual */
+  html[data-lang="en"] .only-es { display: none !important; }
+  html[data-lang="es"] .only-en { display: none !important; }
+
+  /* layout */
+  .wrap { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--gutter); }
+  @media (min-width: 768px){ .wrap { padding: 0 var(--gutter-lg); } }
+  section.band { padding: var(--space-8) 0; position: relative; }
+  @media (min-width: 768px){ section.band { padding: var(--space-10) 0; } }
+
+  /* type */
+  .eyebrow {
+    font-family: var(--font-body); font-size: var(--text-label); font-weight: var(--fw-semibold);
+    text-transform: uppercase; letter-spacing: var(--ls-label);
+    color: var(--text-accent); margin: 0 0 18px; display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--action); display: inline-block; }
+  h2.h {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-tight); line-height: var(--lh-tight);
+    margin: 0; color: var(--text-strong); font-size: var(--text-h2);
+  }
+  .em { font-style: italic; font-weight: var(--fw-medium); color: var(--text-accent); }
+  .lead { font-family: var(--font-body); font-weight: var(--fw-light); font-size: var(--text-lead); line-height: var(--lh-body); color: var(--text-muted); margin: 0; }
+
+  /* buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-weight: var(--fw-semibold);
+    font-size: var(--text-sm); padding: 13px 24px; border-radius: var(--radius-pill);
+    border: 1.5px solid transparent; cursor: pointer; line-height: 1; white-space: nowrap;
+    transition: background-color var(--dur-fast) var(--ease-cushion), transform var(--dur-fast) var(--ease-cushion), border-color var(--dur-fast) var(--ease-cushion);
+  }
+  .btn .arr { transition: transform var(--dur-fast) var(--ease-cushion); }
+  .btn:hover .arr { transform: translateX(5px); }
+  .btn-primary { background: var(--action); color: #fff; box-shadow: var(--shadow-button); }
+  .btn-primary:hover { background: var(--action-hover); transform: translateY(-3px); }
+  .btn-outline { background: transparent; color: var(--text-strong); border-color: var(--border-strong); }
+  .btn-outline:hover { background: var(--action-ink); color: #fff; border-color: var(--action-ink); }
+  .btn-lg { padding: 17px 32px; font-size: 1.05rem; }
+  @media (max-width: 480px){ .btn-lg { padding: 13px 20px; font-size: 0.9rem; } }
+  .btn-icon { width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background: var(--action); color: #fff; border: none; cursor: pointer; flex-shrink: 0; }
+  .btn-icon .material-symbols-outlined { font-size: 20px; }
+  .btn-icon-mobile { display: inline-flex; }
+  @media (min-width: 600px){ .btn-icon-mobile { display: none; } }
+
+  /* header */
+  header.site {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 50; width: calc(100% - 32px); max-width: 1100px;
+    background: rgba(255,255,255,0.96); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-radius: 9999px;
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 4px 28px rgba(31,32,32,0.10), 0 1px 4px rgba(31,32,32,0.06);
+  }
+  header.site .wrap { max-width: 100%; margin: 0; }
+  header.site .row { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 12px; padding: 6px 6px 6px 36px; }
+  .site .logo { height: 28px; width: auto; display: block; }
+  .nav-links { display: none; gap: 26px; font-size: var(--text-sm); color: var(--text-body); font-weight: var(--fw-regular); }
+  .nav-links a:hover { color: var(--text-accent); }
+  @media (min-width: 1040px){ .nav-links { display: flex; } }
+  .site .actions { display: flex; align-items: center; gap: 10px; }
+  .site .actions .btn { display: none; }
+  @media (min-width: 600px){ .site .actions .btn { display: inline-flex; } }
+  .phone { display: none; align-items: center; gap: 6px; font-weight: var(--fw-medium); font-size: var(--text-sm); color: var(--text-strong); }
+  @media (min-width: 800px){ .phone { display: inline-flex; } }
+  .phone .material-symbols-outlined { font-size: 18px; color: var(--action); }
+  .lang { display: inline-flex; border: 1px solid var(--border-soft); border-radius: var(--radius-pill); overflow: hidden; }
+  .lang button { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-caption); letter-spacing: 0.06em; padding: 7px 12px; background: transparent; border: 0; cursor: pointer; color: var(--text-muted); }
+  .lang button[aria-pressed="true"] { background: var(--action); color: #fff; }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease-cushion), transform 0.7s var(--ease-cushion); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* footer */
+  footer.site { background: var(--surface-linen); border-top: 1px solid var(--border-hairline); padding: 52px 0 36px; }
+  .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+  .foot-logo { height: 32px; margin-bottom: 16px; }
+  .foot-col p, .foot-col a { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.9; display: block; }
+  .foot-col a:hover { color: var(--text-accent); }
+  .foot-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border-champagne); font-size: var(--text-caption); color: var(--text-subtle); display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+  .foot-social { display: flex; gap: 12px; margin-top: 16px; }
+  .foot-social a { width: 36px; height: 36px; border-radius: 9999px; background: var(--surface-card); border: 1px solid var(--border-hairline); display: grid; place-items: center; color: var(--text-muted); font-size: 16px; transition: background var(--dur-fast) var(--ease-cushion), color var(--dur-fast) var(--ease-cushion); }
+  .foot-social a:hover { background: var(--action); color: #fff; border-color: var(--action); }
+
+  /* ===================== FINANCING-SPECIFIC ===================== */
+
+  /* hero */
+  .fin-hero {
+    padding-top: 140px; padding-bottom: 72px;
+    background: linear-gradient(135deg, #e0cfa8 0%, #ede5d0 45%, #F8F3EA 100%);
+    position: relative; overflow: hidden;
+  }
+  .fin-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url('assets/olam-spa-livingroom.png') center/cover no-repeat;
+    opacity: 0.07; mix-blend-mode: multiply; pointer-events: none;
+  }
+  .fin-hero .wrap { position: relative; z-index: 1; }
+  .fin-hero .eyebrow { color: var(--text-accent); }
+  .fin-hero .eyebrow .dot { background: var(--action); }
+  .fin-hero-head {
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: clamp(2.4rem, 5vw, 4rem); color: var(--charcoal);
+    line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.01em;
+  }
+  .fin-hero-sub {
+    font-family: var(--font-body); font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--olam-blue);
+    margin: 0 0 24px; line-height: 1.2;
+  }
+  .fin-hero-lead {
+    font-size: var(--text-lead); color: var(--text-muted); font-weight: var(--fw-light);
+    line-height: 1.65; margin: 0; max-width: 58ch;
+  }
+
+  /* partners section */
+  .partners-section { padding: 80px 0 96px; }
+  .partners-grid {
+    display: grid; grid-template-columns: 1fr;
+    gap: 28px; margin-top: 56px;
+  }
+  @media (min-width: 760px) {
+    .partners-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+
+  /* partner card */
+  .partner-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border-hairline);
+    border-radius: 20px;
+    padding: 40px 36px 36px;
+    display: flex; flex-direction: column;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .partner-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.11); transform: translateY(-4px); }
+
+  .partner-logo-wrap {
+    height: 52px; display: flex; align-items: center; margin-bottom: 28px;
+  }
+  .partner-logo { max-height: 52px; max-width: 180px; width: auto; object-fit: contain; }
+
+  .partner-name {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    font-size: 1.5rem; color: var(--text-strong); margin: 0 0 12px;
+  }
+  .partner-desc {
+    font-size: var(--text-sm); color: var(--text-muted); line-height: 1.7;
+    margin: 0 0 28px;
+  }
+
+  /* benefit list */
+  .benefit-list { list-style: none; margin: 0 0 36px; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .benefit-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: var(--text-sm); color: var(--text-body); line-height: 1.5;
+  }
+  .benefit-check {
+    width: 20px; height: 20px; border-radius: 9999px; flex-shrink: 0;
+    background: var(--action); display: grid; place-items: center; margin-top: 1px;
+  }
+  .benefit-check .material-symbols-outlined { font-size: 13px; color: #fff; font-weight: 600; }
+
+  .partner-cta { margin-top: auto; }
+  .partner-cta .btn { width: 100%; justify-content: center; font-size: 0.95rem; padding: 14px 24px; }
+
+  /* bottom CTA band */
+  .fin-cta { background: var(--olam-blue); padding: 64px 0; }
+  .fin-cta-inner { text-align: center; }
+  .fin-cta h2 {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: #fff;
+    margin: 0 0 14px; line-height: 1.2;
+  }
+  .fin-cta h2 em { font-style: italic; color: rgba(255,255,255,0.75); }
+  .fin-cta p { font-size: var(--text-sm); color: rgba(255,255,255,0.7); margin: 0 0 36px; }
+  .fin-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-white { background: #fff; color: var(--olam-blue); font-weight: var(--fw-semibold); }
+  .btn-white:hover { background: var(--surface-linen); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+
+  /* disclaimer */
+  .fin-disclaimer {
+    background: var(--surface-linen); padding: 28px 0;
+    font-size: var(--text-caption); color: var(--text-subtle); text-align: center; line-height: 1.65;
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header class="site">
+  <div class="wrap row">
+    <a href="/" aria-label="Olam Med Spa home"><img class="logo" src="assets/logo-olam.png" alt="Olam Med Spa"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#services"><span class="only-en">Services</span><span class="only-es">Servicios</span></a>
+      <a href="/about"><span class="only-en">About</span><span class="only-es">Nosotros</span></a>
+      <a href="/financing" style="color:var(--text-accent);font-weight:600;"><span class="only-en">Financing</span><span class="only-es">Financiamiento</span></a>
+      <a href="/contact"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+    </nav>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn-icon btn-icon-mobile" href="/#book" aria-label="Book my consultation"><span class="material-symbols-outlined">calendar_month</span></a>
+      <a class="btn btn-primary" href="/#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ====== HERO ====== -->
+<section class="fin-hero">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Financing options</span><span class="only-es">Opciones de financiamiento</span></p>
+      <h1 class="fin-hero-head"><span class="only-en">An investment in</span><span class="only-es">Una inversión en</span></h1>
+      <p class="fin-hero-sub"><span class="only-en">your self confidence.</span><span class="only-es">tu confianza.</span></p>
+      <p class="fin-hero-lead">
+        <span class="only-en">Aesthetic treatments are an investment in your well-being, self-esteem, and confidence. Because most cosmetic services aren't covered by insurance, we've partnered with trusted lenders to make your transformation accessible — on your timeline.</span>
+        <span class="only-es">Los tratamientos estéticos son una inversión en tu bienestar y confianza. Como la mayoría no están cubiertos por seguro, nos aliamos con prestamistas de confianza para que tu transformación sea accesible — a tu ritmo.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PARTNERS ====== -->
+<section class="partners-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Our financing partners</span><span class="only-es">Nuestros socios financieros</span></p>
+      <h2 class="h">
+        <span class="only-en">Flexible plans. <em class="em">Simple approval.</em></span>
+        <span class="only-es">Planes flexibles. <em class="em">Aprobación simple.</em></span>
+      </h2>
+      <p class="lead" style="margin-top:16px; max-width:54ch;">
+        <span class="only-en">Choose the financing option that works best for you. Our team is happy to walk you through the process at your consultation.</span>
+        <span class="only-es">Elige la opción que mejor se adapte a ti. Nuestro equipo te guiará en el proceso durante tu consulta.</span>
+      </p>
+    </div>
+
+    <div class="partners-grid">
+
+      <!-- CareCredit -->
+      <div class="partner-card reveal">
+        <div class="partner-logo-wrap">
+          <img class="partner-logo" src="assets/carecredit.png" alt="CareCredit">
+        </div>
+        <h3 class="partner-name">CareCredit™</h3>
+        <p class="partner-desc">
+          <span class="only-en">A well-established medical financing company providing affordable payment options, including zero-interest promotions so you can start your treatment today and repay at your own pace.</span>
+          <span class="only-es">Una reconocida empresa de financiamiento médico con opciones de pago accesibles, incluyendo promociones sin intereses para que comiences tu tratamiento hoy y pagues a tu ritmo.</span>
+        </p>
+        <ul class="benefit-list">
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">Zero-interest promotional periods of 6 months or more</span><span class="only-es">Períodos promocionales sin intereses de 6 meses o más</span></span>
+          </li>
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">Accepted at thousands of healthcare providers nationwide</span><span class="only-es">Aceptado en miles de proveedores de salud en todo el país</span></span>
+          </li>
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">Simple online application — get a decision quickly</span><span class="only-es">Solicitud en línea simple — respuesta rápida</span></span>
+          </li>
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">Covers the full cost of your treatment series</span><span class="only-es">Cubre el costo total de tu serie de tratamientos</span></span>
+          </li>
+        </ul>
+        <div class="partner-cta">
+          <a class="btn btn-primary" href="https://www.carecredit.com/apply/" target="_blank" rel="noopener">
+            <span class="only-en">Apply for CareCredit</span><span class="only-es">Solicitar CareCredit</span> <span class="arr">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cherry -->
+      <div class="partner-card reveal">
+        <div class="partner-logo-wrap">
+          <img class="partner-logo" src="assets/cherry.png" alt="Cherry">
+        </div>
+        <h3 class="partner-name">Cherry</h3>
+        <p class="partner-desc">
+          <span class="only-en">A community-focused financial service built for patients. Cherry makes it easy to get approved instantly with no paperwork — so nothing stands between you and the treatment you deserve.</span>
+          <span class="only-es">Un servicio financiero enfocado en pacientes. Cherry facilita la aprobación instantánea sin papeleo — para que nada se interponga entre tú y el tratamiento que mereces.</span>
+        </p>
+        <ul class="benefit-list">
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">Qualify for up to $10,000</span><span class="only-es">Calificas para hasta $10,000</span></span>
+          </li>
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">Instant approval — only 60 seconds to apply</span><span class="only-es">Aprobación instantánea — solo 60 segundos para aplicar</span></span>
+          </li>
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">No paperwork required</span><span class="only-es">Sin papeleo</span></span>
+          </li>
+          <li>
+            <span class="benefit-check"><span class="material-symbols-outlined">check</span></span>
+            <span><span class="only-en">Does not hurt your credit score</span><span class="only-es">No afecta tu puntaje de crédito</span></span>
+          </li>
+        </ul>
+        <div class="partner-cta">
+          <a class="btn btn-primary" href="https://withcherry.com/apply/" target="_blank" rel="noopener">
+            <span class="only-en">Apply with Cherry</span><span class="only-es">Solicitar con Cherry</span> <span class="arr">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="fin-cta">
+  <div class="wrap fin-cta-inner reveal">
+    <h2>
+      <span class="only-en">Questions about <em>financing?</em></span>
+      <span class="only-es">¿Preguntas sobre <em>financiamiento?</em></span>
+    </h2>
+    <p>
+      <span class="only-en">Our team is happy to walk you through your options at your free consultation.</span>
+      <span class="only-es">Nuestro equipo te explicará todas las opciones en tu consulta gratuita.</span>
+    </p>
+    <div class="fin-cta-btns">
+      <a class="btn btn-white btn-lg" href="/#book">
+        <span class="only-en">Book a free consultation</span><span class="only-es">Agenda tu consulta gratis</span> <span class="arr">→</span>
+      </a>
+      <a class="btn btn-ghost btn-lg" href="tel:19542370930">
+        <span class="material-symbols-outlined" style="font-size:18px;">call</span>
+        954.237.0930
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DISCLAIMER ====== -->
+<div class="fin-disclaimer">
+  <div class="wrap">
+    <span class="only-en">Financing is subject to credit approval. Terms and conditions vary by lender. CareCredit and Cherry are independent financing providers not affiliated with Olam Med Spa. Individual results and approval amounts may vary.</span>
+    <span class="only-es">El financiamiento está sujeto a aprobación de crédito. Los términos y condiciones varían según el prestamista. CareCredit y Cherry son proveedores independientes no afiliados a Olam Med Spa. Los resultados y montos aprobados pueden variar.</span>
+  </div>
+</div>
+
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col" style="max-width:300px;">
+        <img class="foot-logo" src="assets/logo-olam.png" alt="Olam Med Spa">
+        <p><span class="only-en">La nueva belleza natural. Personalized, physician-supervised non-invasive aesthetic medicine in Pembroke Pines, FL.</span><span class="only-es">La nueva belleza natural. Medicina estética no invasiva, personalizada y supervisada por médicos en Pembroke Pines, FL.</span></p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram">&#9679;</a>
+          <a href="#" aria-label="Facebook">&#9679;</a>
+          <a href="#" aria-label="TikTok">&#9679;</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Services</span><span class="only-es">Servicios</span></p>
+        <a href="/#services"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>
+        <a href="/#services"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>
+        <a href="/#services"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></a>
+        <a href="/#services"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>
+        <a href="/#services"><span class="only-en">Hormone & Weight</span><span class="only-es">Hormonas y Peso</span></a>
+        <a href="/#services"><span class="only-en">Laser Hair Removal</span><span class="only-es">Remoción de Vello</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Clinic</span><span class="only-es">Clínica</span></p>
+        <a href="/about"><span class="only-en">About Us</span><span class="only-es">Nosotros</span></a>
+        <a href="/financing"><span class="only-en">Financing</span><span class="only-es">Financiamiento</span></a>
+        <a href="/contact"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+        <a href="/#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Visit</span><span class="only-es">Visítanos</span></p>
+        <a href="tel:19542370930">954.237.0930</a>
+        <a href="mailto:info@olammedspa.com">info@olammedspa.com</a>
+        <p style="line-height:1.6;">17901 NW 5th St, Ste 201<br>Pembroke Pines, FL 33029</p>
+        <p><span class="only-en">Tue–Fri · 10am–6pm · Sat 9am–2pm</span><span class="only-es">Mar–Vie · 10am–6pm · Sáb 9am–2pm</span></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Olam Med Spa. <span class="only-en">All rights reserved.</span><span class="only-es">Todos los derechos reservados.</span></span>
+      <span><span class="only-en">FDA-approved technology · Individual results may vary.</span><span class="only-es">Tecnología aprobada por la FDA · Los resultados varían según la persona.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.dataset.langBtn;
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem('olam-lang', lang); } catch(e){}
+    });
+  });
+  try {
+    var saved = localStorage.getItem('olam-lang');
+    if (saved === 'es') {
+      document.documentElement.setAttribute('data-lang', 'es');
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === 'es' ? 'true' : 'false');
+      });
+    }
+  } catch(e){}
+
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+</script>
+
+</body>
+</html>
