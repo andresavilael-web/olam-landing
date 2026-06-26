@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Olam Med Spa | Pembroke Pines, FL</title>
+<meta name="description" content="Contact Olam Med Spa in Pembroke Pines, FL. Call (954) 237-0930, email info@olammedspa.com, or fill out our online form to book your consultation.">
+<link rel="icon" href="assets/favicon-olam.png" type="image/png">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap">
+
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: var(--fw-light);
+    color: var(--text-body);
+    background: var(--surface-page);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* bilingual */
+  html[data-lang="en"] .only-es { display: none !important; }
+  html[data-lang="es"] .only-en { display: none !important; }
+
+  /* layout */
+  .wrap { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--gutter); }
+  @media (min-width: 768px){ .wrap { padding: 0 var(--gutter-lg); } }
+  section.band { padding: var(--space-8) 0; position: relative; }
+  @media (min-width: 768px){ section.band { padding: var(--space-10) 0; } }
+
+  /* type */
+  .eyebrow {
+    font-family: var(--font-body); font-size: var(--text-label); font-weight: var(--fw-semibold);
+    text-transform: uppercase; letter-spacing: var(--ls-label);
+    color: var(--text-accent); margin: 0 0 18px; display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--action); display: inline-block; }
+  h2.h {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-tight); line-height: var(--lh-tight);
+    margin: 0; color: var(--text-strong); font-size: var(--text-h2);
+  }
+  .em { font-style: italic; font-weight: var(--fw-medium); color: var(--text-accent); }
+  .lead { font-family: var(--font-body); font-weight: var(--fw-light); font-size: var(--text-lead); line-height: var(--lh-body); color: var(--text-muted); margin: 0; }
+
+  /* buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-weight: var(--fw-semibold);
+    font-size: var(--text-sm); padding: 13px 24px; border-radius: var(--radius-pill);
+    border: 1.5px solid transparent; cursor: pointer; line-height: 1; white-space: nowrap;
+    transition: background-color var(--dur-fast) var(--ease-cushion), transform var(--dur-fast) var(--ease-cushion), border-color var(--dur-fast) var(--ease-cushion);
+  }
+  .btn .arr { transition: transform var(--dur-fast) var(--ease-cushion); }
+  .btn:hover .arr { transform: translateX(5px); }
+  .btn-primary { background: var(--action); color: #fff; box-shadow: var(--shadow-button); }
+  .btn-primary:hover { background: var(--action-hover); transform: translateY(-3px); }
+  .btn-outline { background: transparent; color: var(--text-strong); border-color: var(--border-strong); }
+  .btn-outline:hover { background: var(--action-ink); color: #fff; border-color: var(--action-ink); }
+  .btn-icon { width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background: var(--action); color: #fff; border: none; cursor: pointer; flex-shrink: 0; }
+  .btn-icon .material-symbols-outlined { font-size: 20px; }
+  .btn-icon-mobile { display: inline-flex; }
+  @media (min-width: 600px){ .btn-icon-mobile { display: none; } }
+
+  /* header */
+  header.site {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 50; width: calc(100% - 32px); max-width: 1100px;
+    background: rgba(255,255,255,0.96); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-radius: 9999px;
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 4px 28px rgba(31,32,32,0.10), 0 1px 4px rgba(31,32,32,0.06);
+  }
+  header.site .wrap { max-width: 100%; margin: 0; }
+  header.site .row { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 12px; padding: 6px 6px 6px 36px; }
+  .site .logo { height: 28px; width: auto; display: block; }
+  .nav-links { display: none; gap: 26px; font-size: var(--text-sm); color: var(--text-body); font-weight: var(--fw-regular); }
+  .nav-links a:hover { color: var(--text-accent); }
+  @media (min-width: 1040px){ .nav-links { display: flex; } }
+  .site .actions { display: flex; align-items: center; gap: 10px; }
+  .site .actions .btn { display: none; }
+  @media (min-width: 600px){ .site .actions .btn { display: inline-flex; } }
+  .phone { display: none; align-items: center; gap: 6px; font-weight: var(--fw-medium); font-size: var(--text-sm); color: var(--text-strong); }
+  @media (min-width: 800px){ .phone { display: inline-flex; } }
+  .phone .material-symbols-outlined { font-size: 18px; color: var(--action); }
+  .lang { display: inline-flex; border: 1px solid var(--border-soft); border-radius: var(--radius-pill); overflow: hidden; }
+  .lang button { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-caption); letter-spacing: 0.06em; padding: 7px 12px; background: transparent; border: 0; cursor: pointer; color: var(--text-muted); }
+  .lang button[aria-pressed="true"] { background: var(--action); color: #fff; }
+
+  /* reveal animation */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease-cushion), transform 0.7s var(--ease-cushion); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* footer */
+  footer.site { background: var(--surface-linen); border-top: 1px solid var(--border-hairline); padding: 52px 0 36px; }
+  .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+  .foot-logo { height: 32px; margin-bottom: 16px; }
+  .foot-col p, .foot-col a { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.9; display: block; }
+  .foot-col a:hover { color: var(--text-accent); }
+  .foot-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border-champagne); font-size: var(--text-caption); color: var(--text-subtle); display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+  .foot-social { display: flex; gap: 12px; margin-top: 16px; }
+  .foot-social a { width: 36px; height: 36px; border-radius: 9999px; background: var(--surface-card); border: 1px solid var(--border-hairline); display: grid; place-items: center; color: var(--text-muted); font-size: 16px; transition: background var(--dur-fast) var(--ease-cushion), color var(--dur-fast) var(--ease-cushion); }
+  .foot-social a:hover { background: var(--action); color: #fff; border-color: var(--action); }
+
+  /* ===================== CONTACT-SPECIFIC ===================== */
+
+  /* page header */
+  .contact-header {
+    padding-top: 140px;
+    padding-bottom: 56px;
+    background: var(--surface-page);
+    border-bottom: 1px solid var(--border-hairline);
+  }
+
+  /* main grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 0 80px;
+  }
+  @media (min-width: 900px) {
+    .contact-grid { grid-template-columns: 380px 1fr; gap: 64px; align-items: start; }
+  }
+
+  /* info column */
+  .contact-info { display: flex; flex-direction: column; gap: 32px; }
+
+  .info-block { display: flex; flex-direction: column; gap: 4px; }
+  .info-block-label {
+    display: flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-weight: var(--fw-semibold);
+    font-size: var(--text-sm); color: var(--text-strong);
+    margin-bottom: 6px;
+  }
+  .info-block-label .material-symbols-outlined { font-size: 18px; color: var(--action); }
+  .info-block p, .info-block a {
+    font-size: var(--text-sm); color: var(--text-muted); line-height: 1.7;
+    margin: 0; display: block;
+  }
+  .info-block a:hover { color: var(--text-accent); }
+
+  /* hours table */
+  .hours-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .hours-table tr td { font-size: var(--text-sm); color: var(--text-muted); padding: 4px 0; line-height: 1.6; }
+  .hours-table tr td:first-child { width: 110px; color: var(--text-body); font-weight: var(--fw-regular); }
+  .hours-table tr.closed td { color: var(--text-subtle); }
+
+  /* divider */
+  .info-divider { height: 1px; background: var(--border-hairline); }
+
+  /* map link card */
+  .map-card {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--surface-mist); border: 1px solid var(--border-hairline);
+    border-radius: 14px; padding: 16px 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .map-card:hover { border-color: var(--action); box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+  .map-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--action); display: grid; place-items: center; flex-shrink: 0; }
+  .map-icon .material-symbols-outlined { font-size: 20px; color: #fff; }
+  .map-card-text { display: flex; flex-direction: column; gap: 2px; }
+  .map-card-text strong { font-size: var(--text-sm); font-weight: var(--fw-semibold); color: var(--text-strong); }
+  .map-card-text span { font-size: var(--text-caption); color: var(--text-muted); }
+
+  /* form column */
+  .form-wrap {
+    background: var(--surface-card);
+    border: 1px solid var(--border-hairline);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 8px;
+  }
+  .form-wrap iframe { display: block; }
+
+</style>
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header class="site">
+  <div class="wrap row">
+    <a href="/" aria-label="Olam Med Spa home"><img class="logo" src="assets/logo-olam.png" alt="Olam Med Spa"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#services"><span class="only-en">Services</span><span class="only-es">Servicios</span></a>
+      <a href="index.html#proof"><span class="only-en">Why Olam</span><span class="only-es">Por qué Olam</span></a>
+      <a href="about.html"><span class="only-en">About</span><span class="only-es">Nosotros</span></a>
+      <a href="contact.html" style="color:var(--text-accent);font-weight:600;"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+    </nav>
+    <div class="actions">
+      <a class="phone" href="tel:19542370930"><span class="material-symbols-outlined">call</span>954.237.0930</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn-icon btn-icon-mobile" href="index.html#book" aria-label="Book my consultation"><span class="material-symbols-outlined">calendar_month</span></a>
+      <a class="btn btn-primary" href="index.html#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ====== PAGE HEADER ====== -->
+<div class="contact-header">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Contact us</span><span class="only-es">Contáctanos</span></p>
+      <h2 class="h" style="margin-bottom:18px;">
+        <span class="only-en">Let's talk about <em class="em">your skin.</em></span>
+        <span class="only-es">Hablemos de <em class="em">tu piel.</em></span>
+      </h2>
+      <p class="lead" style="max-width:52ch;">
+        <span class="only-en">Ready to start your transformation? Reach out and our team will guide you to the right treatment.</span>
+        <span class="only-es">¿Lista para comenzar tu transformación? Escríbenos y nuestro equipo te orientará hacia el tratamiento ideal.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== CONTACT GRID ====== -->
+<section style="background:var(--surface-page);">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Info column -->
+      <div class="contact-info reveal">
+
+        <div class="info-block">
+          <p class="info-block-label"><span class="material-symbols-outlined">call</span><span class="only-en">Phone</span><span class="only-es">Teléfono</span></p>
+          <a href="tel:19542370930">(954) 237-0930</a>
+        </div>
+
+        <div class="info-divider"></div>
+
+        <div class="info-block">
+          <p class="info-block-label"><span class="material-symbols-outlined">mail</span><span class="only-en">Email</span><span class="only-es">Correo</span></p>
+          <a href="mailto:info@olammedspa.com">info@olammedspa.com</a>
+        </div>
+
+        <div class="info-divider"></div>
+
+        <div class="info-block">
+          <p class="info-block-label"><span class="material-symbols-outlined">location_on</span><span class="only-en">Address</span><span class="only-es">Dirección</span></p>
+          <p>17901 NW 5th St, Suite 201<br>Pembroke Pines, FL 33029</p>
+        </div>
+
+        <div class="info-divider"></div>
+
+        <div class="info-block">
+          <p class="info-block-label"><span class="material-symbols-outlined">schedule</span><span class="only-en">Hours</span><span class="only-es">Horario</span></p>
+          <table class="hours-table">
+            <tbody>
+              <tr class="closed">
+                <td><span class="only-en">Monday</span><span class="only-es">Lunes</span></td>
+                <td><span class="only-en">Closed</span><span class="only-es">Cerrado</span></td>
+              </tr>
+              <tr>
+                <td><span class="only-en">Tue – Fri</span><span class="only-es">Mar – Vie</span></td>
+                <td>10:00 am – 6:00 pm</td>
+              </tr>
+              <tr>
+                <td><span class="only-en">Saturday</span><span class="only-es">Sábado</span></td>
+                <td>9:00 am – 2:00 pm</td>
+              </tr>
+              <tr class="closed">
+                <td><span class="only-en">Sunday</span><span class="only-es">Domingo</span></td>
+                <td><span class="only-en">Closed</span><span class="only-es">Cerrado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <a class="map-card" href="https://maps.google.com/?q=17901+NW+5th+St+Suite+201+Pembroke+Pines+FL+33029" target="_blank" rel="noopener">
+          <div class="map-icon"><span class="material-symbols-outlined">map</span></div>
+          <div class="map-card-text">
+            <strong><span class="only-en">Get directions</span><span class="only-es">Cómo llegar</span></strong>
+            <span>Google Maps →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Form column -->
+      <div class="form-wrap reveal">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/XgZiougMr3ugZFKI05y8"
+          style="width:100%;height:1072px;border:none;border-radius:8px"
+          id="inline-XgZiougMr3ugZFKI05y8"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="WEBSITE - Contact Page"
+          data-height="1072"
+          data-layout-iframe-id="inline-XgZiougMr3ugZFKI05y8"
+          data-form-id="XgZiougMr3ugZFKI05y8"
+          title="WEBSITE - Contact Page">
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col" style="max-width:300px;">
+        <img class="foot-logo" src="assets/logo-olam.png" alt="Olam Med Spa">
+        <p><span class="only-en">La nueva belleza natural. Personalized, physician-supervised non-invasive aesthetic medicine in Pembroke Pines, FL.</span><span class="only-es">La nueva belleza natural. Medicina estética no invasiva, personalizada y supervisada por médicos en Pembroke Pines, FL.</span></p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram">&#9679;</a>
+          <a href="#" aria-label="Facebook">&#9679;</a>
+          <a href="#" aria-label="TikTok">&#9679;</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Services</span><span class="only-es">Servicios</span></p>
+        <a href="index.html#services"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>
+        <a href="index.html#services"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>
+        <a href="index.html#services"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></a>
+        <a href="index.html#services"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>
+        <a href="index.html#services"><span class="only-en">Hormone & Weight</span><span class="only-es">Hormonas y Peso</span></a>
+        <a href="index.html#services"><span class="only-en">Laser Hair Removal</span><span class="only-es">Remoción de Vello</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Clinic</span><span class="only-es">Clínica</span></p>
+        <a href="index.html#proof"><span class="only-en">Why Olam</span><span class="only-es">Por qué Olam</span></a>
+        <a href="about.html"><span class="only-en">About Us</span><span class="only-es">Nosotros</span></a>
+        <a href="contact.html"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+        <a href="index.html#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Visit</span><span class="only-es">Visítanos</span></p>
+        <a href="tel:19542370930">954.237.0930</a>
+        <a href="mailto:info@olammedspa.com">info@olammedspa.com</a>
+        <p style="line-height:1.6;">17901 NW 5th St, Ste 201<br>Pembroke Pines, FL 33029</p>
+        <p><span class="only-en">Tue–Fri · 10am–6pm · Sat 9am–2pm</span><span class="only-es">Mar–Vie · 10am–6pm · Sáb 9am–2pm</span></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Olam Med Spa. <span class="only-en">All rights reserved.</span><span class="only-es">Todos los derechos reservados.</span></span>
+      <span><span class="only-en">FDA-approved technology · Individual results may vary.</span><span class="only-es">Tecnología aprobada por la FDA · Los resultados varían según la persona.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* lang switcher */
+  document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.dataset.langBtn;
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem('olam-lang', lang); } catch(e){}
+    });
+  });
+  try {
+    var saved = localStorage.getItem('olam-lang');
+    if (saved === 'es') {
+      document.documentElement.setAttribute('data-lang', 'es');
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === 'es' ? 'true' : 'false');
+      });
+    }
+  } catch(e){}
+
+  /* reveal on scroll */
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+</script>
+
+</body>
+</html>
