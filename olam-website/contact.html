@@ -111,74 +111,113 @@
 
   /* ===================== CONTACT-SPECIFIC ===================== */
 
-  /* page header */
-  .contact-header {
-    padding-top: 140px;
-    padding-bottom: 56px;
-    background: var(--surface-page);
-    border-bottom: 1px solid var(--border-hairline);
+  /* full-bleed scene */
+  .contact-scene {
+    position: relative;
+    background: var(--olam-blue);
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .contact-scene-bg {
+    position: absolute; inset: 0;
+    background: url('assets/olam-spa-livingroom.png') center/cover no-repeat;
+    opacity: 0.18;
+    pointer-events: none;
   }
 
-  /* main grid */
-  .contact-grid {
+  /* two-column layout */
+  .contact-cols {
+    position: relative; z-index: 1;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 48px;
-    padding: 64px 0 80px;
+    min-height: 100vh;
   }
-  @media (min-width: 900px) {
-    .contact-grid { grid-template-columns: 380px 1fr; gap: 64px; align-items: start; }
+  @media (min-width: 860px) {
+    .contact-cols { grid-template-columns: 1fr 1fr; }
   }
 
-  /* info column */
-  .contact-info { display: flex; flex-direction: column; gap: 32px; }
-
-  .info-block { display: flex; flex-direction: column; gap: 4px; }
-  .info-block-label {
-    display: flex; align-items: center; gap: 8px;
-    font-family: var(--font-body); font-weight: var(--fw-semibold);
-    font-size: var(--text-sm); color: var(--text-strong);
-    margin-bottom: 6px;
+  /* left: info panel */
+  .contact-left {
+    padding: 140px 48px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    color: #fff;
   }
-  .info-block-label .material-symbols-outlined { font-size: 18px; color: var(--action); }
-  .info-block p, .info-block a {
-    font-size: var(--text-sm); color: var(--text-muted); line-height: 1.7;
-    margin: 0; display: block;
+  @media (min-width: 860px) {
+    .contact-left {
+      position: sticky; top: 0; height: 100vh;
+      padding: 140px 56px 80px 48px;
+    }
   }
-  .info-block a:hover { color: var(--text-accent); }
+  @media (max-width: 859px) {
+    .contact-left { padding: 130px 24px 56px; }
+  }
 
-  /* hours table */
-  .hours-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
-  .hours-table tr td { font-size: var(--text-sm); color: var(--text-muted); padding: 4px 0; line-height: 1.6; }
-  .hours-table tr td:first-child { width: 110px; color: var(--text-body); font-weight: var(--fw-regular); }
-  .hours-table tr.closed td { color: var(--text-subtle); }
+  .contact-pretitle {
+    font-family: var(--font-body); font-size: var(--text-sm); font-weight: var(--fw-regular);
+    color: rgba(255,255,255,0.7); margin: 0 0 12px; letter-spacing: 0.02em;
+  }
+  .contact-headline {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.1;
+    color: #fff; margin: 0 0 8px;
+  }
+  .contact-headline em { font-style: italic; color: rgba(255,255,255,0.75); }
+  .contact-sub {
+    font-family: var(--font-body); font-size: var(--text-sm); font-weight: var(--fw-light);
+    color: rgba(255,255,255,0.65); line-height: 1.65; margin: 0 0 48px; max-width: 34ch;
+  }
 
-  /* divider */
-  .info-divider { height: 1px; background: var(--border-hairline); }
-
-  /* map link card */
-  .map-card {
+  /* contact detail rows */
+  .contact-details { display: flex; flex-direction: column; gap: 20px; }
+  .cd-item {
     display: flex; align-items: center; gap: 14px;
-    background: var(--surface-mist); border: 1px solid var(--border-hairline);
-    border-radius: 14px; padding: 16px 20px;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    color: rgba(255,255,255,0.9); font-size: var(--text-sm);
+    text-decoration: none; line-height: 1.5;
+    transition: color 0.2s;
   }
-  .map-card:hover { border-color: var(--action); box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
-  .map-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--action); display: grid; place-items: center; flex-shrink: 0; }
-  .map-icon .material-symbols-outlined { font-size: 20px; color: #fff; }
-  .map-card-text { display: flex; flex-direction: column; gap: 2px; }
-  .map-card-text strong { font-size: var(--text-sm); font-weight: var(--fw-semibold); color: var(--text-strong); }
-  .map-card-text span { font-size: var(--text-caption); color: var(--text-muted); }
+  .cd-item:hover { color: #fff; }
+  .cd-icon {
+    width: 36px; height: 36px; border-radius: 9999px; flex-shrink: 0;
+    background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22);
+    display: grid; place-items: center;
+  }
+  .cd-icon .material-symbols-outlined { font-size: 17px; color: #fff; }
+  .cd-text { display: flex; flex-direction: column; gap: 1px; }
+  .cd-label { font-size: var(--text-caption); color: rgba(255,255,255,0.5); font-weight: var(--fw-semibold); text-transform: uppercase; letter-spacing: 0.06em; }
+  .cd-value { color: rgba(255,255,255,0.9); font-size: var(--text-sm); }
 
-  /* form column */
-  .form-wrap {
-    background: var(--surface-card);
-    border: 1px solid var(--border-hairline);
-    border-radius: 20px;
-    overflow: hidden;
-    padding: 8px;
+  /* hours mini-block */
+  .cd-hours { margin-top: 32px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.14); }
+  .cd-hours-title { font-size: var(--text-caption); color: rgba(255,255,255,0.5); font-weight: var(--fw-semibold); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  .cd-hours-row { display: flex; gap: 12px; font-size: var(--text-sm); color: rgba(255,255,255,0.75); margin-bottom: 4px; }
+  .cd-hours-row .day { width: 90px; }
+  .cd-hours-row.closed { color: rgba(255,255,255,0.35); }
+
+  /* right: white card */
+  .contact-right {
+    padding: 100px 48px 80px;
+    display: flex; align-items: flex-start; justify-content: center;
   }
-  .form-wrap iframe { display: block; }
+  @media (max-width: 859px) {
+    .contact-right { padding: 0 16px 64px; }
+  }
+  .contact-card {
+    background: #fff; border-radius: 20px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.1);
+    overflow: hidden; width: 100%; max-width: 580px;
+  }
+  .contact-card-head {
+    padding: 32px 36px 0;
+  }
+  .contact-card-head h3 {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    font-size: 1.45rem; color: var(--text-strong); margin: 0 0 4px;
+  }
+  .contact-card-head p {
+    font-size: var(--text-sm); color: var(--text-muted); margin: 0 0 20px;
+  }
+  .contact-card-form { padding: 0 8px 8px; }
+  .contact-card-form iframe { display: block; }
 
 </style>
 </head>
@@ -208,111 +247,85 @@
 
 <main>
 
-<!-- ====== PAGE HEADER ====== -->
-<div class="contact-header">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow"><span class="dot"></span><span class="only-en">Contact us</span><span class="only-es">Contáctanos</span></p>
-      <h2 class="h" style="margin-bottom:18px;">
-        <span class="only-en">Let's talk about <em class="em">your skin.</em></span>
-        <span class="only-es">Hablemos de <em class="em">tu piel.</em></span>
-      </h2>
-      <p class="lead" style="max-width:52ch;">
+<!-- ====== CONTACT SCENE ====== -->
+<div class="contact-scene">
+  <div class="contact-scene-bg"></div>
+  <div class="contact-cols">
+
+    <!-- LEFT: info -->
+    <div class="contact-left">
+      <p class="contact-pretitle"><span class="only-en">Get in touch with</span><span class="only-es">Contáctanos en</span></p>
+      <h1 class="contact-headline"><span class="only-en"><em>Olam</em> Med Spa.</span><span class="only-es"><em>Olam</em> Med Spa.</span></h1>
+      <p class="contact-sub">
         <span class="only-en">Ready to start your transformation? Reach out and our team will guide you to the right treatment.</span>
         <span class="only-es">¿Lista para comenzar tu transformación? Escríbenos y nuestro equipo te orientará hacia el tratamiento ideal.</span>
       </p>
+
+      <div class="contact-details">
+        <a class="cd-item" href="tel:19542370930">
+          <span class="cd-icon"><span class="material-symbols-outlined">call</span></span>
+          <span class="cd-text">
+            <span class="cd-label"><span class="only-en">Phone</span><span class="only-es">Teléfono</span></span>
+            <span class="cd-value">(954) 237-0930</span>
+          </span>
+        </a>
+        <a class="cd-item" href="mailto:info@olammedspa.com">
+          <span class="cd-icon"><span class="material-symbols-outlined">mail</span></span>
+          <span class="cd-text">
+            <span class="cd-label">Email</span>
+            <span class="cd-value">info@olammedspa.com</span>
+          </span>
+        </a>
+        <a class="cd-item" href="https://maps.google.com/?q=17901+NW+5th+St+Suite+201+Pembroke+Pines+FL+33029" target="_blank" rel="noopener">
+          <span class="cd-icon"><span class="material-symbols-outlined">location_on</span></span>
+          <span class="cd-text">
+            <span class="cd-label"><span class="only-en">Address</span><span class="only-es">Dirección</span></span>
+            <span class="cd-value">17901 NW 5th St, Ste 201<br>Pembroke Pines, FL 33029</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="cd-hours">
+        <p class="cd-hours-title"><span class="only-en">Hours</span><span class="only-es">Horario</span></p>
+        <div class="cd-hours-row closed"><span class="day"><span class="only-en">Monday</span><span class="only-es">Lunes</span></span><span><span class="only-en">Closed</span><span class="only-es">Cerrado</span></span></div>
+        <div class="cd-hours-row"><span class="day"><span class="only-en">Tue – Fri</span><span class="only-es">Mar – Vie</span></span><span>10:00 am – 6:00 pm</span></div>
+        <div class="cd-hours-row"><span class="day"><span class="only-en">Saturday</span><span class="only-es">Sábado</span></span><span>9:00 am – 2:00 pm</span></div>
+        <div class="cd-hours-row closed"><span class="day"><span class="only-en">Sunday</span><span class="only-es">Domingo</span></span><span><span class="only-en">Closed</span><span class="only-es">Cerrado</span></span></div>
+      </div>
     </div>
+
+    <!-- RIGHT: form card -->
+    <div class="contact-right">
+      <div class="contact-card">
+        <div class="contact-card-head">
+          <h3><span class="only-en">Send us a message</span><span class="only-es">Envíanos un mensaje</span></h3>
+          <p><span class="only-en">We'll get back to you as soon as possible.</span><span class="only-es">Te responderemos a la brevedad.</span></p>
+        </div>
+        <div class="contact-card-form">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/XgZiougMr3ugZFKI05y8"
+            style="width:100%;height:1072px;border:none;"
+            id="inline-XgZiougMr3ugZFKI05y8"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="WEBSITE - Contact Page"
+            data-height="1072"
+            data-layout-iframe-id="inline-XgZiougMr3ugZFKI05y8"
+            data-form-id="XgZiougMr3ugZFKI05y8"
+            title="WEBSITE - Contact Page">
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
-
-<!-- ====== CONTACT GRID ====== -->
-<section style="background:var(--surface-page);">
-  <div class="wrap">
-    <div class="contact-grid">
-
-      <!-- Info column -->
-      <div class="contact-info reveal">
-
-        <div class="info-block">
-          <p class="info-block-label"><span class="material-symbols-outlined">call</span><span class="only-en">Phone</span><span class="only-es">Teléfono</span></p>
-          <a href="tel:19542370930">(954) 237-0930</a>
-        </div>
-
-        <div class="info-divider"></div>
-
-        <div class="info-block">
-          <p class="info-block-label"><span class="material-symbols-outlined">mail</span><span class="only-en">Email</span><span class="only-es">Correo</span></p>
-          <a href="mailto:info@olammedspa.com">info@olammedspa.com</a>
-        </div>
-
-        <div class="info-divider"></div>
-
-        <div class="info-block">
-          <p class="info-block-label"><span class="material-symbols-outlined">location_on</span><span class="only-en">Address</span><span class="only-es">Dirección</span></p>
-          <p>17901 NW 5th St, Suite 201<br>Pembroke Pines, FL 33029</p>
-        </div>
-
-        <div class="info-divider"></div>
-
-        <div class="info-block">
-          <p class="info-block-label"><span class="material-symbols-outlined">schedule</span><span class="only-en">Hours</span><span class="only-es">Horario</span></p>
-          <table class="hours-table">
-            <tbody>
-              <tr class="closed">
-                <td><span class="only-en">Monday</span><span class="only-es">Lunes</span></td>
-                <td><span class="only-en">Closed</span><span class="only-es">Cerrado</span></td>
-              </tr>
-              <tr>
-                <td><span class="only-en">Tue – Fri</span><span class="only-es">Mar – Vie</span></td>
-                <td>10:00 am – 6:00 pm</td>
-              </tr>
-              <tr>
-                <td><span class="only-en">Saturday</span><span class="only-es">Sábado</span></td>
-                <td>9:00 am – 2:00 pm</td>
-              </tr>
-              <tr class="closed">
-                <td><span class="only-en">Sunday</span><span class="only-es">Domingo</span></td>
-                <td><span class="only-en">Closed</span><span class="only-es">Cerrado</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <a class="map-card" href="https://maps.google.com/?q=17901+NW+5th+St+Suite+201+Pembroke+Pines+FL+33029" target="_blank" rel="noopener">
-          <div class="map-icon"><span class="material-symbols-outlined">map</span></div>
-          <div class="map-card-text">
-            <strong><span class="only-en">Get directions</span><span class="only-es">Cómo llegar</span></strong>
-            <span>Google Maps →</span>
-          </div>
-        </a>
-
-      </div>
-
-      <!-- Form column -->
-      <div class="form-wrap reveal">
-        <iframe
-          src="https://api.leadconnectorhq.com/widget/form/XgZiougMr3ugZFKI05y8"
-          style="width:100%;height:1072px;border:none;border-radius:8px"
-          id="inline-XgZiougMr3ugZFKI05y8"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="WEBSITE - Contact Page"
-          data-height="1072"
-          data-layout-iframe-id="inline-XgZiougMr3ugZFKI05y8"
-          data-form-id="XgZiougMr3ugZFKI05y8"
-          title="WEBSITE - Contact Page">
-        </iframe>
-        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 </main>
 
