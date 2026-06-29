@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRF Platelet-Rich Fibrin — Natural Skin & Hair Rejuvenation | Olam Med Spa</title>
+<meta name="description" content="100% natural skin and hair regeneration with PRF at Olam Med Spa in Pembroke Pines, FL. Harness your own platelets and growth factors for collagen, elastin, and hair follicle stimulation.">
+<link rel="icon" href="../../assets/favicon-olam.png" type="image/png">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap">
+
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    margin: 0; font-family: var(--font-body); font-weight: var(--fw-light);
+    color: var(--text-body); background: var(--surface-page);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: clip;
+  }
+  a { color: inherit; text-decoration: none; }
+  html[data-lang="en"] .only-es { display: none !important; }
+  html[data-lang="es"] .only-en { display: none !important; }
+  .wrap { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--gutter); }
+  @media (min-width: 768px){ .wrap { padding: 0 var(--gutter-lg); } }
+  section.band { padding: var(--space-8) 0; position: relative; }
+  @media (min-width: 768px){ section.band { padding: var(--space-10) 0; } }
+
+  .eyebrow {
+    font-family: var(--font-body); font-size: var(--text-label); font-weight: var(--fw-semibold);
+    text-transform: uppercase; letter-spacing: var(--ls-label);
+    color: var(--text-accent); margin: 0 0 18px; display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--action); display: inline-block; }
+  h2.h {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-tight); line-height: var(--lh-tight);
+    margin: 0; color: var(--text-strong); font-size: var(--text-h2);
+  }
+  .em { font-style: italic; font-weight: var(--fw-medium); color: var(--text-accent); }
+  .lead { font-family: var(--font-body); font-weight: var(--fw-light); font-size: var(--text-lead); line-height: var(--lh-body); color: var(--text-muted); margin: 0; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-weight: var(--fw-semibold);
+    font-size: var(--text-sm); padding: 13px 24px; border-radius: var(--radius-pill);
+    border: 1.5px solid transparent; cursor: pointer; line-height: 1; white-space: nowrap;
+    transition: background-color var(--dur-fast) var(--ease-cushion), transform var(--dur-fast) var(--ease-cushion), border-color var(--dur-fast) var(--ease-cushion);
+  }
+  .btn .arr { transition: transform var(--dur-fast) var(--ease-cushion); }
+  .btn:hover .arr { transform: translateX(5px); }
+  .btn-primary { background: var(--action); color: #fff; box-shadow: var(--shadow-button); }
+  .btn-primary:hover { background: var(--action-hover); transform: translateY(-3px); }
+  .btn-outline { background: transparent; color: var(--text-strong); border-color: var(--border-strong); }
+  .btn-outline:hover { background: var(--action-ink); color: #fff; border-color: var(--action-ink); }
+  .btn-lg { padding: 17px 32px; font-size: 1.05rem; }
+  @media (max-width: 480px){ .btn-lg { padding: 13px 20px; font-size: 0.9rem; } }
+  .btn-white { background: #fff; color: var(--olam-blue); font-weight: var(--fw-semibold); }
+  .btn-white:hover { background: var(--surface-linen); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+  .btn-icon { width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background: var(--action); color: #fff; border: none; cursor: pointer; flex-shrink: 0; }
+  .btn-icon .material-symbols-outlined { font-size: 20px; }
+  .btn-icon-mobile { display: inline-flex; }
+  @media (min-width: 600px){ .btn-icon-mobile { display: none; } }
+
+  /* header */
+  header.site {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 50; width: calc(100% - 32px); max-width: 1100px;
+    background: rgba(255,255,255,0.96); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-radius: 9999px;
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 4px 28px rgba(31,32,32,0.10), 0 1px 4px rgba(31,32,32,0.06);
+  }
+  header.site .wrap { max-width: 100%; margin: 0; }
+  header.site .row { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 12px; padding: 6px 6px 6px 36px; }
+  .site .logo { height: 28px; width: auto; display: block; }
+  .nav-links { display: none; gap: 26px; font-size: var(--text-sm); color: var(--text-body); font-weight: var(--fw-regular); }
+  .nav-links a:hover { color: var(--text-accent); }
+  @media (min-width: 1040px){ .nav-links { display: flex; } }
+  .site .actions { display: flex; align-items: center; gap: 10px; }
+  .site .actions .btn { display: none; }
+  @media (min-width: 600px){ .site .actions .btn { display: inline-flex; } }
+  .lang { display: inline-flex; border: 1px solid var(--border-soft); border-radius: var(--radius-pill); overflow: hidden; }
+  .lang button { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-caption); letter-spacing: 0.06em; padding: 7px 12px; background: transparent; border: 0; cursor: pointer; color: var(--text-muted); }
+  .lang button[aria-pressed="true"] { background: var(--action); color: #fff; }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease-cushion), transform 0.7s var(--ease-cushion); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* footer */
+  footer.site { background: var(--surface-linen); border-top: 1px solid var(--border-hairline); padding: 52px 0 36px; }
+  .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+  .foot-logo { height: 32px; margin-bottom: 16px; }
+  .foot-col p, .foot-col a { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.9; display: block; }
+  .foot-col a:hover { color: var(--text-accent); }
+  .foot-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border-champagne); font-size: var(--text-caption); color: var(--text-subtle); display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+  .foot-social { display: flex; gap: 12px; margin-top: 16px; }
+  .foot-social a { width: 36px; height: 36px; border-radius: 9999px; background: var(--surface-card); border: 1px solid var(--border-hairline); display: grid; place-items: center; color: var(--text-muted); font-size: 16px; transition: background var(--dur-fast) var(--ease-cushion), color var(--dur-fast) var(--ease-cushion); }
+  .foot-social a:hover { background: var(--action); color: #fff; border-color: var(--action); }
+
+  /* ===== PAGE-SPECIFIC ===== */
+
+  /* hero */
+  .svc-hero {
+    padding-top: 0; padding-bottom: 0;
+    position: relative; overflow: hidden;
+    min-height: 92vh; display: flex; align-items: center;
+  }
+  .svc-hero-bg {
+    position: absolute; inset: 0;
+    background: url('../../assets/prf-hero.jpg') center/cover no-repeat;
+  }
+  .svc-hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(100deg, rgba(6,18,30,0.88) 0%, rgba(6,18,30,0.65) 50%, rgba(6,18,30,0.20) 100%);
+  }
+  .svc-hero-inner { position: relative; z-index: 1; padding-top: 140px; padding-bottom: 80px; }
+  .svc-hero-text { max-width: 680px; }
+  .svc-hero h1 {
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: clamp(3rem, 6.5vw, 5.2rem); color: #fff;
+    line-height: 1.05; margin: 0 0 10px; letter-spacing: -0.02em;
+  }
+  .svc-hero h1 strong {
+    font-family: var(--font-body); font-weight: 700; font-style: normal;
+    color: var(--champagne); display: block;
+  }
+  .svc-hero-lead {
+    font-size: var(--text-lead); color: rgba(255,255,255,0.82); font-weight: var(--fw-light);
+    line-height: 1.65; margin: 24px 0 36px; max-width: 52ch;
+  }
+  .svc-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* breadcrumb */
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: var(--text-caption); color: var(--text-subtle); margin-bottom: 20px; }
+  .breadcrumb a:hover { color: var(--text-accent); }
+  .breadcrumb span { color: var(--border-strong); }
+
+  /* detail chips */
+  .detail-band { background: var(--surface-linen); padding: 48px 0; }
+  .detail-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+  .detail-chip { background: #fff; border: 1px solid var(--border-hairline); border-radius: 14px; padding: 18px 24px; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); min-width: 150px; }
+  .detail-chip-label { font-size: var(--text-caption); color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+  .detail-chip-value { font-size: var(--text-sm); color: var(--text-strong); font-weight: 600; line-height: 1.4; }
+
+  /* intro split */
+  .intro-split { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; padding: 80px 0; }
+  @media (min-width: 860px){ .intro-split { grid-template-columns: 1fr 1fr; gap: 72px; } }
+  .intro-split-img { border-radius: 20px; overflow: hidden; height: 460px; }
+  .intro-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .intro-split-text { display: flex; flex-direction: column; gap: 20px; }
+  .intro-split-text p { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; margin: 0; }
+
+  /* advantages */
+  .adv-section { padding: 72px 0; background: var(--surface-linen); }
+  .adv-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 48px; }
+  @media (min-width: 600px){ .adv-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 960px){ .adv-grid { grid-template-columns: repeat(4,1fr); } }
+  .adv-card { background: #fff; border-radius: 18px; padding: 28px 24px; border: 1px solid var(--border-hairline); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+  .adv-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--surface-linen); display: grid; place-items: center; margin-bottom: 16px; }
+  .adv-icon .material-symbols-outlined { font-size: 22px; color: var(--action); }
+  .adv-card h3 { font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; color: var(--text-strong); margin: 0 0 8px; }
+  .adv-card p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+  /* dual treatment tabs */
+  .dual-section { padding: 80px 0; }
+  .dual-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px; }
+  @media (min-width: 860px){ .dual-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  .dual-card { border-radius: 24px; overflow: hidden; border: 1px solid var(--border-hairline); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .dual-card-img { height: 280px; overflow: hidden; }
+  .dual-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  .dual-card:hover .dual-card-img img { transform: scale(1.04); }
+  .dual-card-body { padding: 32px 28px; background: #fff; }
+  .dual-card-tag { display: inline-block; background: var(--olam-blue); color: #fff; font-size: var(--text-caption); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 14px; border-radius: 9999px; margin-bottom: 14px; }
+  .dual-card h3 { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: 1.6rem; color: var(--olam-blue); margin: 0 0 12px; }
+  .dual-card p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.75; margin: 0 0 20px; }
+  .dual-card-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  .dual-card-list li { display: flex; align-items: flex-start; gap: 8px; font-size: var(--text-sm); color: var(--text-body); }
+  .dual-card-list li .material-symbols-outlined { font-size: 16px; color: var(--action); flex-shrink: 0; margin-top: 2px; }
+  .dual-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-hairline); }
+  .dual-meta-chip { background: var(--surface-linen); border-radius: 9999px; padding: 6px 14px; font-size: var(--text-caption); color: var(--text-muted); font-weight: 500; }
+  .dual-meta-chip strong { color: var(--text-strong); }
+
+  /* steps */
+  .steps-section { padding: 80px 0; background: var(--surface-linen); }
+  .steps-wrap { display: grid; grid-template-columns: 1fr; gap: 48px; margin-top: 48px; }
+  @media (min-width: 860px){ .steps-wrap { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .steps-col h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: var(--text-strong); margin: 0 0 24px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .steps-list { display: flex; flex-direction: column; gap: 20px; }
+  .step-item { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 9999px; background: var(--action); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-style: italic; font-size: 1.1rem; font-weight: 300; flex-shrink: 0; }
+  .step-item-text { padding-top: 4px; }
+  .step-item-text strong { font-size: var(--text-sm); font-weight: 600; color: var(--text-strong); display: block; margin-bottom: 4px; }
+  .step-item-text p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+  /* ba split */
+  .ba-section { padding: 80px 0; background: var(--surface-page); }
+  .ba-inner { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; margin-top: 48px; }
+  @media (min-width: 860px){ .ba-inner { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .ba-img { border-radius: 20px; overflow: hidden; cursor: zoom-in; }
+  .ba-img img { width: 100%; display: block; object-fit: cover; }
+  .ba-text { display: flex; flex-direction: column; gap: 20px; }
+  .ba-text p { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; margin: 0; }
+  .ba-tag { display: inline-block; background: var(--olam-blue); color: #fff; font-size: var(--text-caption); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 16px; border-radius: 9999px; margin-bottom: 4px; }
+
+  /* natural callout */
+  .natural-section { padding: 80px 0; background: var(--olam-blue); position: relative; overflow: hidden; }
+  .natural-section::before { content: ''; position: absolute; inset: 0; background: url('../../assets/prf-skin.jpg') center/cover no-repeat; opacity: 0.12; mix-blend-mode: luminosity; }
+  .natural-inner { position: relative; z-index: 1; max-width: 640px; }
+  .natural-inner .eyebrow { color: rgba(255,255,255,0.7); }
+  .natural-inner .eyebrow .dot { background: rgba(255,255,255,0.5); }
+  .natural-inner h2 { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin: 0 0 20px; line-height: 1.15; }
+  .natural-inner h2 strong { font-style: normal; font-weight: 600; }
+  .natural-inner p { font-size: 1.05rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin: 0 0 32px; }
+
+  /* why olam */
+  .why-section { padding: 80px 0; background: var(--surface-linen); }
+  .why-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 48px; }
+  @media (min-width: 640px){ .why-grid { grid-template-columns: repeat(3,1fr); } }
+  .why-card { border: 1px solid var(--border-hairline); border-radius: 20px; padding: 32px 28px; background: #fff; }
+  .why-icon { width: 48px; height: 48px; border-radius: 14px; background: var(--surface-linen); display: grid; place-items: center; margin-bottom: 18px; }
+  .why-icon .material-symbols-outlined { font-size: 24px; color: var(--action); }
+  .why-card h3 { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; color: var(--text-strong); margin: 0 0 10px; }
+  .why-card p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.7; margin: 0; }
+
+  /* cta */
+  .svc-cta { background: linear-gradient(135deg, #0d2d45 0%, #1a4a6b 50%, #2a6a96 100%); padding: 72px 0; text-align: center; }
+  .svc-cta h2 { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: clamp(1.8rem, 4vw, 3rem); color: #fff; margin: 0 0 14px; }
+  .svc-cta h2 strong { font-style: normal; font-weight: 600; color: var(--champagne); }
+  .svc-cta p { font-size: var(--text-sm); color: rgba(255,255,255,0.65); margin: 0 0 36px; }
+  .svc-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* lightbox */
+  .lb-overlay { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.88); align-items: center; justify-content: center; padding: 24px; animation: lbFadeIn 0.2s ease; }
+  .lb-overlay.open { display: flex; }
+  @keyframes lbFadeIn { from { opacity:0; } to { opacity:1; } }
+  .lb-img-wrap { max-width: 90vw; max-height: 90vh; display: flex; align-items: center; justify-content: center; }
+  .lb-img-wrap img { max-width: 90vw; max-height: 88vh; border-radius: 12px; object-fit: contain; box-shadow: 0 32px 80px rgba(0,0,0,0.6); animation: lbScaleIn 0.25s cubic-bezier(0.34,1.56,0.64,1); }
+  @keyframes lbScaleIn { from { transform: scale(0.88); } to { transform: scale(1); } }
+  .lb-close { position: fixed; top: 20px; right: 24px; width: 44px; height: 44px; border-radius: 9999px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 20px; cursor: pointer; display: grid; place-items: center; backdrop-filter: blur(8px); transition: background 0.15s; }
+  .lb-close:hover { background: rgba(255,255,255,0.22); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap row">
+    <a href="/" aria-label="Olam Med Spa home"><img class="logo" src="../../assets/logo-olam.png" alt="Olam Med Spa"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#services" style="color:var(--text-accent);font-weight:600;"><span class="only-en">Services</span><span class="only-es">Servicios</span></a>
+      <a href="/about"><span class="only-en">About</span><span class="only-es">Nosotros</span></a>
+      <a href="/financing"><span class="only-en">Financing</span><span class="only-es">Financiamiento</span></a>
+      <a href="/contact"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+      <a href="https://olamskincare.com/" target="_blank" rel="noopener"><span class="only-en">Shop</span><span class="only-es">Tienda</span></a>
+    </nav>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn-icon btn-icon-mobile" href="/#book" aria-label="Book my consultation"><span class="material-symbols-outlined">calendar_month</span></a>
+      <a class="btn btn-primary" href="/#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="svc-hero">
+  <div class="svc-hero-bg"></div>
+  <div class="wrap" style="width:100%;">
+    <div class="svc-hero-inner">
+      <div class="svc-hero-text reveal">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/" style="color:rgba(255,255,255,0.5);">Home</a><span style="color:rgba(255,255,255,0.3);">›</span>
+          <a href="/#services" style="color:rgba(255,255,255,0.5);">Services</a><span style="color:rgba(255,255,255,0.3);">›</span>
+          <span style="color:rgba(255,255,255,0.7);">PRF</span>
+        </nav>
+        <p class="eyebrow" style="color:rgba(255,255,255,0.7);"><span class="dot" style="background:rgba(255,255,255,0.5);"></span><span class="only-en">Injectables · Platelet-Rich Fibrin</span><span class="only-es">Inyectables · Fibrina Rica en Plaquetas</span></p>
+        <h1>
+          <span class="only-en">Natural Skin &amp;<br><strong>Hair Regeneration.</strong></span>
+          <span class="only-es">Regeneración Natural<br><strong>de Piel y Cabello.</strong></span>
+        </h1>
+        <p class="svc-hero-lead">
+          <span class="only-en">100% natural. No additives. PRF harnesses your own platelets, growth factors, and fibrin to restore youthful skin, promote healing, and stimulate hair growth — the next level of rejuvenation.</span>
+          <span class="only-es">100% natural. Sin aditivos. El PRF utiliza tus propias plaquetas, factores de crecimiento y fibrina para restaurar la piel, promover la curación y estimular el crecimiento del cabello — el siguiente nivel de rejuvenecimiento.</span>
+        </p>
+        <div class="svc-hero-btns">
+          <a class="btn btn-primary btn-lg" href="/#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+          <a class="btn btn-ghost btn-lg" href="tel:19542370930"><span class="only-en">Call 954.237.0930</span><span class="only-es">Llama 954.237.0930</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL CHIPS -->
+<div class="detail-band">
+  <div class="wrap">
+    <div class="detail-grid reveal">
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Skin Session</span><span class="only-es">Sesión Piel</span></span>
+        <span class="detail-chip-value">45 min</span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Hair Session</span><span class="only-es">Sesión Cabello</span></span>
+        <span class="detail-chip-value">60 min</span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Skin Results</span><span class="only-es">Resultados Piel</span></span>
+        <span class="detail-chip-value">2–6 <span class="only-en">weeks</span><span class="only-es">semanas</span></span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Hair Results</span><span class="only-es">Resultados Cabello</span></span>
+        <span class="detail-chip-value">3–6 <span class="only-en">months</span><span class="only-es">meses</span></span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Downtime</span><span class="only-es">Recuperación</span></span>
+        <span class="detail-chip-value"><span class="only-en">Minimal</span><span class="only-es">Mínima</span></span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Formula</span><span class="only-es">Fórmula</span></span>
+        <span class="detail-chip-value"><span class="only-en">100% Natural</span><span class="only-es">100% Natural</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT IS PRF -->
+<section class="band">
+  <div class="wrap">
+    <div class="intro-split">
+      <div class="intro-split-img reveal">
+        <img src="../../assets/prf-results.jpg" alt="PRF treatment results at Olam Med Spa">
+      </div>
+      <div class="intro-split-text reveal">
+        <p class="eyebrow"><span class="dot"></span><span class="only-en">What is PRF?</span><span class="only-es">¿Qué es el PRF?</span></p>
+        <h2 class="h" style="margin-bottom:20px;">
+          <span class="only-en">Your blood.<br><em class="em">Your medicine.</em></span>
+          <span class="only-es">Tu sangre.<br><em class="em">Tu medicina.</em></span>
+        </h2>
+        <p>
+          <span class="only-en">PRF (Platelet-Rich Fibrin) is the next evolution beyond PRP. A small sample of your own blood is drawn and spun at a low speed — preserving a higher concentration of platelets, growth factors, white blood cells, and stem cells within a fibrin matrix.</span>
+          <span class="only-es">El PRF (Fibrina Rica en Plaquetas) es la siguiente evolución más allá del PRP. Una pequeña muestra de tu propia sangre se extrae y centrifuga a baja velocidad — preservando una mayor concentración de plaquetas, factores de crecimiento, glóbulos blancos y células madre dentro de una matriz de fibrina.</span>
+        </p>
+        <p>
+          <span class="only-en">Unlike PRP, PRF contains no anticoagulants or additives — it's completely natural. The fibrin matrix allows growth factors to release slowly over time, extending the regenerative effect for deeper, longer-lasting results in both skin and hair.</span>
+          <span class="only-es">A diferencia del PRP, el PRF no contiene anticoagulantes ni aditivos — es completamente natural. La matriz de fibrina permite que los factores de crecimiento se liberen lentamente con el tiempo, extendiendo el efecto regenerativo para resultados más profundos y duraderos en piel y cabello.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="adv-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Why PRF over PRP</span><span class="only-es">Por qué PRF sobre PRP</span></p>
+      <h2 class="h">
+        <span class="only-en">The next generation <em class="em">of regeneration.</em></span>
+        <span class="only-es">La próxima generación <em class="em">de regeneración.</em></span>
+      </h2>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card reveal">
+        <div class="adv-icon"><span class="material-symbols-outlined">science</span></div>
+        <h3><span class="only-en">Higher Platelet Concentration</span><span class="only-es">Mayor Concentración de Plaquetas</span></h3>
+        <p><span class="only-en">Contains more platelets, fibrin, and white blood cells than traditional PRP — delivering a more powerful regenerative response.</span><span class="only-es">Contiene más plaquetas, fibrina y glóbulos blancos que el PRP tradicional — generando una respuesta regenerativa más potente.</span></p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><span class="material-symbols-outlined">timer</span></div>
+        <h3><span class="only-en">Slow Growth Factor Release</span><span class="only-es">Liberación Lenta de Factores</span></h3>
+        <p><span class="only-en">The fibrin matrix releases growth factors gradually over days and weeks — extending the rejuvenating effect far beyond a single session.</span><span class="only-es">La matriz de fibrina libera factores de crecimiento gradualmente durante días y semanas — extendiendo el efecto rejuvenecedor más allá de una sola sesión.</span></p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><span class="material-symbols-outlined">favorite</span></div>
+        <h3><span class="only-en">Zero Additives</span><span class="only-es">Cero Aditivos</span></h3>
+        <p><span class="only-en">No anticoagulants, no chemicals — just your own biology. PRF is the purest, most biocompatible regenerative treatment available.</span><span class="only-es">Sin anticoagulantes, sin químicos — solo tu propia biología. El PRF es el tratamiento regenerativo más puro y biocompatible disponible.</span></p>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-icon"><span class="material-symbols-outlined">spa</span></div>
+        <h3><span class="only-en">Dual Benefit</span><span class="only-es">Beneficio Dual</span></h3>
+        <p><span class="only-en">Stimulates collagen production, skin elasticity, and hair follicle activation — one treatment, two powerful applications.</span><span class="only-es">Estimula la producción de colágeno, elasticidad de la piel y activación del folículo capilar — un tratamiento, dos aplicaciones poderosas.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKIN + HAIR DUAL CARDS -->
+<section class="dual-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Two powerful applications</span><span class="only-es">Dos aplicaciones poderosas</span></p>
+      <h2 class="h">
+        <span class="only-en">Skin. <em class="em">Hair. Both.</em></span>
+        <span class="only-es">Piel. <em class="em">Cabello. Ambos.</em></span>
+      </h2>
+    </div>
+    <div class="dual-grid">
+      <!-- SKIN -->
+      <div class="dual-card reveal">
+        <div class="dual-card-img">
+          <img src="../../assets/prf-skin.jpg" alt="PRF for skin rejuvenation at Olam Med Spa">
+        </div>
+        <div class="dual-card-body">
+          <span class="dual-card-tag"><span class="only-en">Skin Rejuvenation</span><span class="only-es">Rejuvenecimiento de Piel</span></span>
+          <h3><span class="only-en">PRF for Skin</span><span class="only-es">PRF para la Piel</span></h3>
+          <p><span class="only-en">Injected directly or combined with microneedling to stimulate collagen, elastin, and tissue repair in targeted areas.</span><span class="only-es">Inyectado directamente o combinado con microagujas para estimular colágeno, elastina y reparación tisular en áreas específicas.</span></p>
+          <ul class="dual-card-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Undereye rejuvenation — dark circles &amp; hollows</span><span class="only-es">Rejuvenecimiento de ojeras — círculos oscuros y hundimientos</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Fine lines &amp; wrinkles</span><span class="only-es">Líneas finas y arrugas</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Acne scars &amp; skin texture</span><span class="only-es">Cicatrices de acné y textura</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Microneedling + PRF combination</span><span class="only-es">Combinación microagujas + PRF</span></li>
+          </ul>
+          <div class="dual-meta">
+            <span class="dual-meta-chip"><strong>45 min</strong></span>
+            <span class="dual-meta-chip"><span class="only-en">Results: </span><span class="only-es">Resultados: </span><strong><span class="only-en">2–6 weeks</span><span class="only-es">2–6 semanas</span></strong></span>
+            <span class="dual-meta-chip"><span class="only-en">Lasts: </span><span class="only-es">Duración: </span><strong><span class="only-en">6–12 months</span><span class="only-es">6–12 meses</span></strong></span>
+            <span class="dual-meta-chip"><span class="only-en">From </span><span class="only-es">Desde </span><strong>$750</strong></span>
+          </div>
+        </div>
+      </div>
+      <!-- HAIR -->
+      <div class="dual-card reveal">
+        <div class="dual-card-img">
+          <img src="../../assets/prf-hero.jpg" alt="PRF for hair restoration at Olam Med Spa">
+        </div>
+        <div class="dual-card-body">
+          <span class="dual-card-tag"><span class="only-en">Hair Restoration</span><span class="only-es">Restauración Capilar</span></span>
+          <h3><span class="only-en">PRF for Hair</span><span class="only-es">PRF para el Cabello</span></h3>
+          <p><span class="only-en">Injected directly into the scalp to awaken dormant hair follicles, strengthen existing hair, and restore density over time.</span><span class="only-es">Inyectado directamente en el cuero cabelludo para despertar folículos dormidos, fortalecer el cabello existente y restaurar la densidad con el tiempo.</span></p>
+          <ul class="dual-card-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Thinning hair &amp; early-stage hair loss</span><span class="only-es">Cabello delgado y pérdida incipiente</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Receding hairline &amp; temples</span><span class="only-es">Línea de cabello y sienes</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Weak or fine hair strengthening</span><span class="only-es">Fortalecimiento de cabello débil o fino</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span class="only-en">Postpartum hair loss</span><span class="only-es">Pérdida de cabello postparto</span></li>
+          </ul>
+          <div class="dual-meta">
+            <span class="dual-meta-chip"><strong>60 min</strong></span>
+            <span class="dual-meta-chip"><span class="only-en">Results: </span><span class="only-es">Resultados: </span><strong><span class="only-en">3–6 months</span><span class="only-es">3–6 meses</span></strong></span>
+            <span class="dual-meta-chip"><span class="only-en">Lasts: </span><span class="only-es">Duración: </span><strong>12+ <span class="only-en">months</span><span class="only-es">meses</span></strong></span>
+            <span class="dual-meta-chip"><span class="only-en">From </span><span class="only-es">Desde </span><strong>$850</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">How it works</span><span class="only-es">Cómo funciona</span></p>
+      <h2 class="h">
+        <span class="only-en">Simple process. <em class="em">Powerful results.</em></span>
+        <span class="only-es">Proceso simple. <em class="em">Resultados poderosos.</em></span>
+      </h2>
+    </div>
+    <div class="steps-wrap">
+      <div class="steps-col reveal">
+        <h3><span class="only-en">For Skin</span><span class="only-es">Para la Piel</span></h3>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-item-text">
+              <strong><span class="only-en">Blood Draw &amp; Processing</span><span class="only-es">Extracción y Procesamiento</span></strong>
+              <p><span class="only-en">A small blood sample is drawn and spun at a low speed — preserving stem cells and creating the fibrin matrix that makes PRF superior to PRP.</span><span class="only-es">Se extrae una pequeña muestra de sangre y se centrifuga a baja velocidad — preservando células madre y creando la matriz de fibrina que hace al PRF superior al PRP.</span></p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-item-text">
+              <strong><span class="only-en">Injection or Microneedling</span><span class="only-es">Inyección o Microagujas</span></strong>
+              <p><span class="only-en">PRF is injected into targeted areas or applied topically during microneedling — triggering collagen, elastin, and tissue repair at a cellular level.</span><span class="only-es">El PRF se inyecta en áreas específicas o se aplica durante el microagujado — activando colágeno, elastina y reparación tisular a nivel celular.</span></p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-item-text">
+              <strong><span class="only-en">Progressive Renewal</span><span class="only-es">Renovación Progresiva</span></strong>
+              <p><span class="only-en">Over 2–6 weeks, your skin firms, brightens, and smooths as collagen and elastin rebuild. Results improve with each session and last 6–12 months.</span><span class="only-es">En 2–6 semanas, tu piel se firma, ilumina y suaviza mientras se reconstruyen colágeno y elastina. Los resultados mejoran con cada sesión y duran 6–12 meses.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="steps-col reveal">
+        <h3><span class="only-en">For Hair</span><span class="only-es">Para el Cabello</span></h3>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-item-text">
+              <strong><span class="only-en">Scalp Consultation</span><span class="only-es">Consulta de Cuero Cabelludo</span></strong>
+              <p><span class="only-en">Your expert evaluates your scalp health, hair density, and loss pattern to map the optimal injection zones for maximum follicle stimulation.</span><span class="only-es">Tu experta evalúa la salud del cuero cabelludo, densidad capilar y patrón de pérdida para mapear las zonas óptimas de inyección.</span></p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-item-text">
+              <strong><span class="only-en">Scalp Injections</span><span class="only-es">Inyecciones en el Cuero Cabelludo</span></strong>
+              <p><span class="only-en">PRF is injected directly into thinning areas of the scalp — delivering growth factors to dormant follicles and stimulating the hair growth cycle.</span><span class="only-es">El PRF se inyecta directamente en las áreas de adelgazamiento — entregando factores de crecimiento a los folículos dormidos y estimulando el ciclo de crecimiento capilar.</span></p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-item-text">
+              <strong><span class="only-en">Density &amp; Growth</span><span class="only-es">Densidad y Crecimiento</span></strong>
+              <p><span class="only-en">Over 3–6 months, hair becomes thicker, stronger, and denser. Optimal results are achieved with 3–4 sessions, 4–6 weeks apart, lasting 12+ months.</span><span class="only-es">En 3–6 meses, el cabello se vuelve más grueso, fuerte y denso. Los resultados óptimos se logran con 3–4 sesiones separadas 4–6 semanas, durando 12+ meses.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="band" style="background:var(--surface-page);">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">What clients say</span><span class="only-es">Qué dicen nuestras clientas</span></p>
+      <h2 class="h"><span class="only-en">400+ five-star <em class="em">reviews.</em></span><span class="only-es">400+ reseñas de <em class="em">cinco estrellas.</em></span></h2>
+    </div>
+    <div class="reveal" style="margin-top:32px;">
+      <script defer async src='https://cdn.trustindex.io/loader.js?a69d04174bae977ae596485f37a'></script>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section class="ba-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Before &amp; After</span><span class="only-es">Antes y Después</span></p>
+      <h2 class="h">
+        <span class="only-en">Real results. <em class="em">Real patients.</em></span>
+        <span class="only-es">Resultados reales. <em class="em">Pacientes reales.</em></span>
+      </h2>
+    </div>
+    <div class="ba-inner">
+      <div class="ba-img reveal" data-lb="gallery">
+        <img src="../../assets/prf-results.jpg" alt="PRF before and after at Olam Med Spa">
+      </div>
+      <div class="ba-text reveal">
+        <span class="ba-tag"><span class="only-en">Patient Results</span><span class="only-es">Resultados de Paciente</span></span>
+        <h3 style="font-family:var(--font-display);font-style:italic;font-weight:300;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--charcoal);margin:0;line-height:1.2;">
+          <span class="only-en">Heal from within.<br><strong style="font-style:normal;font-weight:700;color:var(--olam-blue);">Glow from within.</strong></span>
+          <span class="only-es">Sana desde adentro.<br><strong style="font-style:normal;font-weight:700;color:var(--olam-blue);">Brilla desde adentro.</strong></span>
+        </h3>
+        <p><span class="only-en">PRF works with your body's own biology — so the transformation always looks completely natural. Skin becomes firmer, more radiant, and more even. Hair grows thicker and more resilient. No foreign substances, no risk of rejection.</span><span class="only-es">El PRF trabaja con la biología de tu propio cuerpo — por eso la transformación siempre se ve completamente natural. La piel se vuelve más firme, radiante y uniforme. El cabello crece más grueso y resistente. Sin sustancias extrañas, sin riesgo de rechazo.</span></p>
+        <p style="font-size:var(--text-caption);color:var(--text-subtle);font-style:italic;"><span class="only-en">Individual results may vary. Photos shown are from actual Olam Med Spa patients.</span><span class="only-es">Los resultados individuales pueden variar. Las fotos mostradas son de pacientes reales de Olam Med Spa.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATURAL CALLOUT -->
+<section class="natural-section">
+  <div class="wrap">
+    <div class="natural-inner reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">100% your own biology</span><span class="only-es">100% tu propia biología</span></p>
+      <h2>
+        <span class="only-en">The most natural treatment <strong>available today.</strong></span>
+        <span class="only-es">El tratamiento más natural <strong>disponible hoy.</strong></span>
+      </h2>
+      <p>
+        <span class="only-en">No synthetics. No fillers. No chemicals. PRF uses what your body already produces — amplified and redelivered precisely where you need it. It's not just safe. It's the future of regenerative aesthetics.</span>
+        <span class="only-es">Sin sintéticos. Sin rellenos. Sin químicos. El PRF usa lo que tu cuerpo ya produce — amplificado y reentregado precisamente donde lo necesitas. No es solo seguro. Es el futuro de la estética regenerativa.</span>
+      </p>
+      <a class="btn btn-white btn-lg" href="/#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY OLAM -->
+<section class="why-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Why choose Olam Med Spa</span><span class="only-es">Por qué elegir Olam Med Spa</span></p>
+      <h2 class="h">
+        <span class="only-en">Expert care. <em class="em">Every time.</em></span>
+        <span class="only-es">Atención experta. <em class="em">Siempre.</em></span>
+      </h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><span class="material-symbols-outlined">verified</span></div>
+        <h3><span class="only-en">Regenerative Specialists</span><span class="only-es">Especialistas Regenerativas</span></h3>
+        <p><span class="only-en">Our injectors are trained in advanced PRF techniques for both skin and hair — delivering precise, effective results with every session.</span><span class="only-es">Nuestras expertas están capacitadas en técnicas avanzadas de PRF para piel y cabello — ofreciendo resultados precisos y efectivos en cada sesión.</span></p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><span class="material-symbols-outlined">biotech</span></div>
+        <h3><span class="only-en">Advanced PRF Protocol</span><span class="only-es">Protocolo PRF Avanzado</span></h3>
+        <p><span class="only-en">We use low-speed centrifugation to maximize stem cell preservation — ensuring you receive the most potent, effective PRF possible from your own blood.</span><span class="only-es">Usamos centrifugación de baja velocidad para maximizar la preservación de células madre — asegurando el PRF más potente y efectivo posible de tu propia sangre.</span></p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><span class="material-symbols-outlined">tune</span></div>
+        <h3><span class="only-en">Personalized Treatment</span><span class="only-es">Tratamiento Personalizado</span></h3>
+        <p><span class="only-en">Every PRF plan — skin or hair — is tailored to your unique anatomy, concerns, and goals. We combine PRF with other treatments when it maximizes your results.</span><span class="only-es">Cada plan de PRF — piel o cabello — se adapta a tu anatomía, preocupaciones y objetivos únicos. Combinamos el PRF con otros tratamientos cuando maximiza tus resultados.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="svc-cta">
+  <div class="wrap">
+    <div class="reveal">
+      <h2><span class="only-en">Heal, Restore &amp; <strong>Rejuvenate Naturally.</strong></span><span class="only-es">Sana, Restaura y <strong>Rejuvenece Naturalmente.</strong></span></h2>
+      <p><span class="only-en">100% your biology. Zero additives. Book your PRF consultation for skin or hair today.</span><span class="only-es">100% tu biología. Cero aditivos. Agenda tu consulta de PRF para piel o cabello hoy.</span></p>
+      <div class="svc-cta-btns">
+        <a class="btn btn-white btn-lg" href="/#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="tel:19542370930">954.237.0930</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col" style="max-width:300px;">
+        <img class="foot-logo" src="../../assets/logo-olam.png" alt="Olam Med Spa">
+        <p><span class="only-en">La nueva belleza natural. Personalized, physician-supervised non-invasive aesthetic medicine in Pembroke Pines, FL.</span><span class="only-es">La nueva belleza natural. Medicina estética no invasiva, personalizada y supervisada por médicos en Pembroke Pines, FL.</span></p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/olammedspa/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UClQbMWIxJrGFIx2Ptiu787g" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="https://www.facebook.com/olammedspa/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Services</span><span class="only-es">Servicios</span></p>
+        <a href="/#services"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>
+        <a href="/#services"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>
+        <a href="/#services"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></a>
+        <a href="/#services"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>
+        <a href="/#services"><span class="only-en">Hormone &amp; Weight</span><span class="only-es">Hormonas y Peso</span></a>
+        <a href="/#services"><span class="only-en">Laser Hair Removal</span><span class="only-es">Remoción de Vello</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Clinic</span><span class="only-es">Clínica</span></p>
+        <a href="/about"><span class="only-en">About Us</span><span class="only-es">Nosotros</span></a>
+        <a href="/financing"><span class="only-en">Financing</span><span class="only-es">Financiamiento</span></a>
+        <a href="/contact"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+        <a href="/#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Visit</span><span class="only-es">Visítanos</span></p>
+        <a href="tel:19542370930">954.237.0930</a>
+        <a href="mailto:info@olammedspa.com">info@olammedspa.com</a>
+        <p style="line-height:1.6;">17901 NW 5th St, Ste 201<br>Pembroke Pines, FL 33029</p>
+        <p><span class="only-en">Tue–Fri · 10am–6pm · Sat 9am–2pm</span><span class="only-es">Mar–Vie · 10am–6pm · Sáb 9am–2pm</span></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Olam Med Spa. <span class="only-en">All rights reserved.</span><span class="only-es">Todos los derechos reservados.</span></span>
+      <span><span class="only-en">FDA-approved technology · Individual results may vary.</span><span class="only-es">Tecnología aprobada por la FDA · Los resultados varían según la persona.</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+  <div class="lb-img-wrap"><img id="lb-img" src="" alt=""></div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.dataset.langBtn;
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem('olam-lang', lang); } catch(e){}
+    });
+  });
+  try {
+    var saved = localStorage.getItem('olam-lang');
+    if (saved === 'es') {
+      document.documentElement.setAttribute('data-lang', 'es');
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === 'es' ? 'true' : 'false');
+      });
+    }
+  } catch(e){}
+
+  (function() {
+    var items = Array.from(document.querySelectorAll('[data-lb="gallery"]'));
+    var lb = document.getElementById('lb');
+    var lbImg = document.getElementById('lb-img');
+    items.forEach(function(el) {
+      el.addEventListener('click', function() {
+        var img = el.querySelector('img');
+        lbImg.src = img.src; lbImg.alt = img.alt;
+        lb.classList.add('open'); document.body.style.overflow = 'hidden';
+      });
+    });
+    document.getElementById('lb-close').addEventListener('click', function() {
+      lb.classList.remove('open'); document.body.style.overflow = '';
+    });
+    lb.addEventListener('click', function(e) { if (e.target === lb) { lb.classList.remove('open'); document.body.style.overflow = ''; } });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && lb.classList.contains('open')) { lb.classList.remove('open'); document.body.style.overflow = ''; } });
+  })();
+
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+</script>
+
+</body>
+</html>
