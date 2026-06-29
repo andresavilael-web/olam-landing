@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bioestimulator — Sculptra® & Radiesse® | Olam Med Spa Pembroke Pines, FL</title>
+<meta name="description" content="Restore lost volume and stimulate your own collagen with Sculptra® and Radiesse® at Olam Med Spa in Pembroke Pines, FL. Long-lasting, natural-looking rejuvenation — no surgery needed.">
+<link rel="icon" href="../../assets/favicon-olam.png" type="image/png">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap">
+
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    margin: 0; font-family: var(--font-body); font-weight: var(--fw-light);
+    color: var(--text-body); background: var(--surface-page);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: clip;
+  }
+  a { color: inherit; text-decoration: none; }
+  html[data-lang="en"] .only-es { display: none !important; }
+  html[data-lang="es"] .only-en { display: none !important; }
+  .wrap { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--gutter); }
+  @media (min-width: 768px){ .wrap { padding: 0 var(--gutter-lg); } }
+  section.band { padding: var(--space-8) 0; position: relative; }
+  @media (min-width: 768px){ section.band { padding: var(--space-10) 0; } }
+
+  .eyebrow {
+    font-family: var(--font-body); font-size: var(--text-label); font-weight: var(--fw-semibold);
+    text-transform: uppercase; letter-spacing: var(--ls-label);
+    color: var(--text-accent); margin: 0 0 18px; display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--action); display: inline-block; }
+  h2.h {
+    font-family: var(--font-display); font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-tight); line-height: var(--lh-tight);
+    margin: 0; color: var(--text-strong); font-size: var(--text-h2);
+  }
+  .em { font-style: italic; font-weight: var(--fw-medium); color: var(--text-accent); }
+  .lead { font-family: var(--font-body); font-weight: var(--fw-light); font-size: var(--text-lead); line-height: var(--lh-body); color: var(--text-muted); margin: 0; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-weight: var(--fw-semibold);
+    font-size: var(--text-sm); padding: 13px 24px; border-radius: var(--radius-pill);
+    border: 1.5px solid transparent; cursor: pointer; line-height: 1; white-space: nowrap;
+    transition: background-color var(--dur-fast) var(--ease-cushion), transform var(--dur-fast) var(--ease-cushion), border-color var(--dur-fast) var(--ease-cushion);
+  }
+  .btn .arr { transition: transform var(--dur-fast) var(--ease-cushion); }
+  .btn:hover .arr { transform: translateX(5px); }
+  .btn-primary { background: var(--action); color: #fff; box-shadow: var(--shadow-button); }
+  .btn-primary:hover { background: var(--action-hover); transform: translateY(-3px); }
+  .btn-outline { background: transparent; color: var(--text-strong); border-color: var(--border-strong); }
+  .btn-outline:hover { background: var(--action-ink); color: #fff; border-color: var(--action-ink); }
+  .btn-lg { padding: 17px 32px; font-size: 1.05rem; }
+  @media (max-width: 480px){ .btn-lg { padding: 13px 20px; font-size: 0.9rem; } }
+  .btn-white { background: #fff; color: var(--olam-blue); font-weight: var(--fw-semibold); }
+  .btn-white:hover { background: var(--surface-linen); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+  .btn-icon { width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background: var(--action); color: #fff; border: none; cursor: pointer; flex-shrink: 0; }
+  .btn-icon .material-symbols-outlined { font-size: 20px; }
+  .btn-icon-mobile { display: inline-flex; }
+  @media (min-width: 600px){ .btn-icon-mobile { display: none; } }
+
+  /* header */
+  header.site {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 50; width: calc(100% - 32px); max-width: 1100px;
+    background: rgba(255,255,255,0.96); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-radius: 9999px;
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 4px 28px rgba(31,32,32,0.10), 0 1px 4px rgba(31,32,32,0.06);
+  }
+  header.site .wrap { max-width: 100%; margin: 0; }
+  header.site .row { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 12px; padding: 6px 6px 6px 36px; }
+  .site .logo { height: 28px; width: auto; display: block; }
+  .nav-links { display: none; gap: 26px; font-size: var(--text-sm); color: var(--text-body); font-weight: var(--fw-regular); }
+  .nav-links a:hover { color: var(--text-accent); }
+  @media (min-width: 1040px){ .nav-links { display: flex; } }
+  .site .actions { display: flex; align-items: center; gap: 10px; }
+  .site .actions .btn { display: none; }
+  @media (min-width: 600px){ .site .actions .btn { display: inline-flex; } }
+  .lang { display: inline-flex; border: 1px solid var(--border-soft); border-radius: var(--radius-pill); overflow: hidden; }
+  .lang button { font-family: var(--font-body); font-weight: var(--fw-semibold); font-size: var(--text-caption); letter-spacing: 0.06em; padding: 7px 12px; background: transparent; border: 0; cursor: pointer; color: var(--text-muted); }
+  .lang button[aria-pressed="true"] { background: var(--action); color: #fff; }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease-cushion), transform 0.7s var(--ease-cushion); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* footer */
+  footer.site { background: var(--surface-linen); border-top: 1px solid var(--border-hairline); padding: 52px 0 36px; }
+  .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+  .foot-logo { height: 32px; margin-bottom: 16px; }
+  .foot-col p, .foot-col a { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.9; display: block; }
+  .foot-col a:hover { color: var(--text-accent); }
+  .foot-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--border-champagne); font-size: var(--text-caption); color: var(--text-subtle); display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+  .foot-social { display: flex; gap: 12px; margin-top: 16px; }
+  .foot-social a { width: 36px; height: 36px; border-radius: 9999px; background: var(--surface-card); border: 1px solid var(--border-hairline); display: grid; place-items: center; color: var(--text-muted); font-size: 16px; transition: background var(--dur-fast) var(--ease-cushion), color var(--dur-fast) var(--ease-cushion); }
+  .foot-social a:hover { background: var(--action); color: #fff; border-color: var(--action); }
+
+  /* ===== PAGE-SPECIFIC ===== */
+
+  /* hero */
+  .svc-hero {
+    padding-top: 0; padding-bottom: 0;
+    position: relative; overflow: hidden;
+    min-height: 92vh; display: flex; align-items: center;
+  }
+  .svc-hero-bg {
+    position: absolute; inset: 0;
+    background: url('../../assets/biostimulator-hero.jpg') center/cover no-repeat;
+  }
+  .svc-hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(100deg, rgba(6,18,30,0.88) 0%, rgba(6,18,30,0.65) 50%, rgba(6,18,30,0.20) 100%);
+  }
+  .svc-hero-inner {
+    position: relative; z-index: 1;
+    padding-top: 140px; padding-bottom: 80px;
+  }
+  .svc-hero-text { max-width: 680px; }
+  .svc-hero h1 {
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: clamp(3rem, 6.5vw, 5.2rem); color: #fff;
+    line-height: 1.05; margin: 0 0 10px; letter-spacing: -0.02em;
+  }
+  .svc-hero h1 strong {
+    font-family: var(--font-body); font-weight: 700; font-style: normal;
+    color: var(--champagne); display: block;
+  }
+  .svc-hero-lead {
+    font-size: var(--text-lead); color: rgba(255,255,255,0.82); font-weight: var(--fw-light);
+    line-height: 1.65; margin: 24px 0 36px; max-width: 52ch;
+  }
+  .svc-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* breadcrumb */
+  .breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    font-size: var(--text-caption); color: var(--text-subtle); margin-bottom: 20px;
+  }
+  .breadcrumb a:hover { color: var(--text-accent); }
+  .breadcrumb span { color: var(--border-strong); }
+
+  /* detail chips */
+  .detail-band { background: var(--surface-linen); padding: 48px 0; }
+  .detail-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+  .detail-chip {
+    background: #fff; border: 1px solid var(--border-hairline);
+    border-radius: 14px; padding: 18px 24px; display: flex; flex-direction: column; gap: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); min-width: 160px;
+  }
+  .detail-chip-label { font-size: var(--text-caption); color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+  .detail-chip-value { font-size: var(--text-sm); color: var(--text-strong); font-weight: 600; line-height: 1.4; }
+
+  /* intro split */
+  .intro-split {
+    display: grid; grid-template-columns: 1fr;
+    gap: 48px; align-items: center; padding: 80px 0;
+  }
+  @media (min-width: 860px){ .intro-split { grid-template-columns: 1fr 1fr; gap: 72px; } }
+  .intro-split-img { border-radius: 20px; overflow: hidden; height: 420px; }
+  .intro-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .intro-split-text { display: flex; flex-direction: column; gap: 20px; }
+  .intro-split-text p { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; margin: 0; }
+
+  /* perfect for */
+  .perfect-section { padding: 72px 0; background: var(--surface-page); }
+  .perfect-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .perfect-pill {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface-card); border: 1px solid var(--border-hairline);
+    border-radius: 9999px; padding: 10px 20px;
+    font-size: var(--text-sm); color: var(--text-body); font-weight: 500;
+  }
+  .perfect-pill .material-symbols-outlined { font-size: 16px; color: var(--action); }
+
+  /* vs cards */
+  .vs-section { padding: 80px 0; background: var(--surface-linen); }
+  .vs-grid {
+    display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 48px;
+  }
+  @media (min-width: 640px){ .vs-grid { grid-template-columns: 1fr 1fr; } }
+  .vs-card {
+    background: #fff; border-radius: 20px; padding: 36px 32px;
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .vs-card-name {
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: 2rem; color: var(--olam-blue); margin: 0 0 4px;
+  }
+  .vs-card-sub {
+    font-size: var(--text-caption); color: var(--text-subtle); font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 8px; display: block;
+  }
+  .vs-card-tag {
+    display: inline-block; background: var(--surface-linen); color: var(--text-accent);
+    font-size: var(--text-caption); font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+  }
+  .vs-card p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.75; margin: 0 0 14px; }
+  .vs-card p:last-child { margin: 0; }
+  .vs-stat {
+    display: flex; align-items: center; gap: 8px;
+    font-size: var(--text-sm); color: var(--text-body); font-weight: 500; margin-top: 6px;
+  }
+  .vs-stat .material-symbols-outlined { font-size: 16px; color: var(--action); }
+
+  /* steps */
+  .steps-section { padding: 80px 0; background: var(--surface-page); }
+  .steps-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px; }
+  @media (min-width: 640px){ .steps-grid { grid-template-columns: repeat(3,1fr); gap: 24px; } }
+  .step-card {
+    background: #fff; border-radius: 20px; padding: 32px 28px;
+    border: 1px solid var(--border-hairline);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .step-num {
+    width: 44px; height: 44px; border-radius: 9999px;
+    background: var(--action); color: #fff; display: grid; place-items: center;
+    font-family: var(--font-display); font-style: italic; font-size: 1.4rem; font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .step-card h3 { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; color: var(--text-strong); margin: 0 0 10px; }
+  .step-card p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.7; margin: 0; }
+
+  /* before after */
+  .ba-section { padding: 80px 0; background: var(--surface-linen); }
+  .ba-inner {
+    display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; margin-top: 48px;
+  }
+  @media (min-width: 860px){ .ba-inner { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .ba-img { border-radius: 20px; overflow: hidden; cursor: zoom-in; }
+  .ba-img img { width: 100%; display: block; object-fit: cover; }
+  .ba-text { display: flex; flex-direction: column; gap: 20px; }
+  .ba-text p { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; margin: 0; }
+  .ba-tag {
+    display: inline-block; background: var(--olam-blue); color: #fff;
+    font-size: var(--text-caption); font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 5px 16px; border-radius: 9999px; margin-bottom: 4px;
+  }
+
+  /* collagen callout */
+  .collagen-section {
+    padding: 80px 0; background: var(--olam-blue); position: relative; overflow: hidden;
+  }
+  .collagen-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: url('../../assets/biostimulator-model.jpg') center/cover no-repeat;
+    opacity: 0.12; mix-blend-mode: luminosity;
+  }
+  .collagen-inner { position: relative; z-index: 1; max-width: 640px; }
+  .collagen-inner .eyebrow { color: rgba(255,255,255,0.7); }
+  .collagen-inner .eyebrow .dot { background: rgba(255,255,255,0.5); }
+  .collagen-inner h2 {
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin: 0 0 20px; line-height: 1.15;
+  }
+  .collagen-inner h2 strong { font-style: normal; font-weight: 600; }
+  .collagen-inner p { font-size: 1.05rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin: 0 0 32px; }
+
+  /* why olam */
+  .why-section { padding: 80px 0; }
+  .why-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 48px; }
+  @media (min-width: 640px){ .why-grid { grid-template-columns: repeat(3,1fr); } }
+  .why-card {
+    border: 1px solid var(--border-hairline); border-radius: 20px; padding: 32px 28px;
+    background: var(--surface-card);
+  }
+  .why-icon {
+    width: 48px; height: 48px; border-radius: 14px; background: var(--surface-linen);
+    display: grid; place-items: center; margin-bottom: 18px;
+  }
+  .why-icon .material-symbols-outlined { font-size: 24px; color: var(--action); }
+  .why-card h3 { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; color: var(--text-strong); margin: 0 0 10px; }
+  .why-card p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.7; margin: 0; }
+
+  /* reviews */
+  /* cta */
+  .svc-cta { background: linear-gradient(135deg, #0d2d45 0%, #1a4a6b 50%, #2a6a96 100%); padding: 72px 0; text-align: center; }
+  .svc-cta h2 {
+    font-family: var(--font-display); font-style: italic; font-weight: 300;
+    font-size: clamp(1.8rem, 4vw, 3rem); color: #fff; margin: 0 0 14px;
+  }
+  .svc-cta h2 strong { font-style: normal; font-weight: 600; color: var(--champagne); }
+  .svc-cta p { font-size: var(--text-sm); color: rgba(255,255,255,0.65); margin: 0 0 36px; }
+  .svc-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* lightbox */
+  .lb-overlay {
+    display: none; position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.88); align-items: center; justify-content: center; padding: 24px;
+    animation: lbFadeIn 0.2s ease;
+  }
+  .lb-overlay.open { display: flex; }
+  @keyframes lbFadeIn { from { opacity:0; } to { opacity:1; } }
+  .lb-img-wrap { position: relative; max-width: 90vw; max-height: 90vh; display: flex; align-items: center; justify-content: center; }
+  .lb-img-wrap img { max-width: 90vw; max-height: 88vh; border-radius: 12px; object-fit: contain; box-shadow: 0 32px 80px rgba(0,0,0,0.6); animation: lbScaleIn 0.25s cubic-bezier(0.34,1.56,0.64,1); }
+  @keyframes lbScaleIn { from { transform: scale(0.88); } to { transform: scale(1); } }
+  .lb-close { position: fixed; top: 20px; right: 24px; width: 44px; height: 44px; border-radius: 9999px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 20px; cursor: pointer; display: grid; place-items: center; backdrop-filter: blur(8px); transition: background 0.15s; }
+  .lb-close:hover { background: rgba(255,255,255,0.22); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap row">
+    <a href="/" aria-label="Olam Med Spa home"><img class="logo" src="../../assets/logo-olam.png" alt="Olam Med Spa"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#services" style="color:var(--text-accent);font-weight:600;"><span class="only-en">Services</span><span class="only-es">Servicios</span></a>
+      <a href="/about"><span class="only-en">About</span><span class="only-es">Nosotros</span></a>
+      <a href="/financing"><span class="only-en">Financing</span><span class="only-es">Financiamiento</span></a>
+      <a href="/contact"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+      <a href="https://olamskincare.com/" target="_blank" rel="noopener"><span class="only-en">Shop</span><span class="only-es">Tienda</span></a>
+    </nav>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn-icon btn-icon-mobile" href="/#book" aria-label="Book my consultation"><span class="material-symbols-outlined">calendar_month</span></a>
+      <a class="btn btn-primary" href="/#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="svc-hero">
+  <div class="svc-hero-bg"></div>
+  <div class="wrap" style="width:100%;">
+    <div class="svc-hero-inner">
+      <div class="svc-hero-text reveal">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/" style="color:rgba(255,255,255,0.5);">Home</a><span style="color:rgba(255,255,255,0.3);">›</span>
+          <a href="/#services" style="color:rgba(255,255,255,0.5);">Services</a><span style="color:rgba(255,255,255,0.3);">›</span>
+          <span style="color:rgba(255,255,255,0.7);">Bioestimulator</span>
+        </nav>
+        <p class="eyebrow" style="color:rgba(255,255,255,0.7);"><span class="dot" style="background:rgba(255,255,255,0.5);"></span><span class="only-en">Injectables · Collagen Biostimulation</span><span class="only-es">Inyectables · Bioestimulación de Colágeno</span></p>
+        <h1>
+          <span class="only-en">Collagen Boost<br><strong>&amp; Natural Volume.</strong></span>
+          <span class="only-es">Colágeno Propio<br><strong>&amp; Volumen Natural.</strong></span>
+        </h1>
+        <p class="svc-hero-lead">
+          <span class="only-en">More than just volume — this is long-term, natural beauty. Sculptra® and Radiesse® stimulate your own collagen, restoring youthful fullness that builds gradually and lasts up to 2 years.</span>
+          <span class="only-es">Más que solo volumen — esta es belleza natural a largo plazo. Sculptra® y Radiesse® estimulan tu propio colágeno, restaurando la plenitud juvenil que se desarrolla gradualmente y dura hasta 2 años.</span>
+        </p>
+        <div class="svc-hero-btns">
+          <a class="btn btn-primary btn-lg" href="/#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+          <a class="btn btn-ghost btn-lg" href="tel:19542370930"><span class="only-en">Call 954.237.0930</span><span class="only-es">Llama 954.237.0930</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL CHIPS -->
+<div class="detail-band">
+  <div class="wrap">
+    <div class="detail-grid reveal">
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Procedure Time</span><span class="only-es">Duración</span></span>
+        <span class="detail-chip-value">45–60 min</span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Results Timeline</span><span class="only-es">Resultados</span></span>
+        <span class="detail-chip-value">6–12 <span class="only-en">weeks</span><span class="only-es">semanas</span></span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Longevity</span><span class="only-es">Duración</span></span>
+        <span class="detail-chip-value">18–24 <span class="only-en">months</span><span class="only-es">meses</span></span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Downtime</span><span class="only-es">Recuperación</span></span>
+        <span class="detail-chip-value"><span class="only-en">Minimal</span><span class="only-es">Mínima</span></span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Eligibility</span><span class="only-es">Elegibilidad</span></span>
+        <span class="detail-chip-value">21+ <span class="only-en">years</span><span class="only-es">años</span></span>
+      </div>
+      <div class="detail-chip">
+        <span class="detail-chip-label"><span class="only-en">Starting At</span><span class="only-es">Desde</span></span>
+        <span class="detail-chip-value">$1,200+</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT ARE BIOSTIMULATORS -->
+<section class="band">
+  <div class="wrap">
+    <div class="intro-split">
+      <div class="intro-split-img reveal">
+        <img src="../../assets/biostimulator-model.jpg" alt="Bioestimulator treatment at Olam Med Spa">
+      </div>
+      <div class="intro-split-text reveal">
+        <p class="eyebrow"><span class="dot"></span><span class="only-en">What are bio-stimulating fillers?</span><span class="only-es">¿Qué son los bioestimuladores?</span></p>
+        <h2 class="h" style="margin-bottom:20px;">
+          <span class="only-en">Your body's own<br><em class="em">collagen, activated.</em></span>
+          <span class="only-es">El colágeno de tu propio<br><em class="em">cuerpo, activado.</em></span>
+        </h2>
+        <p>
+          <span class="only-en">Bio-stimulating fillers don't just add volume — they trigger your skin's natural collagen production, rebuilding structure from within. Unlike traditional fillers, the results are gradual, progressive, and exceptionally natural-looking.</span>
+          <span class="only-es">Los bioestimuladores no solo agregan volumen — activan la producción natural de colágeno de tu piel, reconstruyendo la estructura desde adentro. A diferencia de los rellenos tradicionales, los resultados son graduales, progresivos y excepcionalmente naturales.</span>
+        </p>
+        <p>
+          <span class="only-en">At Olam Med Spa we use Sculptra® and Radiesse® — the two leading FDA-approved biostimulators — each with unique properties to address different concerns. Your expert injector will recommend the right one for your goals.</span>
+          <span class="only-es">En Olam Med Spa usamos Sculptra® y Radiesse® — los dos bioestimuladores líderes aprobados por la FDA — cada uno con propiedades únicas para diferentes preocupaciones. Tu experta recomendará el indicado para tus objetivos.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFECT FOR -->
+<section class="perfect-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Perfect for</span><span class="only-es">Ideal para</span></p>
+      <h2 class="h">
+        <span class="only-en">Rebuild. Restore. <em class="em">Renew.</em></span>
+        <span class="only-es">Reconstruye. Restaura. <em class="em">Renueva.</em></span>
+      </h2>
+    </div>
+    <div class="perfect-grid reveal">
+      <div class="perfect-pill"><span class="material-symbols-outlined">check_circle</span><span class="only-en">Restoring volume in cheeks, temples &amp; jawline</span><span class="only-es">Restaurar volumen en mejillas, sienes y mandíbula</span></div>
+      <div class="perfect-pill"><span class="material-symbols-outlined">check_circle</span><span class="only-en">Softening deep wrinkles &amp; smile lines</span><span class="only-es">Suavizar arrugas profundas y líneas de expresión</span></div>
+      <div class="perfect-pill"><span class="material-symbols-outlined">check_circle</span><span class="only-en">Improving skin elasticity &amp; texture</span><span class="only-es">Mejorar elasticidad y textura de la piel</span></div>
+      <div class="perfect-pill"><span class="material-symbols-outlined">check_circle</span><span class="only-en">Lifting &amp; contouring the face</span><span class="only-es">Lifting y contorno facial</span></div>
+      <div class="perfect-pill"><span class="material-symbols-outlined">check_circle</span><span class="only-en">Non-surgical hand rejuvenation</span><span class="only-es">Rejuvenecimiento de manos sin cirugía</span></div>
+      <div class="perfect-pill"><span class="material-symbols-outlined">check_circle</span><span class="only-en">Non-surgical buttock enhancement</span><span class="only-es">Realce de glúteos sin cirugía</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCULPTRA VS RADIESSE -->
+<section class="vs-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Which one is right for you?</span><span class="only-es">¿Cuál es el indicado para ti?</span></p>
+      <h2 class="h">
+        <span class="only-en">Sculptra® vs. <em class="em">Radiesse®</em></span>
+        <span class="only-es">Sculptra® vs. <em class="em">Radiesse®</em></span>
+      </h2>
+      <p class="lead" style="margin-top:14px; max-width:56ch;">
+        <span class="only-en">Both are FDA-approved biostimulators with different mechanisms and strengths. Our expert will help you choose — or combine both — for your specific goals.</span>
+        <span class="only-es">Ambos son bioestimuladores aprobados por la FDA con diferentes mecanismos y ventajas. Nuestra experta te ayudará a elegir — o combinar ambos — para tus objetivos específicos.</span>
+      </p>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-card reveal">
+        <div class="vs-card-name">Sculptra®</div>
+        <span class="vs-card-sub">Poly-L-Lactic Acid (PLLA)</span>
+        <span class="vs-card-tag"><span class="only-en">Gradual Full-Face Rejuvenation</span><span class="only-es">Rejuvenecimiento Facial Gradual</span></span>
+        <p><span class="only-en">Stimulates gradual collagen production deep within the skin. Results appear progressively over 6–12 weeks as your skin rebuilds its own structure — delivering a natural, rested appearance that doesn't look "done."</span><span class="only-es">Estimula la producción gradual de colágeno en las capas profundas de la piel. Los resultados aparecen progresivamente en 6–12 semanas mientras tu piel reconstruye su propia estructura — logrando una apariencia natural y descansada.</span></p>
+        <div class="vs-stat"><span class="material-symbols-outlined">schedule</span><span class="only-en">Results last up to 2 years</span><span class="only-es">Resultados duran hasta 2 años</span></div>
+        <div class="vs-stat"><span class="material-symbols-outlined">face</span><span class="only-en">Best for: full-face volume &amp; skin quality</span><span class="only-es">Ideal para: volumen facial y calidad de piel</span></div>
+      </div>
+      <div class="vs-card reveal">
+        <div class="vs-card-name">Radiesse®</div>
+        <span class="vs-card-sub">Calcium Hydroxylapatite (CaHA)</span>
+        <span class="vs-card-tag"><span class="only-en">Immediate Volume + Collagen</span><span class="only-es">Volumen Inmediato + Colágeno</span></span>
+        <p><span class="only-en">Provides immediate visible volume while simultaneously triggering long-term collagen production. The dual action makes it ideal for deeper structural correction — jawline sculpting, nasolabial folds, and hand rejuvenation.</span><span class="only-es">Proporciona volumen visible de inmediato mientras estimula la producción de colágeno a largo plazo. La acción dual lo hace ideal para corrección estructural profunda — mandíbula, surcos nasogenianos y rejuvenecimiento de manos.</span></p>
+        <div class="vs-stat"><span class="material-symbols-outlined">schedule</span><span class="only-en">Results last 12–18 months</span><span class="only-es">Resultados duran 12–18 meses</span></div>
+        <div class="vs-stat"><span class="material-symbols-outlined">face</span><span class="only-en">Best for: jawline, deep wrinkles &amp; hands</span><span class="only-es">Ideal para: mandíbula, arrugas profundas y manos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">How it works</span><span class="only-es">Cómo funciona</span></p>
+      <h2 class="h">
+        <span class="only-en">Simple process. <em class="em">Lasting results.</em></span>
+        <span class="only-es">Proceso simple. <em class="em">Resultados duraderos.</em></span>
+      </h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3><span class="only-en">Consultation</span><span class="only-es">Consulta</span></h3>
+        <p><span class="only-en">Our expert assesses your facial volume loss and skin quality to design a personalized biostimulator plan — selecting the right product, dosage, and placement for your anatomy and goals.</span><span class="only-es">Nuestra experta evalúa la pérdida de volumen y calidad de tu piel para diseñar un plan personalizado — seleccionando el producto, dosis y colocación correcta para tu anatomía y objetivos.</span></p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <h3><span class="only-en">Treatment</span><span class="only-es">Tratamiento</span></h3>
+        <p><span class="only-en">The biostimulator is precisely injected into targeted areas. The process takes 45–60 minutes and is performed with topical numbing for your comfort. Some patients need 1–3 sessions for optimal results.</span><span class="only-es">El bioestimulador se inyecta con precisión en las áreas específicas. El proceso toma 45–60 minutos y se realiza con anestesia tópica para tu comodidad. Algunos pacientes necesitan 1–3 sesiones para resultados óptimos.</span></p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <h3><span class="only-en">Gradual Transformation</span><span class="only-es">Transformación Gradual</span></h3>
+        <p><span class="only-en">Over 6–12 weeks, your skin firms, plumps, and smooths as new collagen builds. The result is a refreshed, natural appearance that improves progressively — and lasts up to 2 years.</span><span class="only-es">En 6–12 semanas, tu piel se firma, rellena y suaviza mientras se forma nuevo colágeno. El resultado es una apariencia renovada y natural que mejora progresivamente — y dura hasta 2 años.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="band" style="background:var(--surface-linen);">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">What clients say</span><span class="only-es">Qué dicen nuestras clientas</span></p>
+      <h2 class="h"><span class="only-en">400+ five-star <em class="em">reviews.</em></span><span class="only-es">400+ reseñas de <em class="em">cinco estrellas.</em></span></h2>
+    </div>
+    <div class="reveal" style="margin-top:32px;">
+      <script defer async src='https://cdn.trustindex.io/loader.js?a69d04174bae977ae596485f37a'></script>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section class="ba-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Before &amp; After</span><span class="only-es">Antes y Después</span></p>
+      <h2 class="h">
+        <span class="only-en">Real results. <em class="em">Real patients.</em></span>
+        <span class="only-es">Resultados reales. <em class="em">Pacientes reales.</em></span>
+      </h2>
+    </div>
+    <div class="ba-inner">
+      <div class="ba-img reveal" data-lb="gallery">
+        <img src="../../assets/biostimulator-hero.jpg" alt="Bioestimulator before and after at Olam Med Spa">
+      </div>
+      <div class="ba-text reveal">
+        <span class="ba-tag"><span class="only-en">Patient Results</span><span class="only-es">Resultados de Paciente</span></span>
+        <h3 style="font-family:var(--font-display);font-style:italic;font-weight:300;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--charcoal);margin:0;line-height:1.2;">
+          <span class="only-en">Your collagen.<br><strong style="font-style:normal;font-weight:700;color:var(--olam-blue);">Your results.</strong></span>
+          <span class="only-es">Tu colágeno.<br><strong style="font-style:normal;font-weight:700;color:var(--olam-blue);">Tus resultados.</strong></span>
+        </h3>
+        <p><span class="only-en">Biostimulators work with your body — not against it. The transformation is subtle and progressive, so you always look like yourself, only rested, lifted, and more youthful. No sudden changes, no "done" look.</span><span class="only-es">Los bioestimuladores trabajan con tu cuerpo — no en su contra. La transformación es sutil y progresiva, para que siempre te veas como tú, solo descansada, levantada y más joven. Sin cambios bruscos, sin apariencia artificial.</span></p>
+        <p style="font-size:var(--text-caption);color:var(--text-subtle);font-style:italic;"><span class="only-en">Individual results may vary. Photos shown are from actual Olam Med Spa patients.</span><span class="only-es">Los resultados individuales pueden variar. Las fotos mostradas son de pacientes reales de Olam Med Spa.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLAGEN CALLOUT -->
+<section class="collagen-section">
+  <div class="wrap">
+    <div class="collagen-inner reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Long-term beauty investment</span><span class="only-es">Inversión en belleza a largo plazo</span></p>
+      <h2>
+        <span class="only-en">Age beautifully — <strong>on your terms.</strong></span>
+        <span class="only-es">Envejece hermosa — <strong>a tu ritmo.</strong></span>
+      </h2>
+      <p>
+        <span class="only-en">Biostimulators are the most natural approach to facial rejuvenation available today. Instead of adding foreign volume, they restore what your skin used to produce on its own. One treatment cycle can give you 2 full years of refreshed, natural-looking results.</span>
+        <span class="only-es">Los bioestimuladores son el enfoque más natural de rejuvenecimiento facial disponible hoy. En lugar de agregar volumen externo, restauran lo que tu piel solía producir naturalmente. Un ciclo de tratamiento puede darte 2 años completos de resultados renovados y naturales.</span>
+      </p>
+      <a class="btn btn-white btn-lg" href="/#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span> <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY OLAM -->
+<section class="why-section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="dot"></span><span class="only-en">Why choose Olam Med Spa</span><span class="only-es">Por qué elegir Olam Med Spa</span></p>
+      <h2 class="h">
+        <span class="only-en">Expert care. <em class="em">Every time.</em></span>
+        <span class="only-es">Atención experta. <em class="em">Siempre.</em></span>
+      </h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><span class="material-symbols-outlined">verified</span></div>
+        <h3><span class="only-en">Advanced Injectors</span><span class="only-es">Expertas Certificadas</span></h3>
+        <p><span class="only-en">Specialists in advanced facial rejuvenation — with deep expertise in biostimulator placement for natural, long-lasting results.</span><span class="only-es">Especialistas en rejuvenecimiento facial avanzado — con profunda experiencia en la colocación de bioestimuladores para resultados naturales y duraderos.</span></p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><span class="material-symbols-outlined">tune</span></div>
+        <h3><span class="only-en">Tailored to Your Anatomy</span><span class="only-es">Adaptado a tu Anatomía</span></h3>
+        <p><span class="only-en">Every treatment plan is designed around your unique facial structure, volume loss patterns, and aesthetic goals — never a one-size-fits-all approach.</span><span class="only-es">Cada plan de tratamiento se diseña alrededor de tu estructura facial única, patrones de pérdida de volumen y objetivos estéticos — nunca un enfoque genérico.</span></p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><span class="material-symbols-outlined">shield_check</span></div>
+        <h3><span class="only-en">FDA-Approved Only</span><span class="only-es">Solo Aprobados FDA</span></h3>
+        <p><span class="only-en">We use only authentic Sculptra® and Radiesse® — the safest, highest-quality biostimulators available — for your complete peace of mind.</span><span class="only-es">Usamos únicamente Sculptra® y Radiesse® auténticos — los bioestimuladores más seguros y de mayor calidad disponibles — para tu total tranquilidad.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="svc-cta">
+  <div class="wrap">
+    <div class="reveal">
+      <h2><span class="only-en">Ready to rebuild your <strong>natural beauty?</strong></span><span class="only-es">¿Lista para reconstruir tu <strong>belleza natural?</strong></span></h2>
+      <p><span class="only-en">Gradual. Natural. Long-lasting. Book your Sculptra® or Radiesse® consultation today.</span><span class="only-es">Gradual. Natural. Duradero. Agenda tu consulta de Sculptra® o Radiesse® hoy.</span></p>
+      <div class="svc-cta-btns">
+        <a class="btn btn-white btn-lg" href="/#book"><span class="only-en">Book My Consultation</span><span class="only-es">Agenda tu consulta</span> <span class="arr">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="tel:19542370930">954.237.0930</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col" style="max-width:300px;">
+        <img class="foot-logo" src="../../assets/logo-olam.png" alt="Olam Med Spa">
+        <p><span class="only-en">La nueva belleza natural. Personalized, physician-supervised non-invasive aesthetic medicine in Pembroke Pines, FL.</span><span class="only-es">La nueva belleza natural. Medicina estética no invasiva, personalizada y supervisada por médicos en Pembroke Pines, FL.</span></p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/olammedspa/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UClQbMWIxJrGFIx2Ptiu787g" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="https://www.facebook.com/olammedspa/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Services</span><span class="only-es">Servicios</span></p>
+        <a href="/#services"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>
+        <a href="/#services"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>
+        <a href="/#services"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></a>
+        <a href="/#services"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>
+        <a href="/#services"><span class="only-en">Hormone &amp; Weight</span><span class="only-es">Hormonas y Peso</span></a>
+        <a href="/#services"><span class="only-en">Laser Hair Removal</span><span class="only-es">Remoción de Vello</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Clinic</span><span class="only-es">Clínica</span></p>
+        <a href="/about"><span class="only-en">About Us</span><span class="only-es">Nosotros</span></a>
+        <a href="/financing"><span class="only-en">Financing</span><span class="only-es">Financiamiento</span></a>
+        <a href="/contact"><span class="only-en">Contact</span><span class="only-es">Contacto</span></a>
+        <a href="/#book"><span class="only-en">Book a consultation</span><span class="only-es">Agenda una consulta</span></a>
+      </div>
+      <div class="foot-col">
+        <p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Visit</span><span class="only-es">Visítanos</span></p>
+        <a href="tel:19542370930">954.237.0930</a>
+        <a href="mailto:info@olammedspa.com">info@olammedspa.com</a>
+        <p style="line-height:1.6;">17901 NW 5th St, Ste 201<br>Pembroke Pines, FL 33029</p>
+        <p><span class="only-en">Tue–Fri · 10am–6pm · Sat 9am–2pm</span><span class="only-es">Mar–Vie · 10am–6pm · Sáb 9am–2pm</span></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Olam Med Spa. <span class="only-en">All rights reserved.</span><span class="only-es">Todos los derechos reservados.</span></span>
+      <span><span class="only-en">FDA-approved technology · Individual results may vary.</span><span class="only-es">Tecnología aprobada por la FDA · Los resultados varían según la persona.</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+  <div class="lb-img-wrap"><img id="lb-img" src="" alt=""></div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.dataset.langBtn;
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem('olam-lang', lang); } catch(e){}
+    });
+  });
+  try {
+    var saved = localStorage.getItem('olam-lang');
+    if (saved === 'es') {
+      document.documentElement.setAttribute('data-lang', 'es');
+      document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+        b.setAttribute('aria-pressed', b.dataset.langBtn === 'es' ? 'true' : 'false');
+      });
+    }
+  } catch(e){}
+
+  (function() {
+    var items = Array.from(document.querySelectorAll('[data-lb="gallery"]'));
+    var lb = document.getElementById('lb');
+    var lbImg = document.getElementById('lb-img');
+    items.forEach(function(el) {
+      el.addEventListener('click', function() {
+        var img = el.querySelector('img');
+        lbImg.src = img.src; lbImg.alt = img.alt;
+        lb.classList.add('open'); document.body.style.overflow = 'hidden';
+      });
+    });
+    document.getElementById('lb-close').addEventListener('click', function() {
+      lb.classList.remove('open'); document.body.style.overflow = '';
+    });
+    lb.addEventListener('click', function(e) { if (e.target === lb) { lb.classList.remove('open'); document.body.style.overflow = ''; } });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && lb.classList.contains('open')) { lb.classList.remove('open'); document.body.style.overflow = ''; } });
+  })();
+
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+</script>
+
+</body>
+</html>
