@@ -42,11 +42,12 @@
     '.mega-cta{position:relative;font-size:13px;font-weight:600;color:var(--champagne);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .2s,color .2s;}',
     '.mega-cta:hover{gap:10px;color:#fff;}',
     /* columns */
-    '.mega-cols{flex:1;display:flex;padding:28px 20px 28px 28px;gap:0;}',
-    '.mega-col{flex:1;padding:0 18px;border-left:1px solid var(--border-hairline);}',
-    '.mega-col:first-child{border-left:none;padding-left:2px;}',
-    '.mega-cat{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--champagne);font-weight:700;margin-bottom:12px;white-space:nowrap;}',
-    '.mega-col a{display:block;font-size:13.5px;color:var(--text-body);text-decoration:none;padding:5px 0;transition:color .15s,padding-left .15s;line-height:1.4;}',
+    '.mega-cols{flex:1;display:grid;grid-template-columns:repeat(3,1fr);padding:24px 24px 24px 24px;gap:0;}',
+    '.mega-col{padding:12px 16px;border-left:1px solid var(--border-hairline);}',
+    '.mega-col:nth-child(3n+1){border-left:none;padding-left:4px;}',
+    '.mega-col:nth-child(n+4){border-top:1px solid var(--border-hairline);padding-top:16px;}',
+    '.mega-cat{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--champagne);font-weight:700;margin-bottom:10px;white-space:nowrap;}',
+    '.mega-col a{display:block;font-size:13px;color:var(--text-body);text-decoration:none;padding:4px 0;transition:color .15s,padding-left .15s;line-height:1.4;}',
     '.mega-col a:hover{color:var(--text-accent);padding-left:4px;}',
     '.mega-col a.active{color:var(--text-accent);font-weight:600;padding-left:0;}'
   ].join('');
@@ -98,6 +99,9 @@
                 '<a href="/services/body-contouring/bodysculp">BodySculp</a>' +
                 '<a href="/services/body-contouring/body-tone">Body Tone</a>' +
                 '<a href="/services/body-contouring/mesotherapy">Mesotherapy</a>' +
+              '</div>' +
+              '<div class="mega-col">' +
+                '<p class="mega-cat"><span class="only-en">Laser Hair Removal</span><span class="only-es">Depilación Láser</span></p>' +
                 '<a href="/services/laser-hair-removal/laser-hair-removal"><span class="only-en">Laser Hair Removal</span><span class="only-es">Depilación Láser</span></a>' +
               '</div>' +
               '<div class="mega-col">' +
