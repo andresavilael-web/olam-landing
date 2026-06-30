@@ -72,35 +72,35 @@
             '<div class="mega-cols">' +
               '<div class="mega-col">' +
                 '<p class="mega-cat"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></p>' +
-                '<a href="/services/injectables/botox-dysport.html">Botox &amp; Dysport</a>' +
-                '<a href="/services/injectables/dermal-fillers.html"><span class="only-en">Dermal Fillers</span><span class="only-es">Rellenos Dérmicos</span></a>' +
-                '<a href="/services/injectables/bioestimulator.html">Bioestimulator</a>' +
-                '<a href="/services/injectables/prf.html">PRF</a>' +
+                '<a href="/services/injectables/botox-dysport">Botox &amp; Dysport</a>' +
+                '<a href="/services/injectables/dermal-fillers"><span class="only-en">Dermal Fillers</span><span class="only-es">Rellenos Dérmicos</span></a>' +
+                '<a href="/services/injectables/bioestimulator">Bioestimulator</a>' +
+                '<a href="/services/injectables/prf">PRF</a>' +
               '</div>' +
               '<div class="mega-col">' +
                 '<p class="mega-cat"><span class="only-en">Aesthetic Services</span><span class="only-es">Servicios Estéticos</span></p>' +
-                '<a href="/services/aesthetic-services/chemical-peel.html"><span class="only-en">Chemical Peel</span><span class="only-es">Peeling Químico</span></a>' +
-                '<a href="/services/aesthetic-services/hydrafacial.html">HydraFacial</a>' +
-                '<a href="/services/aesthetic-services/microneedling.html">Microneedling</a>' +
-                '<a href="/services/aesthetic-services/led-light-therapy.html"><span class="only-en">LED Light Therapy</span><span class="only-es">Terapia LED</span></a>' +
+                '<a href="/services/aesthetic-services/chemical-peel"><span class="only-en">Chemical Peel</span><span class="only-es">Peeling Químico</span></a>' +
+                '<a href="/services/aesthetic-services/hydrafacial">HydraFacial</a>' +
+                '<a href="/services/aesthetic-services/microneedling">Microneedling</a>' +
+                '<a href="/services/aesthetic-services/led-light-therapy"><span class="only-en">LED Light Therapy</span><span class="only-es">Terapia LED</span></a>' +
               '</div>' +
               '<div class="mega-col">' +
                 '<p class="mega-cat"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></p>' +
-                '<a href="/services/skin-tightening/agnes-rf.html">Agnes RF</a>' +
-                '<a href="/services/skin-tightening/ultherapy.html">Ultherapy</a>' +
-                '<a href="/services/skin-tightening/ipl-photofacial.html">IPL Photofacial</a>' +
-                '<a href="/services/skin-tightening/advanced-microneedling.html">Olam Glow</a>' +
-                '<a href="/services/skin-tightening/pixel8-rf-microneedling.html">PiXel8‑RF</a>' +
+                '<a href="/services/skin-tightening/agnes-rf">Agnes RF</a>' +
+                '<a href="/services/skin-tightening/ultherapy">Ultherapy</a>' +
+                '<a href="/services/skin-tightening/ipl-photofacial">IPL Photofacial</a>' +
+                '<a href="/services/skin-tightening/advanced-microneedling">Olam Glow</a>' +
+                '<a href="/services/skin-tightening/pixel8-rf-microneedling">PiXel8‑RF</a>' +
               '</div>' +
               '<div class="mega-col">' +
                 '<p class="mega-cat"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></p>' +
-                '<a href="/services/laser-treatments/erbium-laser-resurfacing.html"><span class="only-en">Erbium Laser Resurfacing</span><span class="only-es">Láser Erbium</span></a>' +
+                '<a href="/services/laser-treatments/erbium-laser-resurfacing"><span class="only-en">Erbium Laser Resurfacing</span><span class="only-es">Láser Erbium</span></a>' +
               '</div>' +
               '<div class="mega-col">' +
                 '<p class="mega-cat"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></p>' +
-                '<a href="/services/body-contouring/bodysculp.html">BodySculp</a>' +
-                '<a href="/services/body-contouring/body-tone.html">Body Tone</a>' +
-                '<a href="/services/body-contouring/mesotherapy.html">Mesotherapy</a>' +
+                '<a href="/services/body-contouring/bodysculp">BodySculp</a>' +
+                '<a href="/services/body-contouring/body-tone">Body Tone</a>' +
+                '<a href="/services/body-contouring/mesotherapy">Mesotherapy</a>' +
               '</div>' +
             '</div>' +
           '</div>' +

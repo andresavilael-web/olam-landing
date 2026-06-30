@@ -43,11 +43,11 @@
         '</div>' +
         '<div class="foot-col">' +
           '<p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Services</span><span class="only-es">Servicios</span></p>' +
-          '<a href="/services/injectables/botox-dysport.html"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>' +
-          '<a href="/services/aesthetic-services/chemical-peel.html"><span class="only-en">Aesthetic Services</span><span class="only-es">Servicios Estéticos</span></a>' +
-          '<a href="/services/skin-tightening/agnes-rf.html"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>' +
-          '<a href="/services/laser-treatments/erbium-laser-resurfacing.html"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></a>' +
-          '<a href="/services/body-contouring/bodysculp.html"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>' +
+          '<a href="/services/injectables/botox-dysport"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>' +
+          '<a href="/services/aesthetic-services/chemical-peel"><span class="only-en">Aesthetic Services</span><span class="only-es">Servicios Estéticos</span></a>' +
+          '<a href="/services/skin-tightening/agnes-rf"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>' +
+          '<a href="/services/laser-treatments/erbium-laser-resurfacing"><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></a>' +
+          '<a href="/services/body-contouring/bodysculp"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>' +
           '<a href="/#services"><span class="only-en">Hormone &amp; Weight</span><span class="only-es">Hormonas y Peso</span></a>' +
         '</div>' +
         '<div class="foot-col">' +
