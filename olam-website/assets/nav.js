@@ -98,9 +98,6 @@
                 '<a href="/services/body-contouring/bodysculp">BodySculp</a>' +
                 '<a href="/services/body-contouring/body-tone">Body Tone</a>' +
                 '<a href="/services/body-contouring/mesotherapy">Mesotherapy</a>' +
-              '</div>' +
-              '<div class="mega-col">' +
-                '<p class="mega-cat"><span class="only-en">Laser Hair Removal</span><span class="only-es">Depilación Láser</span></p>' +
                 '<a href="/services/laser-hair-removal/laser-hair-removal"><span class="only-en">Laser Hair Removal</span><span class="only-es">Depilación Láser</span></a>' +
               '</div>' +
               '<div class="mega-col">' +
