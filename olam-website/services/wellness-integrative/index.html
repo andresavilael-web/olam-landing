@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wellness & Integrative Medicine — Weight Loss, HRT & More | Olam Med Spa Pembroke Pines</title>
+<meta name="description" content="Wellness and integrative medicine at Olam Med Spa: medical weight loss, laser vein removal, sclerotherapy, and hormone replacement therapy in Pembroke Pines, FL.">
+<link rel="icon" href="/assets/favicon-olam.png" type="image/png">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;overflow-x:clip;}
+  body{margin:0;font-family:var(--font-body);font-weight:var(--fw-light);color:var(--text-body);background:var(--surface-page);-webkit-font-smoothing:antialiased;overflow-x:clip;}
+  a{color:inherit;text-decoration:none;}
+  html[data-lang="en"] .only-es{display:none!important;}
+  html[data-lang="es"] .only-en{display:none!important;}
+  .wrap{max-width:var(--content-max);margin:0 auto;padding:0 var(--gutter);}
+  @media(min-width:768px){.wrap{padding:0 var(--gutter-lg);}}
+
+  .eyebrow{font-family:var(--font-body);font-size:var(--text-label);font-weight:var(--fw-semibold);text-transform:uppercase;letter-spacing:var(--ls-label);color:var(--text-accent);margin:0 0 18px;display:flex;align-items:center;gap:10px;}
+  .eyebrow .dot{width:6px;height:6px;border-radius:9999px;background:var(--action);display:inline-block;}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:var(--fw-semibold);font-size:var(--text-sm);padding:13px 24px;border-radius:var(--radius-pill);border:1.5px solid transparent;cursor:pointer;line-height:1;white-space:nowrap;transition:background-color var(--dur-fast) var(--ease-cushion),transform var(--dur-fast) var(--ease-cushion);}
+  .btn .arr{transition:transform var(--dur-fast) var(--ease-cushion);}
+  .btn:hover .arr{transform:translateX(5px);}
+  .btn-primary{background:var(--action);color:#fff;box-shadow:var(--shadow-button);}
+  .btn-primary:hover{background:var(--action-hover);transform:translateY(-3px);}
+  .btn-lg{padding:17px 32px;font-size:1.05rem;}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.45);}
+  .btn-ghost:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.75);}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s var(--ease-cushion),transform 0.7s var(--ease-cushion);}
+  .reveal.in{opacity:1;transform:none;}
+
+  .cat-hero{position:relative;min-height:68vh;display:flex;align-items:center;overflow:hidden;}
+  .cat-hero-bg{position:absolute;inset:0;background:url('/assets/wellness-category.jpg') center/cover no-repeat;}
+  .cat-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(6,18,30,0.87) 0%,rgba(6,18,30,0.60) 55%,rgba(6,18,30,0.18) 100%);}
+  .cat-hero-inner{position:relative;z-index:1;padding:140px 0 80px;}
+  .cat-hero-text{max-width:660px;}
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-size:var(--text-caption);color:rgba(255,255,255,0.60);margin-bottom:22px;}
+  .breadcrumb a{color:rgba(255,255,255,0.60);}
+  .breadcrumb a:hover{color:#fff;}
+  .breadcrumb span{color:rgba(255,255,255,0.35);}
+  .cat-hero h1{font-family:var(--font-display);font-style:italic;font-weight:300;font-size:clamp(2.6rem,5.5vw,4.6rem);color:#fff;line-height:1.06;margin:0 0 8px;letter-spacing:-0.02em;}
+  .cat-hero h1 strong{font-family:var(--font-body);font-weight:700;font-style:normal;color:var(--champagne);display:block;}
+  .cat-hero-lead{font-size:var(--text-lead);color:rgba(255,255,255,0.80);font-weight:var(--fw-light);line-height:1.65;margin:22px 0 34px;max-width:52ch;}
+  .cat-hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+
+  .cat-intro{padding:72px 0 32px;}
+  .cat-intro p{font-size:1.1rem;color:var(--text-muted);line-height:1.75;max-width:70ch;margin:16px 0 0;}
+  h2.cat-h{font-family:var(--font-display);font-weight:var(--fw-medium);font-size:var(--text-h2);color:var(--text-strong);letter-spacing:var(--ls-tight);line-height:var(--lh-tight);margin:0;}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;padding:40px 0 80px;}
+  .svc-cat-card{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s var(--ease-cushion),box-shadow 0.3s var(--ease-cushion);}
+  .svc-cat-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(0,0,0,0.13);}
+  .svc-cat-card-img{height:230px;overflow:hidden;}
+  .svc-cat-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s var(--ease-cushion);}
+  .svc-cat-card:hover .svc-cat-card-img img{transform:scale(1.04);}
+  .svc-cat-card-body{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;gap:10px;}
+  .svc-cat-card-title{font-family:var(--font-display);font-size:1.3rem;font-weight:var(--fw-medium);color:var(--text-strong);margin:0;line-height:1.2;}
+  .svc-cat-card-desc{font-size:var(--text-sm);color:var(--text-muted);line-height:1.7;margin:0;flex:1;}
+  .svc-cat-card-link{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-sm);font-weight:var(--fw-semibold);color:var(--text-accent);margin-top:6px;}
+  .svc-cat-card-link .arr{transition:transform 0.25s var(--ease-cushion);}
+  .svc-cat-card:hover .svc-cat-card-link .arr{transform:translateX(5px);}
+
+  .cta-band{background:var(--olam-blue);padding:80px 0;text-align:center;}
+  .cta-band h2{font-family:var(--font-display);font-style:italic;font-weight:300;font-size:clamp(2rem,4vw,3rem);color:#fff;margin:0 0 16px;}
+  .cta-band h2 strong{font-style:normal;font-weight:700;color:var(--champagne);}
+  .cta-band p{font-size:var(--text-lead);color:rgba(255,255,255,0.75);margin:0 auto 34px;max-width:54ch;}
+</style>
+</head>
+<body>
+<div id="g-header"></div>
+<script src="/assets/nav.js"></script>
+
+<main>
+  <section class="cat-hero">
+    <div class="cat-hero-bg"></div>
+    <div class="cat-hero-inner wrap">
+      <div class="cat-hero-text">
+        <nav class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="#">Services</a><span>›</span>
+          <span style="color:#fff;">Wellness &amp; Integrative</span>
+        </nav>
+        <p class="eyebrow"><span class="dot"></span><span class="only-en">Wellness & Integrative Medicine</span><span class="only-es">Medicina Integrativa</span></p>
+        <h1><span class="only-en">Health That Goes <strong>Deeper.</strong></span><span class="only-es">Salud que Va <strong>Más Profundo.</strong></span></h1>
+        <p class="cat-hero-lead only-en">Physician-led wellness programs that address weight, hormones, and vascular health—because true beauty starts from the inside.</p>
+        <p class="cat-hero-lead only-es">Programas de bienestar liderados por médicos que abordan peso, hormonas y salud vascular, porque la belleza verdadera comienza desde adentro.</p>
+        <div class="cat-hero-btns">
+          <a href="/contact" class="btn btn-primary btn-lg"><span class="only-en">Book a Consultation</span><span class="only-es">Agenda tu Consulta</span> <span class="arr">→</span></a>
+          <a href="#treatments" class="btn btn-ghost btn-lg"><span class="only-en">Explore Programs</span><span class="only-es">Ver Programas</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="treatments" style="background:var(--surface-page);">
+    <div class="wrap">
+      <div class="cat-intro reveal">
+        <p class="eyebrow"><span class="dot"></span><span class="only-en">Our Programs</span><span class="only-es">Nuestros Programas</span></p>
+        <h2 class="cat-h"><span class="only-en">Wellness & Integrative Services</span><span class="only-es">Servicios de Bienestar</span></h2>
+        <p class="only-en">From medically supervised weight loss to hormone optimization and vascular treatments, our integrative programs treat the whole person—not just the symptom.</p>
+        <p class="only-es">Desde pérdida de peso médicamente supervisada hasta optimización hormonal y tratamientos vasculares—tratamos a la persona completa, no solo el síntoma.</p>
+      </div>
+      <div class="svc-grid">
+        <a href="/services/wellness-integrative/medical-weight-loss" class="svc-cat-card reveal">
+          <div class="svc-cat-card-img"><img src="/assets/medical-weight-loss-hero.jpg" alt="Medical weight loss program"></div>
+          <div class="svc-cat-card-body">
+            <h3 class="svc-cat-card-title"><span class="only-en">Medical Weight Loss</span><span class="only-es">Pérdida de Peso Médica</span></h3>
+            <p class="svc-cat-card-desc only-en">Physician-supervised weight loss programs combining GLP-1 medications, metabolic testing, and personalized nutrition coaching for sustainable, medically guided transformation.</p>
+            <p class="svc-cat-card-desc only-es">Programas de pérdida de peso supervisados por médicos que combinan medicamentos GLP-1, análisis metabólico y coaching nutricional personalizado.</p>
+            <span class="svc-cat-card-link"><span class="only-en">Learn More</span><span class="only-es">Más Información</span> <span class="arr">→</span></span>
+          </div>
+        </a>
+        <a href="/services/wellness-integrative/laser-vein-removal" class="svc-cat-card reveal">
+          <div class="svc-cat-card-img"><img src="/assets/laser-vein-removal-hero.jpg" alt="Laser vein removal"></div>
+          <div class="svc-cat-card-body">
+            <h3 class="svc-cat-card-title"><span class="only-en">Laser Vein Removal</span><span class="only-es">Eliminación de Venas Láser</span></h3>
+            <p class="svc-cat-card-desc only-en">Targeted laser energy that collapses and eliminates spider veins and small varicose veins on the face and legs—restoring smooth, even skin without needles or incisions.</p>
+            <p class="svc-cat-card-desc only-es">Energía láser dirigida que elimina venas araña y várices pequeñas en cara y piernas sin agujas ni incisiones.</p>
+            <span class="svc-cat-card-link"><span class="only-en">Learn More</span><span class="only-es">Más Información</span> <span class="arr">→</span></span>
+          </div>
+        </a>
+        <a href="/services/wellness-integrative/sclerotherapy" class="svc-cat-card reveal">
+          <div class="svc-cat-card-img"><img src="/assets/sclerotherapy-hero.jpg" alt="Sclerotherapy treatment"></div>
+          <div class="svc-cat-card-body">
+            <h3 class="svc-cat-card-title"><span class="only-en">Sclerotherapy</span><span class="only-es">Escleroterapia</span></h3>
+            <p class="svc-cat-card-desc only-en">The gold-standard injectable treatment for spider veins and reticular veins—a sclerosing solution causes vessels to collapse and fade over 4–6 weeks.</p>
+            <p class="svc-cat-card-desc only-es">El tratamiento inyectable estándar de oro para venas araña: una solución esclerosante colapsa los vasos y los elimina en 4–6 semanas.</p>
+            <span class="svc-cat-card-link"><span class="only-en">Learn More</span><span class="only-es">Más Información</span> <span class="arr">→</span></span>
+          </div>
+        </a>
+        <a href="/services/wellness-integrative/hormone-replacement-therapy" class="svc-cat-card reveal">
+          <div class="svc-cat-card-img"><img src="/assets/hormone-therapy-hero.jpg" alt="Hormone replacement therapy"></div>
+          <div class="svc-cat-card-body">
+            <h3 class="svc-cat-card-title"><span class="only-en">Hormone Replacement Therapy</span><span class="only-es">Terapia Hormonal Sustitutiva</span></h3>
+            <p class="svc-cat-card-desc only-en">Bioidentical hormone optimization that restores energy, mood, libido, and vitality—individualized protocols based on comprehensive lab work and symptom assessment.</p>
+            <p class="svc-cat-card-desc only-es">Optimización hormonal bioidentical que restaura energía, estado de ánimo, libido y vitalidad con protocolos individualizados basados en análisis completos.</p>
+            <span class="svc-cat-card-link"><span class="only-en">Learn More</span><span class="only-es">Más Información</span> <span class="arr">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2><span class="only-en">Feel Like <strong>Yourself Again.</strong></span><span class="only-es">Vuelve a <strong>Sentirte Tú.</strong></span></h2>
+      <p class="only-en">Schedule a wellness consultation and let our physicians design a plan that addresses your whole health—inside and out.</p>
+      <p class="only-es">Agenda una consulta de bienestar y deja que nuestros médicos diseñen un plan que aborde tu salud completa, por dentro y por fuera.</p>
+      <a href="/contact" class="btn btn-primary btn-lg"><span class="only-en">Book Your Consultation</span><span class="only-es">Agenda tu Consulta</span> <span class="arr">→</span></a>
+    </div>
+  </section>
+</main>
+
+<div id="g-footer"></div>
+<script src="/assets/footer.js"></script>
+<script>
+  var io = new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>

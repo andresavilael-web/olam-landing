@@ -185,6 +185,7 @@
   @media (min-width: 1000px){ .svc-grid { grid-template-columns: repeat(3,1fr); gap: 24px; } }
 
   .svc-card {
+    display: block; text-decoration: none; color: inherit;
     position: relative; border-radius: 24px; overflow: hidden;
     aspect-ratio: 3/4;
     box-shadow: 0 4px 28px rgba(0,0,0,.13), 0 1px 4px rgba(0,0,0,.07);
@@ -606,9 +607,9 @@
     <div class="svc-grid">
 
       <!-- Injectables -->
-      <div class="svc-card reveal">
+      <a href="/services/injectables" class="svc-card reveal">
         <div class="svc-card-img-wrap">
-          <img class="svc-card-img" src="assets/injectables.jpg" alt="Injectables — Botox & Fillers" loading="lazy">
+          <img class="svc-card-img" src="assets/injectables-category.jpg" alt="Injectables — Botox & Fillers" loading="lazy">
         </div>
         <div class="svc-card-body">
           <div class="svc-name-row">
@@ -618,15 +619,33 @@
           <p><span class="only-en">Botox, fillers & skin boosters for a naturally refreshed look—not frozen.</span><span class="only-es">Botox, fillers y estimuladores para una apariencia natural y rejuvenecida.</span></p>
           <div class="svc-footer">
             <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">FDA Approved</span><span class="only-es">Aprobado FDA</span></span>
-            <a href="/contact" class="svc-book-btn"><span class="only-en">Book</span><span class="only-es">Reservar</span> →</a>
+            <span class="svc-book-btn"><span class="only-en">Explore</span><span class="only-es">Ver más</span> →</span>
           </div>
         </div>
-      </div>
+      </a>
+
+      <!-- Aesthetic Services -->
+      <a href="/services/aesthetic-services" class="svc-card reveal">
+        <div class="svc-card-img-wrap">
+          <img class="svc-card-img" src="assets/aesthetic-services-category.jpg" alt="Aesthetic Services — Facials & Peels" loading="lazy">
+        </div>
+        <div class="svc-card-body">
+          <div class="svc-name-row">
+            <h3><span class="only-en">Aesthetic Services</span><span class="only-es">Servicios Estéticos</span></h3>
+            <span class="svc-badge">✦</span>
+          </div>
+          <p><span class="only-en">HydraFacial, chemical peels, microneedling & LED—clinical glow with zero downtime.</span><span class="only-es">HydraFacial, peelings, microagujas y LED para un brillo clínico sin tiempo de recuperación.</span></p>
+          <div class="svc-footer">
+            <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">No Downtime</span><span class="only-es">Sin Recuperación</span></span>
+            <span class="svc-book-btn"><span class="only-en">Explore</span><span class="only-es">Ver más</span> →</span>
+          </div>
+        </div>
+      </a>
 
       <!-- Skin Tightening -->
-      <div class="svc-card reveal">
+      <a href="/services/skin-tightening" class="svc-card reveal">
         <div class="svc-card-img-wrap">
-          <img class="svc-card-img" src="assets/skin%20tating.jpg" alt="Skin Tightening & Resurfacing" loading="lazy">
+          <img class="svc-card-img" src="assets/skin-tightening-category.jpg" alt="Skin Tightening & Resurfacing" loading="lazy">
         </div>
         <div class="svc-card-body">
           <div class="svc-name-row">
@@ -636,33 +655,15 @@
           <p><span class="only-en">Radiofrequency & ultrasound to lift and firm without surgery or downtime.</span><span class="only-es">Radiofrecuencia y ultrasonido para tensar y levantar sin cirugía ni tiempo de recuperación.</span></p>
           <div class="svc-footer">
             <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">No Downtime</span><span class="only-es">Sin Recuperación</span></span>
-            <a href="/contact" class="svc-book-btn"><span class="only-en">Book</span><span class="only-es">Reservar</span> →</a>
+            <span class="svc-book-btn"><span class="only-en">Explore</span><span class="only-es">Ver más</span> →</span>
           </div>
         </div>
-      </div>
-
-      <!-- Laser -->
-      <div class="svc-card reveal">
-        <div class="svc-card-img-wrap">
-          <img class="svc-card-img" src="assets/Laser.jpg" alt="Laser Treatments" loading="lazy">
-        </div>
-        <div class="svc-card-body">
-          <div class="svc-name-row">
-            <h3><span class="only-en">Laser Treatments</span><span class="only-es">Tratamientos Láser</span></h3>
-            <span class="svc-badge">✦</span>
-          </div>
-          <p><span class="only-en">Skin resurfacing, pigmentation correction & rejuvenation with FDA-approved laser tech.</span><span class="only-es">Renovación de piel, corrección de pigmentación y rejuvenecimiento con tecnología láser aprobada por la FDA.</span></p>
-          <div class="svc-footer">
-            <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">FDA Approved</span><span class="only-es">Aprobado FDA</span></span>
-            <a href="/contact" class="svc-book-btn"><span class="only-en">Book</span><span class="only-es">Reservar</span> →</a>
-          </div>
-        </div>
-      </div>
+      </a>
 
       <!-- Body Contouring -->
-      <div class="svc-card reveal">
+      <a href="/services/body-contouring" class="svc-card reveal">
         <div class="svc-card-img-wrap">
-          <img class="svc-card-img" src="assets/body-contouring.jpg" alt="Body Contouring" loading="lazy">
+          <img class="svc-card-img" src="assets/body-contouring-category.jpg" alt="Body Contouring" loading="lazy">
         </div>
         <div class="svc-card-body">
           <div class="svc-name-row">
@@ -672,33 +673,33 @@
           <p><span class="only-en">Non-surgical fat reduction and body sculpting—no incisions, no recovery time.</span><span class="only-es">Reducción de grasa y escultura corporal sin cirugía—sin incisiones ni tiempo de recuperación.</span></p>
           <div class="svc-footer">
             <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">Non-Surgical</span><span class="only-es">No Quirúrgico</span></span>
-            <a href="/contact" class="svc-book-btn"><span class="only-en">Book</span><span class="only-es">Reservar</span> →</a>
+            <span class="svc-book-btn"><span class="only-en">Explore</span><span class="only-es">Ver más</span> →</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <!-- Hormone & Weight -->
-      <div class="svc-card reveal">
+      <!-- Wellness & Integrative -->
+      <a href="/services/wellness-integrative" class="svc-card reveal">
         <div class="svc-card-img-wrap">
-          <div class="svc-card-ph"><span class="material-symbols-outlined">psychiatry</span></div>
+          <img class="svc-card-img" src="assets/wellness-category.jpg" alt="Wellness & Integrative Medicine" loading="lazy">
         </div>
         <div class="svc-card-body">
           <div class="svc-name-row">
-            <h3><span class="only-en">Hormone & Weight</span><span class="only-es">Hormonas y Peso</span></h3>
+            <h3><span class="only-en">Wellness & Integrative</span><span class="only-es">Medicina Integrativa</span></h3>
             <span class="svc-badge">✦</span>
           </div>
-          <p><span class="only-en">Integrative hormone therapy and medical weight management programs personalized to your biology.</span><span class="only-es">Terapia hormonal integrativa y programas médicos de control de peso personalizados a tu biología.</span></p>
+          <p><span class="only-en">Medical weight loss, hormone therapy & vascular treatments—beauty from the inside out.</span><span class="only-es">Pérdida de peso, terapia hormonal y tratamientos vasculares—belleza desde adentro.</span></p>
           <div class="svc-footer">
-            <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">Personalized</span><span class="only-es">Personalizado</span></span>
-            <a href="/contact" class="svc-book-btn"><span class="only-en">Book</span><span class="only-es">Reservar</span> →</a>
+            <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">Physician-Led</span><span class="only-es">Supervisado Médico</span></span>
+            <span class="svc-book-btn"><span class="only-en">Explore</span><span class="only-es">Ver más</span> →</span>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Laser Hair Removal -->
-      <div class="svc-card reveal">
+      <a href="/services/laser-hair-removal/laser-hair-removal" class="svc-card reveal">
         <div class="svc-card-img-wrap">
-          <div class="svc-card-ph"><span class="material-symbols-outlined">electric_bolt</span></div>
+          <img class="svc-card-img" src="assets/laser-hair-removal-hero.jpg" alt="Laser Hair Removal" loading="lazy">
         </div>
         <div class="svc-card-body">
           <div class="svc-name-row">
@@ -708,10 +709,10 @@
           <p><span class="only-en">Permanent hair reduction with advanced laser—all skin tones, all areas, lasting results.</span><span class="only-es">Reducción permanente del vello con láser avanzado—todos los tonos de piel, todas las áreas.</span></p>
           <div class="svc-footer">
             <span class="svc-tag"><span class="material-symbols-outlined">verified</span> <span class="only-en">All Skin Tones</span><span class="only-es">Todos los Tonos</span></span>
-            <a href="/contact" class="svc-book-btn"><span class="only-en">Book</span><span class="only-es">Reservar</span> →</a>
+            <span class="svc-book-btn"><span class="only-en">Explore</span><span class="only-es">Ver más</span> →</span>
           </div>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>

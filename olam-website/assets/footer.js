@@ -43,12 +43,12 @@
         '</div>' +
         '<div class="foot-col">' +
           '<p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Services</span><span class="only-es">Servicios</span></p>' +
-          '<a href="/services/injectables/botox-dysport"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>' +
-          '<a href="/services/aesthetic-services/chemical-peel"><span class="only-en">Aesthetic Services</span><span class="only-es">Servicios Estéticos</span></a>' +
-          '<a href="/services/skin-tightening/agnes-rf"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>' +
-          '<a href="/services/body-contouring/bodysculp"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>' +
+          '<a href="/services/injectables"><span class="only-en">Injectables</span><span class="only-es">Inyectables</span></a>' +
+          '<a href="/services/aesthetic-services"><span class="only-en">Aesthetic Services</span><span class="only-es">Servicios Estéticos</span></a>' +
+          '<a href="/services/skin-tightening"><span class="only-en">Skin Tightening</span><span class="only-es">Tensado de Piel</span></a>' +
+          '<a href="/services/body-contouring"><span class="only-en">Body Contouring</span><span class="only-es">Contorno Corporal</span></a>' +
           '<a href="/services/laser-hair-removal/laser-hair-removal"><span class="only-en">Laser Hair Removal</span><span class="only-es">Depilación Láser</span></a>' +
-          '<a href="/services/wellness-integrative/medical-weight-loss"><span class="only-en">Wellness &amp; Integrative</span><span class="only-es">Medicina Integrativa</span></a>' +
+          '<a href="/services/wellness-integrative"><span class="only-en">Wellness &amp; Integrative</span><span class="only-es">Medicina Integrativa</span></a>' +
         '</div>' +
         '<div class="foot-col">' +
           '<p style="color:var(--text-strong);font-weight:600;margin-bottom:4px;"><span class="only-en">Clinic</span><span class="only-es">Clínica</span></p>' +
